@@ -1,0 +1,179 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "resource_generation"
+	group: ""
+	id: "7F1459A9E8B20865"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/recource_generation.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: -1.4d
+			y: 0.0d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/white"
+			rotation: 0.0d
+			width: 5.0d
+			x: -1.5d
+			y: 3.0d
+		}
+	]
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			description: ["{ftbquests.chapter.resource_generation.quest1.description1}"]
+			id: "15B33100403EF393"
+			rewards: [
+				{
+					count: 2
+					id: "42F8D21432C59747"
+					item: "industrialforegoing:item_transporter_type"
+					type: "item"
+				}
+				{
+					id: "2D9C03F30FC808C4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6DB478C45440BC52"
+					table_id: 1961581323197983260L
+					type: "random"
+				}
+				{
+					id: "6294C79E2410022B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.resource_generation.quest1.subtitle}"
+			tasks: [
+				{
+					count: 4L
+					id: "77ED7A0A310A1139"
+					item: "industrialforegoing:laser_drill"
+					type: "item"
+				}
+				{
+					id: "46CAE1736ED43E1B"
+					item: "industrialforegoing:ore_laser_base"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.resource_generation.quest1.title}"
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			description: ["{ftbquests.chapter.resource_generation.quest2.description1}"]
+			id: "2E58477B5F4D57B1"
+			rewards: [
+				{
+					id: "0BF0D37704818F05"
+					item: "rftoolsbuilder:shape_card_def"
+					type: "item"
+				}
+				{
+					id: "0CE65932AFB1A6DC"
+					item: "minecraft:lever"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "391D664907C64BFA"
+					table_id: 8858681397723566140L
+					type: "random"
+				}
+				{
+					id: "7B454B696EE39781"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.resource_generation.quest2.subtitle}"
+			tasks: [
+				{
+					id: "48C9C7C442F47D8C"
+					item: "rftoolsbuilder:builder"
+					type: "item"
+				}
+				{
+					id: "0E7C90570780175F"
+					item: "rftoolsbuilder:shape_card_quarry"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.resource_generation.quest2.title}"
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			description: ["{ftbquests.chapter.resource_generation.quest3.description1}"]
+			icon: "minecraft:iron_ore"
+			id: "4174E61EC4ED9130"
+			rewards: [{
+				id: "2095C08598C2B582"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "{ftbquests.chapter.resource_generation.quest3.subtitle}"
+			tasks: [{
+				id: "30021BB6C894929E"
+				title: "{ftbquests.chapter.resource_generation.quest3.task_+3459357935637140126.title}"
+				type: "checkmark"
+			}]
+			title: "{ftbquests.chapter.resource_generation.quest3.title}"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			id: "2C4B9E457F74476C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6E6737ED51D62BE7"
+					table_id: 1961581323197983260L
+					type: "random"
+				}
+				{
+					id: "1C8772220A3557EB"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.resource_generation.quest4.subtitle}"
+			tasks: [{
+				id: "27DB3BC088C32E03"
+				item: "mekanism:digital_miner"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.resource_generation.quest4.title}"
+			x: -1.5d
+			y: 5.0d
+		}
+	]
+	title: "{ftbquests.chapter.resource_generation.title}"
+}

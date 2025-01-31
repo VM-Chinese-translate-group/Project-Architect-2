@@ -1,0 +1,19 @@
+{
+	icon: "quark:blaze_lantern"
+	id: "22AC4B49A1F2207F"
+	loot_size: 1
+	order_index: 10
+	rewards: [
+		{
+			command: "/ars-light on"
+			icon: "additionallanterns:basalt_lantern"
+			type: "command"
+		}
+		{
+			command: "/ars-light off"
+			icon: "additionallanterns:black_basalt_lantern"
+			type: "command"
+		}
+	]
+	title: "{ftbquests.loot_table_2498454672905478271.title}"
+}

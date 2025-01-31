@@ -1,0 +1,92 @@
+{
+	icon: "projecte:cyan_alchemical_bag"
+	id: "1B38EFD20F41AA1C"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{ item: "mob_grinding_utils:tank" }
+		{ item: "mekanism:basic_fluid_tank" }
+		{ item: "mekanism:advanced_fluid_tank" }
+		{ item: "mekanism:basic_chemical_tank" }
+		{ item: "mekanism:advanced_chemical_tank" }
+		{ count: 4, item: "create:fluid_tank" }
+		{ item: "industrialforegoing:common_black_hole_tank" }
+		{ item: "industrialforegoing:pity_black_hole_tank" }
+		{ item: "thermal:upgrade_augment_1" }
+		{ item: "thermal:upgrade_augment_2" }
+		{ item: "thermal:upgrade_augment_3" }
+		{ item: "mekanism:basic_tier_installer" }
+		{ item: "mekanism:advanced_tier_installer" }
+		{ count: 8, item: "mekanism:upgrade_speed" }
+		{ count: 8, item: "mekanism:upgrade_energy" }
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:speed_addon_1"
+				tag: {
+					TitaniumAugment: {
+						Speed: 2.0f
+					}
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:efficiency_addon_1"
+				tag: {
+					TitaniumAugment: {
+						Efficiency: 0.9f
+					}
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:processing_addon_1"
+				tag: {
+					TitaniumAugment: {
+						Processing: 2.0f
+					}
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:speed_addon_2"
+				tag: {
+					TitaniumAugment: {
+						Speed: 3.0f
+					}
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:efficiency_addon_2"
+				tag: {
+					TitaniumAugment: {
+						Efficiency: 0.8f
+					}
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "industrialforegoing:processing_addon_2"
+				tag: {
+					TitaniumAugment: {
+						Processing: 3.0f
+					}
+				}
+			}
+		}
+		{ item: "mob_grinding_utils:tank_sink" }
+		{ item: "cookingforblockheads:sink" }
+	]
+	title: "{ftbquests.loot_table_1961581323197983260.title}"
+}
