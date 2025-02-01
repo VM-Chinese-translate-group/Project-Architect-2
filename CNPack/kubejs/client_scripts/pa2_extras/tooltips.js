@@ -123,7 +123,7 @@ const tooltipToItem = [
 	{
 		// Mek Cables
 		items: /mekanism:.+_(pipe|cable|tube|transporter|conductor)/,
-		tips: "tooltip.mekanism.pipe.1"
+		tips: ["tooltip.mekanism.pipe.1"]
 	},
 	{
 		// Trader
@@ -145,8 +145,8 @@ const tooltipToItem = [
 // Fixes the name of some items
 // - Key is the id of the item, value is the name to set to (using %name will reuse the original name)
 const nameFixer = {
-	"jaopca:storage_blocks.soul_sand": "§6%name Dust",
-	"jaopca:storage_blocks.obsidian": "Block of Powdered Obsidian"
+	"jaopca:storage_blocks.soul_sand": "§6%name粉",
+	"jaopca:storage_blocks.obsidian": "黑曜石粉末块"
 }
 
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ ItemEvents.tooltip(event => {
             if (index === -1)
                 return;
 
-            text.set(index, Text.of("More info at §b§nhttps://github.com/DonovanDMC/ProjectExpansion/wiki").yellow());
+            text.set(index, Text.of("More info at §b§nhttps://github.com/DonovanDMC/ProjectExpansion/wiki").yellow());//目前未实装，先不管
         });
     };
 

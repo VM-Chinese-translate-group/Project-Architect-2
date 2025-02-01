@@ -14,12 +14,12 @@ const tooltipToItem2 = [
 	{
 		// Framed Cubes
 		items: "framedblocks:framed_cube",
-		tips: ["§eYou can sneak right-click on certain cables (that offer no facades/covers) to add a frame cover", "§eSneak right-click with a block to change the appearance", "§eUse any wrench item to remove with sneak right-click"]
+		tips: ["tooltip.framedblocks.framed_cube.1", "tooltip.framedblocks.framed_cube.2", "tooltip.framedblocks.framed_cube.3"]
 	},
 	{
 		// Wrenches
 		items: "#forge:wrenches",
-		tips: ["§eSneak left-click to toggle the frame of framed cables on/off", "§eSneak right-click to make a frame from a framed cable pop off"]
+		tips: ["tooltip.#forge.wrenches.1", "tooltip.#forge.wrenches.2"]
 	}
 ];
 
@@ -29,6 +29,6 @@ const tooltipToItem2 = [
 ItemEvents.tooltip(event => {
 	// General tooltips
 	tooltipToItem2.forEach(entry => {
-		event.add(entry.items, entry.tips);
+    	event.add(entry.items, entry.tips.map(tip => Text.translate(tip)));
 	})
 });

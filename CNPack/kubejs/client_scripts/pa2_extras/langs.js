@@ -138,7 +138,7 @@ const multiLang = [
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
 // The language event to apply the fixes in
-ClientEvents.lang("en_us", event => {
+ClientEvents.lang("zh_cn", event => {
 	Object.keys(langs).forEach(key => {
 		event.add("pa2", key, langs[key]);
 	});
