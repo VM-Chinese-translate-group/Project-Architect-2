@@ -14,7 +14,7 @@ translations = {}
 for i, match in enumerate(matches):
     # 去掉字符串两端的引号
     stripped_match = match[1:-1]
-    key = f"tooltip.secret.warning.{i+1}"
+    key = f"waring.secret.{i+1}"
     translations[key] = stripped_match
 
 # 替换 warnings 数组中的字符串为翻译键
