@@ -44,6 +44,7 @@ async def main():
     tasks = []
 
     for file in files:
+        print(file.split("Source"))
         path = (
             file.split("Source")[1]
             .replace("\\", "/")
