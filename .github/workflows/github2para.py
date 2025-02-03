@@ -3,7 +3,7 @@ import os
 import json
 from pprint import pprint
 import paratranz_client
-
+from pydantic import ValidationError
 
 configuration = paratranz_client.Configuration(host="https://paratranz.cn/api")
 configuration.api_key["Token"] = os.environ["API_TOKEN"]
@@ -44,7 +44,6 @@ async def main():
     tasks = []
 
     for file in files:
-        print(file.split("Source"))
         path = (
             file.split("Source")[1]
             .replace("\\", "/")
