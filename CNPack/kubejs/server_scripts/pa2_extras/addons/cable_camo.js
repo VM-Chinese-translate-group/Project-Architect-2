@@ -216,7 +216,7 @@ BlockEvents.rightClicked(event => {
 	{
 		if (!validateBE)
 		{
-			player.tell(Text.of("You cannot use block entities on camo blocks!").red());
+			player.tell(Text.translate('tip.kubejs.camon').red());
 			event.cancel();
 			return;
 		}

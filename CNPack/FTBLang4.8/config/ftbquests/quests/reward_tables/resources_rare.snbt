@@ -1,0 +1,44 @@
+{
+	icon: "projecte:light_blue_alchemical_bag"
+	id: "627169CC0E7D5FB9"
+	loot_size: 1
+	order_index: 6
+	rewards: [
+		{ count: 2, item: "minecraft:glowstone" }
+		{ count: 3, item: "minecraft:golden_carrot" }
+		{ count: 3, item: "minecraft:crying_obsidian" }
+		{ item: "minecraft:iron_block" }
+		{ item: "minecraft:gold_block" }
+		{ item: "minecraft:netherite_upgrade_smithing_template", weight: 0.2f }
+		{ count: 4, item: "minecraft:quartz" }
+		{ item: "minecraft:netherite_scrap", weight: 0.8f }
+		{ count: 3, item: "minecraft:lapis_lazuli" }
+		{ item: "minecraft:experience_bottle" }
+		{ item: "supplementaries:globe" }
+		{ count: 2, item: "minecraft:prismarine_crystals" }
+		{ item: "minecraft:heart_of_the_sea" }
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_hoe"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ item: "minecraft:enchanted_golden_apple" }
+		{ count: 6, item: "minecraft:emerald" }
+		{ count: 4, item: "minecraft:iron_ingot" }
+		{ count: 2, item: "minecraft:gold_ingot" }
+		{ item: "minecraft:golden_apple" }
+		{ item: "minecraft:redstone" }
+		{ count: 2, item: "minecraft:diamond" }
+		{ count: 3, item: "minecraft:ender_pearl" }
+		{ item: "minecraft:golden_horse_armor" }
+		{ item: "thermal:upgrade_augment_3" }
+		{ item: "projecte:condenser_mk1", weight: 0.4f }
+		{ item: "projectexpansion:basic_emc_link" }
+		{ item: "projecte:transmutation_tablet", weight: 0.8f }
+	]
+	title: "{ftbquests.loot_table_7093567213222584249.title}"
+}

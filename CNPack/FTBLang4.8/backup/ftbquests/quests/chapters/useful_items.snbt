@@ -1,0 +1,781 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "useful_items"
+	group: ""
+	id: "6B91FC0BC2BC257E"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/quality_of_life.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: -6.0d
+			y: -2.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/orange"
+			rotation: 0.0d
+			width: 5.0d
+			x: -6.0d
+			y: 0.0d
+		}
+	]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Sometimes, building large structures can be a little tedious, and take a lot of effort. Not all of us a great builders you know! Dire's Building Gadgets aims to make building a little bit easier."]
+			id: "77A815B084782AD1"
+			rewards: [
+				{
+					id: "04A902DFBD749C20"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "buildinggadgets2:buildinggadgets2book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "36D8E71405E7AC1F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Direwolf20 Approved"
+			tasks: [
+				{
+					id: "17E19D7CDC9D9053"
+					item: "buildinggadgets2:gadget_building"
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "6520EACD82EAEA7B"
+					item: "buildinggadgets2:gadget_exchanging"
+					type: "item"
+				}
+				{
+					id: "3D0FCD2C6F87F763"
+					item: {
+						Count: 1
+						id: "buildinggadgets2:gadget_copy_paste"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "436ACC0A2006BF06"
+					item: {
+						Count: 1
+						id: "buildinggadgets2:gadget_cut_paste"
+						tag: {
+							pastereplace: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "751686F9F999B63F"
+					item: "buildinggadgets2:gadget_destruction"
+					type: "item"
+				}
+			]
+			title: "Building Gadgets"
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			description: ["Enhance your Minecraft experience with these convenient quality of life mods. Streamline gameplay, improve inventory management, and simplify crafting with these handy additions. Explore the world more efficiently and enjoy a smoother adventure in Minecraft."]
+			icon: "create:clipboard"
+			id: "764C4D6535BDEFCE"
+			rewards: [
+				{
+					id: "412CB7C7FD1C8AAA"
+					item: {
+						Count: 1
+						id: "constructionwand:diamond_wand"
+						tag: {
+							Damage: 0
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5B60A3B07C36D0CA"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "Optimizing At Its Finest"
+			tasks: [{
+				id: "3664EACD9C19839F"
+				title: "Helpfull Items"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["This mod introduces several portable workbenches mounted on sticks, designed to simplify life, especially in the early stages of your journey. Additionally, you can assign a hotkey to access the crafting table in your Curio slot, allowing you to open it without needing it in your inventory!"]
+			id: "05BF62BFCDE46A92"
+			rewards: [
+				{
+					id: "23B3193E24BA7409"
+					item: "crafting_on_a_stick:anvil"
+					type: "item"
+				}
+				{
+					id: "0F614CB4D745DA54"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Stick With Me"
+			tasks: [
+				{
+					id: "19E6782DFD6BFB69"
+					item: "crafting_on_a_stick:crafting_table"
+					type: "item"
+				}
+				{
+					id: "73846277B8C4585A"
+					item: "crafting_on_a_stick:loom"
+					type: "item"
+				}
+				{
+					id: "46DC522FE8AF85C3"
+					item: "crafting_on_a_stick:grindstone"
+					type: "item"
+				}
+				{
+					id: "2649B4D3426E4AF5"
+					item: "crafting_on_a_stick:cartography_table"
+					type: "item"
+				}
+				{
+					id: "757A1099569BD258"
+					item: "crafting_on_a_stick:stonecutter"
+					type: "item"
+				}
+				{
+					id: "30FE15381E4603A4"
+					item: "crafting_on_a_stick:smithing_table"
+					type: "item"
+				}
+			]
+			title: "Everything On A Stick"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Sophisticated backpacks is yet another backpack mod this time with backpack you can place in world, color in different color combinations, upgrade with more inventory and enhance with many functional upgrades. UPGRADE AWAY!"]
+			id: "1BA4593E1826A777"
+			rewards: [
+				{
+					id: "56A6D6026B077651"
+					item: "sophisticatedbackpacks:upgrade_base"
+					type: "item"
+				}
+				{
+					id: "26A9A0A2E9BC928D"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "You can carry HOW much???"
+			tasks: [{
+				id: "1FDB49F202F45B4E"
+				item: "sophisticatedbackpacks:backpack"
+				match_nbt: false
+				type: "item"
+			}]
+			title: "Advanced Backpacks"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Do you want to build cool things in Minecraft, like a big sandstone castle, a fiery Nether fortress, a simple dirt house, or even a totem pole with funny diorite faces? Well, you're in the right place! We've got you covered for all your building ideas!"]
+			id: "46ADA718BA2413AA"
+			rewards: [
+				{
+					id: "7299A1AC0A4B1D2A"
+					item: "chipped:botanist_workbench"
+					type: "item"
+				}
+				{
+					id: "7E9C5A53A65452E4"
+					item: "chipped:loom_table"
+					type: "item"
+				}
+				{
+					id: "5BFE470144612838"
+					item: "chipped:alchemy_bench"
+					type: "item"
+				}
+				{
+					id: "6EE52AB85AFF6506"
+					item: "chipped:tinkering_table"
+					type: "item"
+				}
+				{
+					id: "75A644E7F4C16704"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Don't 'block' creativity"
+			tasks: [
+				{
+					id: "7F7168BD3500BAA6"
+					item: "chipped:glassblower"
+					type: "item"
+				}
+				{
+					id: "2DF4FEFBA5FF74B7"
+					item: "chipped:carpenters_table"
+					type: "item"
+				}
+				{
+					id: "4B1B08D423A06630"
+					item: "chipped:mason_table"
+					type: "item"
+				}
+			]
+			title: "Better Blocks"
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["This mod simplifies interactions with villagers, offers various helpful blocks, and enhances gameplay related to trading and farming with villagers. Just Shift + Right Click to pick up a villager!"]
+			id: "3F65A43A7641875A"
+			rewards: [
+				{
+					id: "11D97B0AAA9C179E"
+					item: "easy_villagers:trader"
+					type: "item"
+				}
+				{
+					id: "326B424727118CDE"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "No more hassle, just easy trading!"
+			tasks: [
+				{
+					id: "7C749A7818585822"
+					item: "easy_villagers:villager"
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "16E6847C3D9D5176"
+					item: "easy_villagers:iron_farm"
+					type: "item"
+				}
+			]
+			title: "Easy Villagers"
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Entangled gives you the materials needed to bind two blocks together, allowing you to interact with either one as if they were the same block! This will allow you to transfer items, energy, fluids or whatever you want instantly, you can have more than six sides to work with or you could just hide your messy cables, the possibilities are endless!"]
+			id: "04441ADE9330C23D"
+			rewards: [
+				{
+					id: "6F89727F11FEF801"
+					item: {
+						Count: 1
+						id: "entangled:item"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "32B9C31892B8B7E9"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Web of possibilities"
+			tasks: [{
+				id: "228270FE926D0114"
+				item: {
+					Count: 1
+					id: "entangled:block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["The \"FramedBlocks\" mod for Minecraft, introduces various decorative and versatile blocks that can mimic the appearance of almost any other block in the game. These blocks come in a wide range of shapes, allowing players to customize their builds and add intricate details to their structures."]
+			id: "1A05063D95EB59D3"
+			rewards: [
+				{
+					id: "552BF6A54104A9DC"
+					item: "framedblocks:framed_hammer"
+					type: "item"
+				}
+				{
+					id: "2414882F4A09787A"
+					item: "framedblocks:framed_wrench"
+					type: "item"
+				}
+				{
+					id: "736D8C39CFA007B7"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "'Frame' of reference!"
+			tasks: [{
+				id: "15F1F8C801EABE54"
+				item: "framedblocks:framed_cube"
+				type: "item"
+			}]
+			title: "Framed Blocks"
+			x: -9.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Chicken Feeds are a unique feature within the mod that allows players to click them onto chickens, resulting in the production of eggs. These eggs can be of either a Hostile farm or a Passive mob farm variety. When you click these eggs onto dirt blocks, they transform the area into a 5x5 spawning zone, with mob spawns dependent on the specific conditions required by the mobs. For Passive mob farms, it's important to note that grass may grow over time, so periodically clearing the grass is necessary to facilitate mob spawning."]
+			id: "2EE2CC9B64908EF8"
+			rewards: [
+				{
+					id: "2E2BB3BFABFB2532"
+					item: "mob_grinding_utils:solid_xp_baby"
+					type: "item"
+				}
+				{
+					id: "3B55F8B924E69BD7"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "55A1584443FE8278"
+					item: "mob_grinding_utils:gm_chicken_feed"
+					type: "item"
+				}
+				{
+					id: "7AA29C3A2C321576"
+					item: "mob_grinding_utils:gm_chicken_feed_cursed"
+					type: "item"
+				}
+			]
+			title: "Easy Mob Farms"
+			x: -10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Item Collectors adds Collectors which collect items in a specified range! Item Collectors range can be changed and items can be whitelisted or blacklisted!"]
+			id: "77EDBB84989D1B26"
+			rewards: [
+				{
+					id: "79F30A18F0E029A0"
+					item: "itemcollectors:advanced_collector"
+					type: "item"
+				}
+				{
+					id: "32C8B6D81D17EF52"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Will Destroy you in Pick Up Sticks"
+			tasks: [{
+				id: "2B25E3A4189496BE"
+				item: "itemcollectors:basic_collector"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "096659FC3A9AD7EF"
+			rewards: [{
+				id: "640325282EE3EBCA"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Weak Elytra"
+			tasks: [{
+				id: "0B08BBB32F37D6B9"
+				item: {
+					Count: 1
+					id: "hangglider:hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["This mod features a straightforward magnet with assignable hotkeys for toggling it on or off. Additionally, you can strategically place demagnetizers in specific areas to prevent the magnet's effect within a localized zone."]
+			id: "2853C03018667258"
+			rewards: [
+				{
+					id: "674D47A8362F87E0"
+					item: "simplemagnets:advanced_demagnetization_coil"
+					type: "item"
+				}
+				{
+					id: "177E1E7160BF3559"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Become Attractive"
+			tasks: [{
+				id: "17493200E7F0F928"
+				item: {
+					Count: 1
+					id: "simplemagnets:basicmagnet"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"Shrink is a small mod for Minecraft that allows players to change their player's size."
+				""
+				"Shrinking to a smaller size allows the player to access places that they could normally not access without breaking blocks."
+				""
+				"You can also change the size of other mobs by punching them with this."
+			]
+			id: "69C2D2CE0D927CC2"
+			rewards: [{
+				id: "17BD14A8A6599203"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Honey, I Shrunk the Chicken!"
+			tasks: [{
+				id: "54BF1082F71936E9"
+				item: {
+					Count: 1
+					id: "shrink:shrinking_device"
+					tag: { }
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			title: "Fit In Small Spaces"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Can move mobs simple as that!"]
+			id: "147F2EEADDAC9B6E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1489961037CD025B"
+					table_id: 3638666773780251567L
+					type: "random"
+				}
+				{
+					id: "1299856EA14C4268"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Moving ME"
+			tasks: [{
+				id: "7C814096F4D283CB"
+				item: {
+					Count: 1
+					id: "utilitix:mob_yoinker"
+					tag: {
+						filled: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["Why bother with stairs when you can effortlessly teleport to a higher location or perform an impressive single-jump or crouch maneuver!"]
+			id: "34A29B45B62CCADE"
+			rewards: [
+				{
+					count: 2
+					id: "60A4ACCAF70F69D6"
+					item: "elevatorid:elevator_white"
+					type: "item"
+				}
+				{
+					id: "7BEDEF00506DB420"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Going Places"
+			tasks: [{
+				id: "6E3694304A43D937"
+				item: "elevatorid:elevator_white"
+				match_nbt: false
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"With the Matter Receiver and Charged Porter from the RFTools mod, you gain a powerful teleportation system. "
+				""
+				"To set the destination for your Charged Porter, simply hold down the Shift key and right-click on a Matter Receiver."
+			]
+			id: "40A262250EDD876A"
+			rewards: [
+				{
+					id: "31090FD817739503"
+					item: "rftoolsbase:manual"
+					type: "item"
+				}
+				{
+					id: "105536D7795E4634"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Why walk when you can PORT!"
+			tasks: [
+				{
+					id: "7DB0E62E2E65B386"
+					item: "rftoolsutility:matter_receiver"
+					type: "item"
+				}
+				{
+					id: "083DA088C7C8B62A"
+					item: {
+						Count: 1
+						id: "rftoolsutility:charged_porter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Fast Travel"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"The Slingshot Mod introduces a fascinating tool to your Minecraft adventures. This unique tool allows you to shoot blocks with precision and creativity."
+				""
+				"&lQuick Charge:&r Speed up your block-shooting abilities, making building and designing faster and more efficient."
+				""
+				"&lMulti Shot:&r Shoot multiple blocks simultaneously, enabling you to create intricate structures with ease."
+				""
+				"&lStasis:&r Discover the exclusive Stasis enchantment, obtainable in end cities. Slingshots enchanted with Stasis gain remarkable capabilities. They can shoot blocks in a perfectly straight line, defying gravity. Additionally, projectiles fired from a Stasis-enchanted Slingshot will display a white block outline, providing a clear preview of where they will land."
+			]
+			id: "2BB0CEB2BDCB2F06"
+			rewards: [
+				{
+					id: "16A9692029847A65"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "supplementaries:stasis"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "797E45CD30F00060"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Don't Go YEETING Crates"
+			tasks: [{
+				id: "0F753EB858F41FA8"
+				item: {
+					Count: 1
+					id: "supplementaries:slingshot"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"&lPlacement of Mega Torches:&r One of the primary features of the mod is the ability to craft and place \"Mega Torches.\" These torches emit an exceptionally high level of light, preventing hostile mobs from spawning within a certain radius. They are useful for creating safe zones around your base or in specific areas."
+				""
+				"&lFeral Flare Lanterns:&r This mod also introduces Feral Flare Lanterns, which can be used to repel hostile mobs within a designated range. They provide an alternative way to keep your surroundings safe from threats."
+				""
+				"&lLantern Control:&r TorchMaster offers control over lanterns' behavior, allowing players to customize their settings. You can adjust lanterns to function as Mega Torches, Feral Flare "
+			]
+			id: "7A627A935A840AC4"
+			rewards: [
+				{
+					id: "5B24052F1048D18D"
+					item: "torchmaster:frozen_pearl"
+					type: "item"
+				}
+				{
+					id: "162335D3CCA4DA01"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Light Up The Night"
+			tasks: [
+				{
+					id: "2C0D327D36ACC7B4"
+					item: "torchmaster:megatorch"
+					type: "item"
+				}
+				{
+					id: "456076F494546BED"
+					item: "torchmaster:dreadlamp"
+					type: "item"
+				}
+				{
+					id: "776957A696A60B2A"
+					item: "torchmaster:feral_flare_lantern"
+					type: "item"
+				}
+			]
+			title: "Torchmaster"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "3E9A55528FC45B5C"
+			rewards: [{
+				id: "5B5C871BE8ECA034"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "From Redstone to Flight"
+			tasks: [{
+				id: "01BD0C9FA6624992"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "rftoolsutility"
+					}
+				}
+				title: "RFTools Utility"
+				type: "item"
+			}]
+			title: "&eRFTools Utility"
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "7F87DA5E70323961"
+			rewards: [{
+				id: "22C1CE724FF283F0"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Just like Tinkers!"
+			tasks: [
+				{
+					id: "2F77B7755CF802FB"
+					item: {
+						Count: 1
+						id: "usefulslime:slime_sling"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "00CB468B8FBF8A14"
+					item: {
+						Count: 1
+						id: "usefulslime:slime_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "1FFE52A9DE54D85B"
+			rewards: [{
+				id: "55307FE30C955A71"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Never Guess POWER!"
+			tasks: [{
+				id: "1156D42BD7F5D06D"
+				item: "energymeter:meter"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+	]
+	title: "&fQuality Of Life"
+}

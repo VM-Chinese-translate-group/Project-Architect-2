@@ -1,0 +1,285 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	disable_toast: true
+	filename: "nonjei_trades"
+	group: "22CEF801BC52A635"
+	icon: "morevillagers:decayed_workbench"
+	id: "0B2B7A22053CA2CB"
+	images: [
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/oceanographer_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -7.5d
+			y: -0.5d
+		}
+		{
+			height: 1.842696629213483d
+			image: "pa2_extras:textures/trades/oceanographer_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -7.499999999999993d
+			y: 2.9107142857142847d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/forester_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -3.5d
+			y: -0.5d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/forester_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -3.499999999999993d
+			y: 3.3035714285714306d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/enderologist_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/enderologist_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 0.5000000000000142d
+			y: 3.3392857142857224d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/netherologist_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.5d
+			y: -0.5d
+		}
+		{
+			height: 1.8202247191011236d
+			image: "pa2_extras:textures/trades/netherologist_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.5d
+			y: 2.92d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/hunter_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 0.5d
+			y: 8.21d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/hunter_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 0.5000000000000213d
+			y: 12.033250401284107d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/engineer_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.5d
+			y: 8.21d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/hunter_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.500000000000014d
+			y: 12.05d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/florist_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -7.499999999999986d
+			y: 8.21d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/florist_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -7.5d
+			y: 12.05d
+		}
+		{
+			height: 6.337078651685393d
+			image: "pa2_extras:textures/trades/miner_t1.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -3.5357142857142705d
+			y: 8.21d
+		}
+		{
+			height: 2.741573033707865d
+			image: "pa2_extras:textures/trades/miner_t2.png"
+			rotation: 0.0d
+			width: 4.0d
+			x: -3.51d
+			y: 12.05d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: -2.0d
+			y: 5.0d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [""]
+			disable_toast: true
+			icon: "morevillagers:oceanography_table"
+			id: "157412F9A2DC2E86"
+			subtitle: "Trades for the Oceanographer"
+			tasks: [{
+				id: "74E309286111D28C"
+				item: "morevillagers:oceanography_table"
+				type: "item"
+			}]
+			title: "Oceanographer"
+			x: -7.5d
+			y: -3.69d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:woodworking_table"
+			id: "4E3C44A0D7814735"
+			subtitle: "Trades for the Forester"
+			tasks: [{
+				id: "3219D703D5207B3B"
+				item: "morevillagers:woodworking_table"
+				type: "item"
+			}]
+			title: "Forester"
+			x: -3.5d
+			y: -3.69d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:decayed_workbench"
+			id: "5D4395A07384FFF0"
+			subtitle: "Trades for the Netherologist"
+			tasks: [{
+				id: "6D1019CCC5770701"
+				item: "morevillagers:decayed_workbench"
+				type: "item"
+			}]
+			title: "Netherologist"
+			x: 4.500000000000014d
+			y: -3.69d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:purpur_altar"
+			id: "37223959BD251E2B"
+			subtitle: "Trades for the Enderologist"
+			tasks: [{
+				id: "2561F41916C14932"
+				item: "morevillagers:purpur_altar"
+				type: "item"
+			}]
+			title: "Enderologist"
+			x: 0.5000000000000213d
+			y: -3.69d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:blueprint_table"
+			id: "276C4205BE44FB8C"
+			subtitle: "Trades for the Engineer"
+			tasks: [{
+				id: "5340C91A15D15882"
+				item: "morevillagers:blueprint_table"
+				type: "item"
+			}]
+			title: "Engineer"
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:gardening_table"
+			id: "30CC7F53500B9D53"
+			subtitle: "Trades for the Florist"
+			tasks: [{
+				id: "7D4B3F3F7612AF94"
+				item: "morevillagers:gardening_table"
+				type: "item"
+			}]
+			title: "Florist"
+			x: -7.5d
+			y: 5.0d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:hunting_post"
+			id: "27FAC9DA1686B595"
+			subtitle: "Trades for the Hunter"
+			tasks: [{
+				id: "32553C5B73490139"
+				item: "morevillagers:hunting_post"
+				type: "item"
+			}]
+			title: "Hunter"
+			x: 0.5d
+			y: 5.0d
+		}
+		{
+			disable_toast: true
+			icon: "morevillagers:mining_bench"
+			id: "10D6058E671F21F5"
+			subtitle: "Trades for the Miner"
+			tasks: [{
+				id: "5C73C5D7E75BC0C2"
+				item: "morevillagers:mining_bench"
+				type: "item"
+			}]
+			title: "Miner"
+			x: -3.5d
+			y: 5.0d
+		}
+		{
+			description: [
+				"These trades don't appear in JEI because they are a bit bugged, but they do function normally, only the maps are broken. They seem to be able to appear sometimes and work, but sometimes they have air as the item."
+				""
+				"NOTE: The icons on top of each trade line tells you the profession and shows you the workstation"
+			]
+			icon: "createdeco:decal_warning"
+			id: "09D858939759E7A9"
+			subtitle: "Open this to know more"
+			tasks: [{
+				id: "10F7224BF65C762D"
+				type: "checkmark"
+			}]
+			title: "More Villagers"
+			x: -10.0d
+			y: 4.5d
+		}
+	]
+	subtitle: ["Shows trades not present in JEI"]
+	title: "Non-JEI Trades"
+}

@@ -18,7 +18,7 @@ Platform.mods.jaopca.name = 'Mekanism';
 StartupEvents.registry('block', event => {
 	
 	event.create('blaze_block')
-		.displayName('Blaze Block')
+		.displayName('烈焰块')
 		.soundType('shroomlight')
 		.hardness(1.0)
         .resistance(-1)

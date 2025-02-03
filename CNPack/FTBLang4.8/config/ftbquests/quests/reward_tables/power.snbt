@@ -1,0 +1,23 @@
+{
+	icon: "projecte:red_alchemical_bag"
+	id: "01C554D826C0728D"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{ item: "thermal:dynamo_stirling" }
+		{ item: "thermal:dynamo_numismatic" }
+		{ item: "thermal:dynamo_lapidary" }
+		{ item: "thermal:dynamo_magmatic" }
+		{ item: "mekanismgenerators:wind_generator" }
+		{ item: "cyclic:generator_fuel" }
+		{ item: "powah:furnator_basic" }
+		{ item: "industrialforegoing:pitiful_generator" }
+		{ item: "draconicevolution:generator" }
+		{ item: "integrateddynamics:coal_generator" }
+		{ item: "powah:solar_panel_starter" }
+		{ item: "powah:solar_panel_basic" }
+		{ item: "powah:solar_panel_hardened" }
+		{ item: "mekanismgenerators:solar_generator" }
+	]
+	title: "{ftbquests.loot_table_127601451789742733.title}"
+}

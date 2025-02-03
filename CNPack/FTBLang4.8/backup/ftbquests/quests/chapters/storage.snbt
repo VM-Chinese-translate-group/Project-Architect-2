@@ -1,0 +1,782 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage"
+	group: ""
+	id: "4AF1094A5AB5888A"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/storage.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/pink"
+			rotation: 0.0d
+			width: 5.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			id: "65C1FDA613BB02BD"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B4DCB3F67A6B506"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "651B4CFB53910875"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "I'm better than RS"
+			tasks: [{
+				id: "3AE95135CE2138E9"
+				item: "ae2:crafting_terminal"
+				type: "item"
+			}]
+			title: "&6Applied Energistics 2"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			id: "4EF5C73B68262E4F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2E74DB513CB3ADA1"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "0AC8564879226A03"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "I'm better than AE2"
+			tasks: [{
+				id: "6CAC0BBE3B20C113"
+				item: "refinedstorage:crafting_grid"
+				type: "item"
+			}]
+			title: "&6Refined Storage"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			id: "6CB8E6FF4D6AF3DC"
+			rewards: [
+				{
+					id: "7FA57800AE8051B9"
+					item: "functionalstorage:configuration_tool"
+					type: "item"
+				}
+				{
+					id: "6BE66C8DBDFA1C92"
+					item: {
+						Count: 1
+						id: "functionalstorage:linking_tool"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "4DB63CC5E463B107"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Near infinate Storage Solution"
+			tasks: [{
+				id: "5FFB1C349936A325"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "functionalstorage:drawer"
+					}
+				}
+				title: "Storage Drawer"
+				type: "item"
+			}]
+			title: "&6Deeper Storage"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			id: "71D6292C08D6879F"
+			rewards: [
+				{
+					id: "0275D39471E9AA58"
+					item: "sophisticatedstorage:upgrade_base"
+					type: "item"
+				}
+				{
+					id: "3E04478A853B771B"
+					item: "sophisticatedstorage:crafting_upgrade"
+					type: "item"
+				}
+				{
+					id: "3190CA6684962BD7"
+					item: "sophisticatedstorage:basic_to_diamond_tier_upgrade"
+					type: "item"
+				}
+				{
+					id: "4958777B71D6E26E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Chests With Upgrades"
+			tasks: [{
+				id: "390834CC871688C6"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "sophisticatedstorage:base_tier_wooden_storage"
+					}
+				}
+				title: "Sophisticated Storage"
+				type: "item"
+			}]
+			title: "&6More Then Just a Chest"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: ["Just connect the Item Interface to a storage container, link it with Logic Cables, and then connect a Storage Terminal, and you'll have a storage interface!"]
+			id: "6F93293DB7949E1B"
+			rewards: [
+				{
+					count: 4
+					id: "10511BF205A49BE8"
+					item: "integratedtunnels:part_interface_item"
+					type: "item"
+				}
+				{
+					id: "4C24798161ABE6E2"
+					item: "integratedcrafting:part_interface_crafting"
+					type: "item"
+				}
+				{
+					id: "4E5898B024BF1CEE"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Simple yet complicated"
+			tasks: [{
+				id: "52C4894852C7AACE"
+				item: "integratedterminals:part_terminal_storage"
+				type: "item"
+			}]
+			title: "&6Intagrated Storage"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: ["Shift-click the Bookwyrm Charm onto the Lectern, and then use the Dominion Wand to link the inventories to the Lectern.\""]
+			id: "2C0223969EDA5D51"
+			rewards: [
+				{
+					id: "5AD0833DF47D401B"
+					item: "ars_nouveau:repository"
+					type: "item"
+				}
+				{
+					id: "01540902DA1D592B"
+					item: "ars_nouveau:bookwyrm_charm"
+					type: "item"
+				}
+				{
+					id: "3C1E370CF9023915"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Simple RS-Like Storage Solution"
+			tasks: [
+				{
+					id: "6C66F22793AB6558"
+					item: "ars_nouveau:storage_lectern"
+					type: "item"
+				}
+				{
+					id: "361FF136B14148FC"
+					item: "ars_nouveau:bookwyrm_charm"
+					type: "item"
+				}
+				{
+					id: "30E042A106DC49DD"
+					item: {
+						Count: 1
+						id: "ars_nouveau:dominion_wand"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "&6Magic Storage"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			id: "4489B4B80C3EA32D"
+			rewards: [
+				{
+					id: "0D91932CFBB93391"
+					item: "rftoolsstorage:storage_module0"
+					type: "item"
+				}
+				{
+					id: "24928986783772AA"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "square"
+			subtitle: "Early Game of Early Game Storage"
+			tasks: [
+				{
+					id: "5C68E00EFE6586ED"
+					item: "rftoolsstorage:modular_storage"
+					type: "item"
+				}
+				{
+					id: "10D1E9273C069CB0"
+					item: "rftoolsstorage:storage_scanner"
+					type: "item"
+				}
+			]
+			title: "&6Modular Storage"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65C1FDA613BB02BD"]
+			description: ["Storage cells that can store 1k, 4k, 16k and 64k items without any type limit."]
+			id: "19498192E8A72760"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1893DCE1BFDA35BA"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "7D41224F7E577C63"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "RS Drives but for AE2"
+			tasks: [{
+				id: "1C0B624F6AC8DC4E"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "ae2things"
+					}
+				}
+				match_nbt: false
+				title: "Anything from AE2 Things"
+				type: "item"
+			}]
+			title: "&6AE2 Things"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["65C1FDA613BB02BD"]
+			description: ["The ME Requester can host 5 requests by default. You can place as many of them as you like on your system and remote access them through the ME Requester Terminal. The terminal allows you to configure the requests and monitor the status remotely."]
+			id: "3E48A070FDA2ED76"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "19B2F9CD2BE21639"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "01A0969566AA8630"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Keep me stocked"
+			tasks: [{
+				id: "400193D5AB56ADFC"
+				item: "merequester:requester"
+				type: "item"
+			}]
+			title: "&6ME Requester"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["65C1FDA613BB02BD"]
+			id: "47912E492F7D752C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "50D1FCC9736E04C3"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "6CBE322366BC5FCF"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Easy Wireless AE2?"
+			tasks: [{
+				id: "64382AEA10AC7CA1"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "expatternprovider"
+					}
+				}
+				title: "Anything from ExtendedAE"
+				type: "item"
+			}]
+			title: "&6ExtendedAE"
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["65C1FDA613BB02BD"]
+			description: ["MEGA Cells is an add-on for Applied Energistics 2 providing higher tiers of storage, ranging in capacity from 1M to as high as 256M, similarly to add-ons of old such as Extra Cells 2 and its successors."]
+			id: "4271E4FF9D79951E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0BCF6001F8FF8144"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "3A4375A28731EB73"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Cells but they are MEGA"
+			tasks: [{
+				id: "1E1B525247424CCC"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "megacells"
+					}
+				}
+				match_nbt: false
+				title: "Anything from MEGA Cells"
+				type: "item"
+			}]
+			title: "&6MEGA Cells"
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			description: ["This mod adds better Importer, Exporter, Constructor, Destructor, Disk Manipulator, Interface, Requester from Refined Storage and RSRequestify."]
+			id: "4FB054BF96BF6E4F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4A8B2938AD58C203"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "68C4C2CF5095E4E6"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Better Porters"
+			tasks: [{
+				id: "0C4D4126E5FB8A6D"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "cabletiers"
+					}
+				}
+				title: "Anything from Cable Tiers"
+				type: "item"
+			}]
+			title: "&6Cable Tiers"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			id: "4870B1F076E0A717"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1F99AEB598B47264"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "6BF2F583B182037B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Keep it in stock"
+			tasks: [{
+				id: "15994CE45C7E6289"
+				item: "rsrequestify:requester"
+				type: "item"
+			}]
+			title: "&6Requester"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			id: "5923893760A1FF3C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "57E8393D88CC638C"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "4F1CA93A6DD8018E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Wireless Crafting GRID!!!"
+			tasks: [{
+				id: "09D0FE0110866FAB"
+				item: "refinedstorageaddons:wireless_crafting_grid"
+				type: "item"
+			}]
+			title: "&6Refined Storage Addons"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			description: [
+				"ExtraStorage is an addon from Refined Storage."
+				"It adds 4 levels of crafters, each of which increases the crafting speed and the number of patterns it can hold."
+				"Adds an advanced exporter/importer that has 18 slots instead of 9."
+				"It adds the disks that Reborn Storage added, moreover for each added disk its relative Storage Block and Fluid Storage Block is implemented."
+			]
+			id: "3F79228DB39C4E36"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3CAE5918CB52BF6A"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "75813372CD3B76C5"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Better Crafters"
+			tasks: [{
+				id: "17290C540EF3651F"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "extrastorage"
+					}
+				}
+				title: "Anything from ExtraStorage"
+				type: "item"
+			}]
+			title: "&6ExtraStorage"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			description: [
+				"Adds a multiblock pattern crafter and drives. It works just the same as it did back in AE 1. "
+				""
+				"The max size is 16x16 and it must have at least one CPU and one storage block."
+			]
+			id: "21330FE64BC67971"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1D40DBF8AF7505F4"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "2741744B9810C04B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Multiblock Crafters"
+			tasks: [{
+				id: "51D0F6EC93A55E0E"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "rebornstorage"
+					}
+				}
+				match_nbt: false
+				title: "Anything from Reborn Storage"
+				type: "item"
+			}]
+			title: "&6Reborn Storage"
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4EF5C73B68262E4F"]
+			id: "577225AB68515DA4"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "66C62568D59C983A"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "29167EC7CD97BC8C"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "RANGE of the GODS"
+			tasks: [
+				{
+					id: "302E6B7D200B813B"
+					item: "rsinfinitybooster:infinity_card"
+					type: "item"
+				}
+				{
+					id: "27FFC8AE53358F5C"
+					item: "rsinfinitybooster:dimension_card"
+					type: "item"
+				}
+			]
+			title: "&6RS Infinity Booster"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: ["Step into the future with QIO Storage from the Mekanism mod. This revolutionary system leverages quantum technology to offer virtually limitless storage for all your items. Seamlessly manage and access your inventory with unparalleled efficiency and speed, transforming the way you organize and utilize resources in your Minecraft world"]
+			id: "1BB2C5DC68FA6011"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "754664148CF30CCB"
+					table_id: 1961581323197983260L
+					type: "random"
+				}
+				{
+					id: "1064A894C6B5BBFF"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "5F20E517DC83C027"
+				item: "mekanism:qio_drive_array"
+				type: "item"
+			}]
+			title: "&6QIO Storage"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: [
+				"Seamlessly blend the mystical energies of Ars Nouveau with the technological prowess of Applied Energistics 2. Ars Energistics provides integration for managing and storing Source, the magical power from Ars Nouveau, within the sophisticated storage networks of AE2. "
+				""
+				"Empower your magical endeavors with the precision and efficiency of advanced tech, creating a synergy that elevates both your spellcraft and automation capabilities to new heights."
+			]
+			id: "0A8C3CDF9522C92C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3EF402438300A3A7"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "6651D0C691351C3C"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Harmonizing Magic and Technology"
+			tasks: [{
+				id: "4A1EFE34A1982015"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "arseng"
+					}
+				}
+				title: "Ars Energistics"
+				type: "item"
+			}]
+			title: "&6Ars Energistics"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: [
+				"Combine the robust technology of Applied Energistics 2 with the advanced machinery of Mekanism. Applied Mekanistics bridges the gap between these two powerful mods, allowing you to integrate Mekanism's Chemical systems and processing capabilities into AE2's intricate storage networks. "
+				""
+				"Streamline your resource management, automate complex processes, and create a seamlessly connected base that harnesses the best of both technological worlds."
+			]
+			id: "46DCD79CC4EA44A8"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "537F0F484A90765E"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "480D738E64E85B32"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Fusing High Tech and Energy Mastery"
+			tasks: [{
+				id: "078EE2E6F2DF3B06"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "appmek"
+					}
+				}
+				title: "Applied Mekanistics"
+				type: "item"
+			}]
+			title: "&6Applied Mekanistics"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C37FFC2DE8BB6F3"]
+			description: [
+				"Harness the power of Applied Flux to seamlessly store and distribute energy within your Applied Energistics 2 system. This mod allows you to integrate power storage solutions directly into your AE2 networks, ensuring efficient energy management and uninterrupted operations. "
+				""
+				"Automate your power needs, streamline resource flow, and optimize your base's performance with the perfect fusion of energy and storage technologies."
+			]
+			id: "784031796E242D21"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "23E220D80B24E502"
+					table_id: 3141321017942514772L
+					type: "random"
+				}
+				{
+					id: "044ECABD1BD3E1CE"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Power Storage and Distribution Mastery"
+			tasks: [{
+				id: "7315C09D60987131"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "appflux"
+					}
+				}
+				title: "Applied Flux"
+				type: "item"
+			}]
+			title: "&6Applied Flux"
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			description: ["Storage Mods and Addons Showcase: This quest is a straightforward exploration of various storage mods and their addons. It provides you with a clear list of storage solutions to help expand your inventory, organize resources, and improve your Minecraft storage experience."]
+			icon: "ae2:chest"
+			id: "6C37FFC2DE8BB6F3"
+			rewards: [{
+				id: "59DFB37C05CAB0EE"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "Where does all of this stuff go?"
+			tasks: [{
+				id: "3C5E22B9D44E881B"
+				title: "Storage Options"
+				type: "checkmark"
+			}]
+			title: "&6Storage Options"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	title: "&6Storage"
+}

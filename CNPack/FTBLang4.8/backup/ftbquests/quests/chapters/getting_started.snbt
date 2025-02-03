@@ -40,7 +40,7 @@
 		{
 			click: "https://discord.gg/ChosenArchitect"
 			height: 1.22d
-			hover: ["ftbquests.chapter.getting_started.image.hovertext1"]
+			hover: ["Join Discord for HELP!"]
 			image: "kubejs:textures/quests/discord.png"
 			rotation: 0.0d
 			width: 1.22d
@@ -50,7 +50,7 @@
 		{
 			click: "https://www.youtube.com/@ChosenArchitect"
 			height: 1.5d
-			hover: ["ftbquests.chapter.getting_started.image.hovertext2"]
+			hover: ["Subscribe to ChosenArchitect's on YouTube"]
 			image: "kubejs:textures/quests/youtube.png"
 			rotation: 0.0d
 			width: 1.5d
@@ -60,7 +60,7 @@
 		{
 			click: "https://www.twitch.tv/chosenarchitect"
 			height: 0.95d
-			hover: ["ftbquests.chapter.getting_started.image.hovertext3"]
+			hover: ["Follow ChosenArchitect's on Twitch"]
 			image: "kubejs:textures/quests/twitch.png"
 			rotation: 0.0d
 			width: 0.95d
@@ -110,11 +110,11 @@
 	quests: [
 		{
 			description: [
-				"{ftbquests.chapter.getting_started.quest1.description1}"
+				"Dive into a meticulously crafted modpack focused on automation and EMC optimization. "
 				""
-				"{ftbquests.chapter.getting_started.quest1.description2}"
+				"Harness powerful mods to automate resource gathering, processing, and crafting, reducing the grind and enhancing your gameplay experience. Master the art of EMC management, turning raw materials into valuable resources effortlessly. "
 				""
-				"{ftbquests.chapter.getting_started.quest1.description3}"
+				"From complex machinery to magical transformations, this modpack offers the perfect blend of technology and mysticism, providing endless opportunities for innovation and efficiency."
 			]
 			id: "47A503F1E8CEBC7A"
 			rewards: [
@@ -140,7 +140,7 @@
 			]
 			shape: "diamond"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.getting_started.quest1.subtitle}"
+			subtitle: "Questing Your Way!"
 			tasks: [{
 				icon: "farmersdelight:brown_canvas_sign"
 				id: "46B820E552DE13B2"
@@ -148,19 +148,19 @@
 				type: "stat"
 				value: 1
 			}]
-			title: "{ftbquests.chapter.getting_started.quest1.title}"
+			title: "Welcome To Project Architect 2"
 			x: -5.5d
 			y: -4.0d
 		}
 		{
 			dependencies: ["47A503F1E8CEBC7A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest2.description1}"
-				"{ftbquests.chapter.getting_started.quest2.description2}"
+				"While holding the default &oGrave &rkey "
+				"( ` ), located under the &oESC &rkey on most keyboards, look at the blocks you want to mine. Ultimine will highlight the blocks within its range that will be mined together."
 				""
-				"{ftbquests.chapter.getting_started.quest2.description3}"
+				"Break the highlighted blocks by mining normally. Ultimine will break all the connected blocks of the same type within its range, saving you time and effort."
 				""
-				"{ftbquests.chapter.getting_started.quest2.description4}"
+				"You can configure the shape and size of the Ultimine area by holding the activation key and &oShift &rat the same time and using the scroll wheel or the up and down arrow keys. "
 			]
 			id: "178E5471B197AB43"
 			rewards: [
@@ -177,7 +177,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest2.subtitle}"
+			subtitle: "Log-in to Log-out!"
 			tasks: [{
 				id: "22ED1EDB08BDBD0A"
 				item: {
@@ -187,16 +187,16 @@
 						value: "minecraft:logs"
 					}
 				}
-				title: "{ftbquests.chapter.getting_started.quest2.task_+2516701692863298826.title}"
+				title: "Any #minecraft:logs"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest2.title}"
+			title: "Tree-mendous Strength"
 			x: -3.5d
 			y: -4.0d
 		}
 		{
 			dependencies: ["178E5471B197AB43"]
-			description: ["{ftbquests.chapter.getting_started.quest3.description1}"]
+			description: ["When you go mining, just play the game and have fun. Remember, many items have EMC values, so use your Transmutation Table to store most of your mined resources efficiently."]
 			id: "285E24E41CE6850A"
 			rewards: [
 				{
@@ -218,7 +218,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest3.subtitle}"
+			subtitle: "Ore-some Adventures Await!"
 			tasks: [{
 				id: "07EAD5EFCB031E0D"
 				item: {
@@ -228,19 +228,19 @@
 						value: "forge:cobblestone"
 					}
 				}
-				title: "{ftbquests.chapter.getting_started.quest3.task_+570503528695668237.title}"
+				title: "Any #forge:cobblestone"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest3.title}"
+			title: "Cave-in Your Enthusiasm"
 			x: -2.0d
 			y: -4.0d
 		}
 		{
 			dependencies: ["285E24E41CE6850A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest4.description1}"
+				"To travel to the Nether, build a Nether Portal using obsidian and light it with flint and steel. Once there, be prepared for tough enemies and hazardous terrain. "
 				""
-				"{ftbquests.chapter.getting_started.quest4.description2}"
+				"Gather valuable resources, and remember to keep a way back to your portal safe."
 			]
 			id: "41D5B490E66A8181"
 			rewards: [
@@ -263,7 +263,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest4.subtitle}"
+			subtitle: "Hellishly Good Time"
 			tasks: [
 				{
 					id: "554DFD12EAD5D625"
@@ -276,16 +276,16 @@
 					type: "dimension"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest4.title}"
+			title: "Hot Pursuit"
 			x: -0.5d
 			y: -4.0d
 		}
 		{
 			dependencies: ["285E24E41CE6850A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest5.description1}"
+				"Discovering an ancient city requires exploring deep caves. Once found, prepare for the challenge of the Warden. Equip yourself with powerful gear, move carefully to avoid detection, and be ready for a tough fight. "
 				""
-				"{ftbquests.chapter.getting_started.quest5.description2}"
+				"The rewards in the ancient city are worth the risk!"
 			]
 			id: "1FC8B36BF5370644"
 			rewards: [
@@ -308,7 +308,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest5.subtitle}"
+			subtitle: "Deep Dark Dance-off!"
 			tasks: [
 				{
 					id: "36F1736BC0DE231C"
@@ -322,20 +322,20 @@
 					value: 1L
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest5.title}"
+			title: "Warden Wrangling"
 			x: -0.5d
 			y: -5.5d
 		}
 		{
 			dependencies: ["6BB6B7B38F548C6F"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest6.description1}"
+				"&dNow, you might not spawn on the Dragon's Protected Island, but you can seek her out when you are ready! You can always find the Main End Island at coordinates &60x, 0z &din the End!"
 				""
-				"{ftbquests.chapter.getting_started.quest6.description2}"
+				"&e&lHEAR THE BELL RING!"
 				""
-				"{ftbquests.chapter.getting_started.quest6.description3}"
+				"&rWhen facing the Ender Dragon, consider using a knife from Farmer's Delight. This weapon will give you better rewards upon the Dragon's defeat. "
 				""
-				"{ftbquests.chapter.getting_started.quest6.description4}"
+				"Prepare well, destroy the end crystals, and take down the dragon to reap the enhanced rewards."
 			]
 			id: "6C9F091C8D55983D"
 			rewards: [
@@ -358,7 +358,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest6.subtitle}"
+			subtitle: "Ender-sational!"
 			tasks: [
 				{
 					id: "619CC1EF0CD2D2F9"
@@ -381,16 +381,16 @@
 					type: "dimension"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest6.title}"
+			title: "Wheres the DRAGON?"
 			x: 1.0d
 			y: -2.5d
 		}
 		{
 			dependencies: ["1FC8B36BF5370644"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest7.description1}"
+				"Defeat the Warden and rip out its heart to unlock the portal to the Deeper Darker Dimension. In this perilous realm, you'll face even more skulk-covered mobs and explore eerie structures. "
 				""
-				"{ftbquests.chapter.getting_started.quest7.description2}"
+				"Prepare for an even greater challenge and greater rewards."
 			]
 			id: "2AF4515C1608200E"
 			rewards: [
@@ -413,7 +413,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest7.subtitle}"
+			subtitle: "Deep Dark Secrets Await!"
 			tasks: [
 				{
 					id: "1105F8E9E1C73D76"
@@ -426,18 +426,18 @@
 					type: "dimension"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest7.title}"
+			title: "Darkness Descends"
 			x: 1.0d
 			y: -5.5d
 		}
 		{
 			dependencies: ["285E24E41CE6850A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest8.description1}"
+				"The Bumblezone is a bee dimension filled with many brand new bee-related blocks! There's even quite a few structures to explore and a unique bee armor you can obtain! If you are lucky, you may find a special Throne-Locating Honey Compasses from certain structures that leads you to a Bee Queen!"
 				""
-				"{ftbquests.chapter.getting_started.quest8.description2}"
+				"Note: If you have severe trypophobia and the current textures are too much, you can enable the internal mod Anti-Trypophobia resourcepack"
 				""
-				"{ftbquests.chapter.getting_started.quest8.description3}"
+				"&6To get out of this dim dig up or down into the void!"
 			]
 			id: "36FC80FC020C0E9F"
 			rewards: [
@@ -460,7 +460,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest8.subtitle}"
+			subtitle: "Bumbling Through Bumblezone!"
 			tasks: [
 				{
 					id: "55239FEDCB23164F"
@@ -478,16 +478,16 @@
 					type: "dimension"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest8.title}"
+			title: "Buzzworthy Adventures"
 			x: -2.0d
 			y: -2.5d
 		}
 		{
 			dependencies: ["285E24E41CE6850A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest9.description1}"
+				"To get started with RFTools Dimensions and create your own custom dimension, you first need an Enscriber. Inside the Enscriber, you will need to insert a Digit Dimlet into the main storage to define a numbered dimension (your first dimensions will be random and don't require a Digit Dimlet). After that, add an Empty Dimension Tab into the far left slot. "
 				""
-				"{ftbquests.chapter.getting_started.quest9.description2}"
+				"You will need o name your dimension (this has to be lowercase with no spaces; however, underscores ' _ ' are allowed. Example: new_world_1)"
 			]
 			id: "2DA71DF56330FF10"
 			rewards: [
@@ -510,7 +510,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest9.subtitle}"
+			subtitle: "RFTools for Dimensional Delights!"
 			tasks: [
 				{
 					id: "15BE468E71688C71"
@@ -523,18 +523,18 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest9.title}"
+			title: "Dim Enscribing"
 			x: -2.0d
 			y: -5.5d
 		}
 		{
 			dependencies: ["2DA71DF56330FF10"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest10.description1}"
+				"Once you have your Realized Dimension Tab (created using the Enscriber), insert it into the Dimension Builder by right-clicking on the Dimension Builder and placing the tab in the designated slot."
 				""
-				"{ftbquests.chapter.getting_started.quest10.description2}"
+				"The Dimension Builder requires a significant amount of RF (Redstone Flux) power to operate. Make sure it is connected to a power source capable of supplying enough RF to maintain the dimension."
 				""
-				"{ftbquests.chapter.getting_started.quest10.description3}"
+				"After inserting the tab and supplying power, the Dimension Builder will begin charging the dimension. You can monitor the progress in the GUI. Once the dimension is fully charged, it will be ready for use."
 			]
 			id: "7172EA20FAF7A2B4"
 			rewards: [
@@ -557,7 +557,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest10.subtitle}"
+			subtitle: "Dimensions by Design!"
 			tasks: [
 				{
 					id: "477697910BF9DC83"
@@ -570,21 +570,21 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest10.title}"
+			title: "Architect of Realms"
 			x: -2.0d
 			y: -7.0d
 		}
 		{
 			dependencies: ["7172EA20FAF7A2B4"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest11.description1}"
+				"&4&lWARNING: &rMake sure to have a way to return, such as a Matter Receiver set up in the dimension or a charged RF Tools charged porter linked to a Matter Receiver in your BASE!"
 				""
 				""
-				"{ftbquests.chapter.getting_started.quest11.description2}"
+				"To enter the dimension, you will need a Dialing Device and a Matter Transmitter. Place the Matter Transmitter near the Dimension Builder and connect it to the same power source."
 				""
-				"{ftbquests.chapter.getting_started.quest11.description3}"
+				"Use the Dialing Device to dial the Realized Dimension. Select the Matter Transmitter you want to use and the dimension you wish to travel to, then click \"Dial.\""
 				""
-				"{ftbquests.chapter.getting_started.quest11.description4}"
+				"Step into the Matter Transmitter to be transported to your newly created dimension."
 			]
 			id: "21A32E3C856E7D3A"
 			rewards: [
@@ -607,7 +607,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest11.subtitle}"
+			subtitle: "Hopping Dimensions!"
 			tasks: [
 				{
 					id: "19796C0C1996F94C"
@@ -636,16 +636,16 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest11.title}"
+			title: "Quantum Leap"
 			x: -0.5d
 			y: -7.0d
 		}
 		{
 			dependencies: ["6C9F091C8D55983D"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest12.description1}"
+				"After defeating the Ender Dragon, locate an End City by exploring the outer islands of the End. Look for tall, tower-like structures. Inside, search for an End Ship, where you'll find the "
 				""
-				"{ftbquests.chapter.getting_started.quest12.description2}"
+				"Elytra—wings that allow you to glide through the air and explore the world from above and craft much better ways of FLYING!"
 			]
 			id: "446317CC97CDB685"
 			rewards: [
@@ -668,7 +668,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest12.subtitle}"
+			subtitle: "Winging It!"
 			tasks: [
 				{
 					id: "47E7A3DFA9D5AD9F"
@@ -687,16 +687,16 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest12.title}"
+			title: "Sky's the Limit"
 			x: 1.0d
 			y: -4.0d
 		}
 		{
 			dependencies: ["21A32E3C856E7D3A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest13.description1}"
+				"As you explore the dimensions you create with RFTools, keep an eye out for Blobs. These entities provide items necessary for crafting and customizing future dimensions, making them crucial for your custom Dimension Multiverse."
 				""
-				"{ftbquests.chapter.getting_started.quest13.description2}"
+				"Additionally, seek out special Structures scattered throughout the worlds you create. These contain valuable Dimlets, essential components for designing and refining future dimensions. Explore thoroughly to gather all the resources needed for your dimensional creations."
 			]
 			id: "1342C28A6786459E"
 			rewards: [
@@ -719,7 +719,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.getting_started.quest13.subtitle}"
+			subtitle: "Blobbing and Dimleting!"
 			tasks: [
 				{
 					id: "0CBF6386D71B98EF"
@@ -737,16 +737,16 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.getting_started.quest13.title}"
+			title: "Dimlet Diving"
 			x: 1.0d
 			y: -7.0d
 		}
 		{
 			dependencies: ["47A503F1E8CEBC7A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest14.description1}"
+				"&c&lDisable Spiders Crawling: &rIf you prefer not to have spiders crawling, you can easily disable this feature by removing the &o&bNyf's Spiders &rMod from the modpacks mods folder."
 				""
-				"{ftbquests.chapter.getting_started.quest14.description2}"
+				"Then restart the modpack :D"
 			]
 			icon: "plushies:spider_plushie"
 			id: "3AB99F1750A3B8E3"
@@ -762,10 +762,10 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.getting_started.quest14.subtitle}"
+			subtitle: "Arachnophobia!?!"
 			tasks: [{
 				id: "2C1DD84726F400D4"
-				title: "{ftbquests.chapter.getting_started.quest14.task_+3178934712101241044.title}"
+				title: "SPIDERS"
 				type: "checkmark"
 			}]
 			x: -3.5d
@@ -774,17 +774,17 @@
 		{
 			dependencies: ["47A503F1E8CEBC7A"]
 			description: [
-				"{ftbquests.chapter.getting_started.quest15.description1}"
+				"With the Wall-Jump mod you can:"
 				""
-				"{ftbquests.chapter.getting_started.quest15.description2}"
+				"&lWall Cling&r: Jump towards a wall and hold the wall jump key (LSHIFT)"
 				""
-				"{ftbquests.chapter.getting_started.quest15.description3}"
+				"&lWall Jump&r: While wall clinging, keep holding W and let go of LSHIFT to wall jump"
 				""
-				"{ftbquests.chapter.getting_started.quest15.description4}"
+				"&lDouble Jump&r: Optional mid-air jump"
 				""
-				"{ftbquests.chapter.getting_started.quest15.description5}"
+				"&lSpeed Boost&r: Boosts your speed while sprinting"
 				""
-				"{ftbquests.chapter.getting_started.quest15.description6}"
+				"&lSteep Assist&r: Walk up steps even while airborne, also jump over fences"
 			]
 			icon: {
 				Count: 1
@@ -812,20 +812,20 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.getting_started.quest15.subtitle}"
+			subtitle: "Climb WALLS!"
 			tasks: [{
 				id: "23A4CD94100246A7"
-				title: "{ftbquests.chapter.getting_started.quest15.task_+2568403723315463847.title}"
+				title: "Stuck in a HOLE!"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest15.title}"
+			title: "Hardcore Parkour!"
 			x: -3.5d
 			y: -5.5d
 		}
 		{
 			can_repeat: true
 			dependencies: ["47A503F1E8CEBC7A"]
-			description: ["{ftbquests.chapter.getting_started.quest16.description1}"]
+			description: ["You can use this toggle to turn on and off Dynamic Lights allowing you to see in the dark underground while holding a torch or other light block/item!"]
 			icon: "suppsquared:copper_lantern"
 			id: "78C8D66936F00A3A"
 			rewards: [{
@@ -834,10 +834,10 @@
 				table_id: 2498454672905478271L
 				type: "choice"
 			}]
-			subtitle: "{ftbquests.chapter.getting_started.quest16.subtitle}"
+			subtitle: "LET THERE BE LIGHT!"
 			tasks: [{
 				id: "593738F4F177C3ED"
-				title: "{ftbquests.chapter.getting_started.quest16.task_+6428669617769006061.title}"
+				title: "Dynamic Lights"
 				type: "checkmark"
 			}]
 			x: -7.5d
@@ -845,7 +845,7 @@
 		}
 		{
 			dependencies: ["285E24E41CE6850A"]
-			description: ["{ftbquests.chapter.getting_started.quest17.description1}"]
+			description: ["In the depths of your Minecraft world, the Integrated Stronghold mod enhances the ancient stronghold with new secrets and challenges."]
 			icon: "supplementaries:statue"
 			id: "6BB6B7B38F548C6F"
 			rewards: [
@@ -875,77 +875,77 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.getting_started.quest17.subtitle}"
+			subtitle: "Unveil the Secret Path to the End"
 			tasks: [{
 				id: "25A16602D609C98D"
 				structure: "integrated_stronghold:stronghold"
-				title: "{ftbquests.chapter.getting_started.quest17.task_+2711560613020682637.title}"
+				title: "Find the Stronghold"
 				type: "structure"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest17.title}"
+			title: "The Hidden Passage"
 			x: -0.5d
 			y: -2.5d
 		}
 		{
 			description: [
-				"{ftbquests.chapter.getting_started.quest18.description1}"
+				"When using &6Building Gadgets&r avoid copying or cutting any block entity. These would be entities that contain inventory, have some functionality like holding items, moving things around, etc."
 				""
-				"{ftbquests.chapter.getting_started.quest18.description2}"
-				"{ftbquests.chapter.getting_started.quest18.description3}"
-				"{ftbquests.chapter.getting_started.quest18.description4}"
-				"{ftbquests.chapter.getting_started.quest18.description5}"
-				"{ftbquests.chapter.getting_started.quest18.description6}"
+				"&eDoing this can crash your game, the well-known blocks that cause crashes are:&r"
+				"&7-&r All &3Industrial Foregoing: Souls&r blocks"
+				"&7-&r All &3Ender Storage&r blocks"
+				"&7-&r Some, if not all, &3Applied Energistics 2&r blocks"
+				"&7-&r Some &3Create&r blocks, at least from the addons, also tend to cause crashes"
 			]
 			disable_toast: true
 			icon: "buildinggadgets2:gadget_building"
 			id: "50E7EC4B8A28BBEB"
-			subtitle: "{ftbquests.chapter.getting_started.quest18.subtitle}"
+			subtitle: "Things not to do with building gadgets"
 			tasks: [{
 				id: "106CDBA2FD4205F5"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest18.title}"
+			title: "Building Gadgets Tips"
 			x: -9.0d
 			y: -5.5d
 		}
 		{
 			description: [
-				"{ftbquests.chapter.getting_started.quest19.description1}"
+				"If your block placers, breakers and others that use &efake players&r aren't working you need to change your &3FTB Teams&r setting."
 				""
-				"{ftbquests.chapter.getting_started.quest19.description2}"
-				"{ftbquests.chapter.getting_started.quest19.description3}"
-				"{ftbquests.chapter.getting_started.quest19.description4}"
+				"1. Go to &3FTB Teams&r menu"
+				"2. Click the cog/gear on the top right"
+				"3. Change the &eAllow All Fake Player&r config to &aalways&r."
 			]
 			disable_toast: true
 			icon: "modularrouters:player_module"
 			id: "3A9CBE5E2F675A1A"
-			subtitle: "{ftbquests.chapter.getting_started.quest19.subtitle}"
+			subtitle: "Make block placers/breakers work"
 			tasks: [{
 				id: "10875A746B166B45"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest19.title}"
+			title: "Fake Players"
 			x: -9.0d
 			y: -4.0d
 		}
 		{
 			description: [
-				"{ftbquests.chapter.getting_started.quest20.description1}"
+				"You can upgrade the &3Mekanism&r cables/pipes/transporters/etc. from a previous tier to the next one by &bright clicking&r them with the &enext tier's alloy&r."
 				""
-				"{ftbquests.chapter.getting_started.quest20.description2}"
+				"When doing this up to &b8&r connected ones will be &aupgraded&r, but if you keep &bright clicking&r the alloys will be consumed and it will keep going down the connected cables until all are &aupgraded&r, doing &b8&r at a time."
 			]
 			disable_toast: true
 			icon: "mekanism:alloy_atomic"
 			id: "49148B7E64203151"
-			subtitle: "{ftbquests.chapter.getting_started.quest20.subtitle}"
+			subtitle: "Upgrade Mekanism cables/pipes/etc. without breaking them"
 			tasks: [{
 				id: "16D4A94FC3A7CB4E"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.getting_started.quest20.title}"
+			title: "Mekanism Upgrades"
 			x: -9.0d
 			y: -2.5d
 		}
 	]
-	title: "{ftbquests.chapter.getting_started.title}"
+	title: "&cStarting Out"
 }

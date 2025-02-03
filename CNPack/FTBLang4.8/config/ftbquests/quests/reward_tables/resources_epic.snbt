@@ -1,0 +1,119 @@
+{
+	icon: "projecte:purple_alchemical_bag"
+	id: "2A7C5F7787E16040"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{ item: "minecraft:chorus_flower" }
+		{ count: 2, item: "cyclic:chorus_flight" }
+		{ item: "cyclic:carrot_ender" }
+		{ item: "allthecompressed:emerald_block_1x" }
+		{ item: "minecraft:diamond_block" }
+		{ item: "minecraft:enchanted_golden_apple" }
+		{ count: 2, item: "quark:smithing_template_rune" }
+		{ item: "minecraft:emerald" }
+		{ item: "minecraft:iron_horse_armor" }
+		{ item: "minecraft:golden_horse_armor" }
+		{ item: "minecraft:diamond_horse_armor" }
+		{ item: "minecraft:saddle" }
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_shovel"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_leggings"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_chestplate"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "minecraft:diamond_boots"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ count: 4, item: "minecraft:diamond" }
+		{ count: 9, item: "minecraft:iron_ingot" }
+		{ count: 6, item: "minecraft:gold_ingot" }
+		{
+			item: {
+				Count: 1
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "supplementaries:stasis"
+						lvl: 1s
+					}]
+				}
+			}
+		}
+		{ item: "mekanism:pellet_antimatter", weight: 0.2f }
+		{ item: "pipez:ultimate_upgrade" }
+		{ item: "mekanism:ultimate_control_circuit" }
+		{
+			item: {
+				Count: 1
+				id: "reliquary:alkahestry_tome"
+				tag: {
+					Damage: 1001
+				}
+			}
+			weight: 0.1f
+		}
+		{ item: "minecraft:netherite_ingot" }
+		{ item: "minecraft:nether_star", weight: 0.4f }
+		{ item: "projecte:dark_matter" }
+		{ item: "projecte:red_matter" }
+		{ item: "extradisks:1048576k_storage_part", weight: 0.001f }
+		{ item: "megacells:cell_component_256m", weight: 0.001f }
+		{ item: "projectexpansion:transmutation_interface" }
+	]
+	title: "{ftbquests.loot_table_3061426813690536000.title}"
+}

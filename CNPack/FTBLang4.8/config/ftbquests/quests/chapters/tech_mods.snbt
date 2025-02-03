@@ -1,0 +1,362 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tech_mods"
+	group: ""
+	id: "64B31D54C21D34E8"
+	images: [
+		{
+			height: 5.0d
+			image: "lollipop:textures/misc/magic/rune_circle.png"
+			rotation: 0.0d
+			width: 5.0d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/magic.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/purple"
+			rotation: 0.0d
+			width: 5.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["{ftbquests.chapter.tech_mods.quest1.description1}"]
+			icon: {
+				Count: 1
+				id: "starbunclemania:star_wand"
+				tag: { }
+			}
+			id: "214D647C4918E13D"
+			rewards: [{
+				id: "031264CD11551000"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "{ftbquests.chapter.tech_mods.quest1.subtitle}"
+			tasks: [{
+				id: "58F552A9D9CC938B"
+				title: "{ftbquests.chapter.tech_mods.quest1.task_+6410120534088782731.title}"
+				type: "checkmark"
+			}]
+			title: "{ftbquests.chapter.tech_mods.quest1.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: ["{ftbquests.chapter.tech_mods.quest2.description1}"]
+			id: "5513B8281E672711"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "08BAFD09CDF13BCB"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "17493EDB8856EA56"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.tech_mods.quest2.subtitle}"
+			tasks: [{
+				id: "7647C283C8B110D8"
+				item: "ars_nouveau:apprentice_spell_book"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.tech_mods.quest2.title}"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: [
+				"{ftbquests.chapter.tech_mods.quest3.description1}"
+				""
+				"{ftbquests.chapter.tech_mods.quest3.description2}"
+			]
+			icon: "apotheosis:ender_library"
+			id: "663B5408E4F4F141"
+			rewards: [
+				{
+					id: "1EAAAC5653E40B8F"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "apotheosis:apoth_chronicle"
+						}
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7578C96B5DD4F2C3"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "106CA76DB4C544D4"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.tech_mods.quest3.subtitle}"
+			tasks: [{
+				id: "1E2C4C8FC187721F"
+				item: "apotheosis:gem"
+				title: "{ftbquests.chapter.tech_mods.quest3.task_+2174196900424020511.title}"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.tech_mods.quest3.title}"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: ["{ftbquests.chapter.tech_mods.quest4.description1}"]
+			icon: {
+				Count: 1
+				id: "reliquary:alkahestry_tome"
+				tag: {
+					Damage: 1001
+				}
+			}
+			id: "4BD2613F66A49FEB"
+			rewards: [
+				{
+					id: "3AEE50EE5EFF3F61"
+					item: "reliquary:pedestals/passive/white_passive_pedestal"
+					type: "item"
+				}
+				{
+					id: "7B718BC3D84E2E53"
+					item: "reliquary:glowing_bread"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5BBD7FAC370EBD66"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "07AFF0990DF1BEA2"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.tech_mods.quest4.subtitle}"
+			tasks: [{
+				id: "31ECC0C9170675B6"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "reliquary:zombie_heart"
+							}
+							{
+								Count: 1b
+								id: "reliquary:squid_beak"
+							}
+							{
+								Count: 1b
+								id: "reliquary:rib_bone"
+							}
+							{
+								Count: 1b
+								id: "reliquary:catalyzing_gland"
+							}
+							{
+								Count: 1b
+								id: "reliquary:chelicerae"
+							}
+							{
+								Count: 1b
+								id: "reliquary:slime_pearl"
+							}
+							{
+								Count: 1b
+								id: "reliquary:kraken_shell_fragment"
+							}
+							{
+								Count: 1b
+								id: "reliquary:bat_wing"
+							}
+							{
+								Count: 1b
+								id: "reliquary:withered_rib"
+							}
+							{
+								Count: 1b
+								id: "reliquary:molten_core"
+							}
+							{
+								Count: 1b
+								id: "reliquary:eye_of_the_storm"
+							}
+							{
+								Count: 1b
+								id: "reliquary:frozen_core"
+							}
+							{
+								Count: 1b
+								id: "reliquary:nebulous_heart"
+							}
+						]
+					}
+				}
+				title: "{ftbquests.chapter.tech_mods.quest4.task_+3597462172269442486.title}"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.tech_mods.quest4.title}"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: [
+				"{ftbquests.chapter.tech_mods.quest5.description1}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description2}"
+				"{ftbquests.chapter.tech_mods.quest5.description3}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description4}"
+				"{ftbquests.chapter.tech_mods.quest5.description5}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description6}"
+				"{ftbquests.chapter.tech_mods.quest5.description7}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description8}"
+				"{ftbquests.chapter.tech_mods.quest5.description9}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description10}"
+				"{ftbquests.chapter.tech_mods.quest5.description11}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description12}"
+				"{ftbquests.chapter.tech_mods.quest5.description13}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description14}"
+				"{ftbquests.chapter.tech_mods.quest5.description15}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description16}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description17}"
+				""
+				"{@pagebreak}"
+				"{ftbquests.chapter.tech_mods.quest5.image0}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description18}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description19}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description20}"
+				""
+				"{@pagebreak}"
+				"{ftbquests.chapter.tech_mods.quest5.image2}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description21}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description22}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description23}"
+				""
+				"{@pagebreak}"
+				"{ftbquests.chapter.tech_mods.quest5.image4}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description24}"
+				""
+				"{ftbquests.chapter.tech_mods.quest5.description25}"
+			]
+			icon: "apotheosis:mythic_material"
+			id: "1AA05277FF3EC40C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0DA3CD4E1F3A433C"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "301D16A037C81409"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.tech_mods.quest5.subtitle}"
+			tasks: [
+				{
+					id: "7B887462BF80E437"
+					item: "apotheosis:mythic_material"
+					type: "item"
+				}
+				{
+					id: "5F0543AE3A3CE45D"
+					item: "apotheosis:infused_breath"
+					type: "item"
+				}
+				{
+					id: "01E3EB842038EDF6"
+					item: "pa2_extras:inf_archiveau"
+					type: "item"
+				}
+				{
+					id: "68D0F44737A5037E"
+					item: "ars_nouveau:arcane_platform"
+					type: "item"
+				}
+				{
+					id: "22DEDF8DF23B8053"
+					item: "ars_nouveau:arcane_core"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "422FBC61CBC14454"
+					item: { Count: 2, id: "ars_nouveau:source_jar" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5B7483372F366C76"
+					item: { Count: 3, id: "ars_nouveau:arcane_pedestal" }
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.tech_mods.quest5.title}"
+			x: 0.0d
+			y: -2.0d
+		}
+	]
+	title: "{ftbquests.chapter.tech_mods.title}"
+}

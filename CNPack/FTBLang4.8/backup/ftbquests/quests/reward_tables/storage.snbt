@@ -1,0 +1,35 @@
+{
+	icon: "projecte:brown_alchemical_bag"
+	id: "2B9836D287EE9C54"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{ item: "functionalstorage:copper_upgrade" }
+		{ item: "functionalstorage:gold_upgrade" }
+		{ item: "functionalstorage:diamond_upgrade" }
+		{ item: "functionalstorage:netherite_upgrade" }
+		{ item: "functionalstorage:collector_upgrade" }
+		{ item: "functionalstorage:puller_upgrade" }
+		{ item: "functionalstorage:pusher_upgrade" }
+		{ item: "functionalstorage:void_upgrade" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_1_plus" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_1" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_2" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_3" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_4" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_5" }
+		{ item: "sophisticatedstorage:hopper_upgrade" }
+		{ item: "sophisticatedstorage:advanced_hopper_upgrade" }
+		{ item: "sophisticatedstorage:basic_to_iron_tier_upgrade" }
+		{ item: "sophisticatedstorage:basic_to_gold_tier_upgrade" }
+		{ item: "sophisticatedstorage:basic_to_diamond_tier_upgrade" }
+		{ item: "sophisticatedstorage:basic_to_netherite_tier_upgrade" }
+		{ count: 2, item: "enderstorage:ender_chest" }
+		{ count: 2, item: "enderstorage:ender_tank" }
+		{ item: "ae2:cell_component_4k" }
+		{ item: "ae2:cell_component_16k" }
+		{ item: "refinedstorage:4k_storage_part" }
+		{ item: "refinedstorage:16k_storage_part" }
+	]
+	title: "Storage"
+}

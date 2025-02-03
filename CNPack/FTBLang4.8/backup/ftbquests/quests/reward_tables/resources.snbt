@@ -1,0 +1,59 @@
+{
+	icon: "projecte:white_alchemical_bag"
+	id: "7AF05BCBC1AC903C"
+	loot_size: 1
+	order_index: 2
+	rewards: [
+		{ item: "supplementaries:flax_seeds" }
+		{ count: 2, item: "minecraft:bone" }
+		{ count: 3, item: "minecraft:gunpowder" }
+		{ item: "minecraft:rotten_flesh" }
+		{ count: 3, item: "minecraft:string" }
+		{ count: 2, item: "minecraft:bread" }
+		{ item: "minecraft:wheat" }
+		{ item: "minecraft:name_tag" }
+		{ item: "minecraft:saddle" }
+		{ item: "minecraft:coal" }
+		{ count: 3, item: "minecraft:redstone" }
+		{ item: "minecraft:golden_apple", weight: 0.8f }
+		{ item: "minecraft:iron_horse_armor" }
+		{ item: "minecraft:beetroot_seeds" }
+		{ count: 3, item: "minecraft:iron_ingot" }
+		{ item: "minecraft:melon_seeds" }
+		{ item: "minecraft:pumpkin_seeds" }
+		{ item: "minecraft:book" }
+		{ item: "minecraft:golden_horse_armor" }
+		{ item: "quark:smithing_template_rune" }
+		{ item: "minecraft:gold_ingot" }
+		{
+			item: {
+				Count: 1
+				id: "utilitix:ancient_compass"
+				tag: { }
+			}
+		}
+		{ item: "minecraft:enchanted_golden_apple", weight: 0.2f }
+		{ item: "minecraft:music_disc_otherside" }
+		{ item: "minecraft:diamond" }
+		{ item: "minecraft:diamond_horse_armor" }
+		{ count: 3, item: "minecraft:obsidian" }
+		{ count: 3, item: "minecraft:emerald" }
+		{ count: 2, item: "minecraft:paper" }
+		{ count: 3, item: "minecraft:leather" }
+		{ count: 2, item: "minecraft:cactus" }
+		{ count: 3, item: "minecraft:sugar_cane" }
+		{ count: 3, item: "minecraft:bamboo" }
+		{
+			item: {
+				Count: 1
+				ForgeCaps: {
+					Parent: { }
+				}
+				id: "projecte:klein_star_ein"
+			}
+		}
+		{ item: "sophisticatedbackpacks:feeding_upgrade" }
+		{ item: "farmersdelight:steak_and_potatoes" }
+	]
+	title: "Resources Common"
+}

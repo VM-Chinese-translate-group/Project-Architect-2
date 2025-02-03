@@ -1,0 +1,43 @@
+{
+	id: "4740AD39549A6C84"
+	loot_size: 1
+	order_index: 9
+	rewards: [
+		{ item: "plushies:zombie_villager_plushie" }
+		{ item: "plushies:pillager_plushie" }
+		{ item: "plushies:illusioner_plushie" }
+		{ item: "plushies:vindicator_plushie" }
+		{ item: "plushies:witch_plushie" }
+		{ item: "plushies:ravager_plushie" }
+		{ item: "plushies:vex_plushie" }
+		{ item: "plushies:creeper_plushie" }
+		{ item: "plushies:skeleton_plushie" }
+		{ item: "plushies:stray_plushie" }
+		{ item: "plushies:skeleton_horse_plushie" }
+		{ item: "plushies:spider_plushie" }
+		{ item: "plushies:cave_spider_plushie" }
+		{ item: "plushies:phantom_plushie" }
+		{ item: "plushies:silverfish_plushie" }
+		{ item: "plushies:slime_plushie" }
+		{ item: "plushies:zombie_plushie" }
+		{ item: "plushies:husk_plushie" }
+		{ item: "plushies:drowned_plushie" }
+		{ item: "plushies:squid_plushie" }
+		{ item: "plushies:glow_squid_plushie" }
+		{ item: "plushies:guardian_plushie" }
+		{ item: "plushies:pufferfish_plushie" }
+		{ item: "plushies:wither_skeleton_plushie" }
+		{ item: "plushies:piglin_plushie" }
+		{ item: "plushies:piglin_brute_plushie" }
+		{ item: "plushies:zombiefied_piglin_plushie" }
+		{ item: "plushies:blaze_plushie" }
+		{ item: "plushies:ghast_plushie" }
+		{ item: "plushies:hoglin_plushie" }
+		{ item: "plushies:zoglin_plushie" }
+		{ item: "plushies:magma_cube_plushie" }
+		{ item: "plushies:enderman_plushie" }
+		{ item: "plushies:endermite_plushie" }
+		{ item: "plushies:shulker_plushie" }
+	]
+	title: "Hostial Plush"
+}

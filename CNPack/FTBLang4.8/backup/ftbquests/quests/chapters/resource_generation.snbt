@@ -1,0 +1,179 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "resource_generation"
+	group: ""
+	id: "7F1459A9E8B20865"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/recource_generation.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: -1.4d
+			y: 0.0d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/white"
+			rotation: 0.0d
+			width: 5.0d
+			x: -1.5d
+			y: 3.0d
+		}
+	]
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			description: ["The interesting aspect of using Industrial Foregoing's Laser Drills is that the biome where you place them matters a long with the Y lv you set it to. Depending on the biome, you can generate resources specific to that biome, such as Ancient Debris from the Nether Biomes. Additionally, you can increase your chances of obtaining certain ores by using lenses of different colors. This becomes especially powerful when you use more than four laser drills and maximize the upgrades for each."]
+			id: "15B33100403EF393"
+			rewards: [
+				{
+					count: 2
+					id: "42F8D21432C59747"
+					item: "industrialforegoing:item_transporter_type"
+					type: "item"
+				}
+				{
+					id: "2D9C03F30FC808C4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6DB478C45440BC52"
+					table_id: 1961581323197983260L
+					type: "random"
+				}
+				{
+					id: "6294C79E2410022B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "RF to ITEMS"
+			tasks: [
+				{
+					count: 4L
+					id: "77ED7A0A310A1139"
+					item: "industrialforegoing:laser_drill"
+					type: "item"
+				}
+				{
+					id: "46CAE1736ED43E1B"
+					item: "industrialforegoing:ore_laser_base"
+					type: "item"
+				}
+			]
+			title: "&eMining With Lasers"
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			description: ["You can also gather resources by clearing out all the blocks in a designated area. To use the Builder as a quarry, you'll require a Shape Card (Quarry), a Builder, and a Lever. Additionally, ensure you have a power source and a large chest to store the collected items. This is a fun way of gathering large ammounts of blocks from diffrents areas!"]
+			id: "2E58477B5F4D57B1"
+			rewards: [
+				{
+					id: "0BF0D37704818F05"
+					item: "rftoolsbuilder:shape_card_def"
+					type: "item"
+				}
+				{
+					id: "0CE65932AFB1A6DC"
+					item: "minecraft:lever"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "391D664907C64BFA"
+					table_id: 8858681397723566140L
+					type: "random"
+				}
+				{
+					id: "7B454B696EE39781"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Wait? Isn't This A BuIlDeR???"
+			tasks: [
+				{
+					id: "48C9C7C442F47D8C"
+					item: "rftoolsbuilder:builder"
+					type: "item"
+				}
+				{
+					id: "0E7C90570780175F"
+					item: "rftoolsbuilder:shape_card_quarry"
+					type: "item"
+				}
+			]
+			title: "&eQuarry"
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			description: ["Learn to set up farms, machines, and systems for continuous resource production, and become a master of automation to ensure your world thrives. The real challenge lies in organizing it all!"]
+			icon: "minecraft:iron_ore"
+			id: "4174E61EC4ED9130"
+			rewards: [{
+				id: "2095C08598C2B582"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "Let's 'dig' into it!"
+			tasks: [{
+				id: "30021BB6C894929E"
+				title: "Automate Resources"
+				type: "checkmark"
+			}]
+			title: "&eAutomated Resources"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4174E61EC4ED9130"]
+			id: "2C4B9E457F74476C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6E6737ED51D62BE7"
+					table_id: 1961581323197983260L
+					type: "random"
+				}
+				{
+					id: "1C8772220A3557EB"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Digital EMC Creator"
+			tasks: [{
+				id: "27DB3BC088C32E03"
+				item: "mekanism:digital_miner"
+				type: "item"
+			}]
+			title: "&eMek Quarry"
+			x: -1.5d
+			y: 5.0d
+		}
+	]
+	title: "&eResource Generation"
+}

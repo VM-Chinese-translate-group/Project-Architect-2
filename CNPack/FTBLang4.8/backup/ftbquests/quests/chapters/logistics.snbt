@@ -1,0 +1,610 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "logistics"
+	group: ""
+	id: "2B342C114029AC3A"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/logistics.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: 1.0d
+			y: -4.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/light_blue"
+			rotation: 0.0d
+			width: 5.0d
+			x: 1.0d
+			y: -1.0d
+		}
+	]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Master fluid and item transport with Pipez Mod. Build networks of pipes to automate resource logistics and power your machines efficiently. Simplify your base management and enhance production with intuitive pipe systems."]
+			id: "5F2C14BE04680D8E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7EF2E32AAC95C10F"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "7A4AD96A9D273828"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Simple \\&\\ Powerfull"
+			tasks: [{
+				id: "13CFCBD6680A79DB"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "pipez"
+					}
+				}
+				title: "Pipez"
+				type: "item"
+			}]
+			title: "Pipez"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Connect, transfer, and manage energy and fluids with precision. From pipes to conduits, streamline your systems and let your energy flow with flair!"]
+			id: "5C39D9D418218FFB"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4E2BA101B199FA6B"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "4F0F79030DDB1BBA"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Dynamic Energy"
+			tasks: [
+				{
+					id: "36EDDB91BFC059CF"
+					item: "thermal:energy_duct"
+					type: "item"
+				}
+				{
+					id: "728FD7433CA2094E"
+					item: "thermal:fluid_duct"
+					type: "item"
+				}
+				{
+					id: "388412B0CD6854F2"
+					item: "thermal:servo_attachment"
+					type: "item"
+				}
+				{
+					id: "1B668F0FB76523AC"
+					item: "thermal:filter_attachment"
+					type: "item"
+				}
+			]
+			title: "Thermal Dynamics"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Optimize your operations with Integrated Tunnels, enabling seamless item transport and automation. Build intricate networks and automate resource flow across your base effortlessly."]
+			id: "13864ECCFE89029C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2CEC2B2CE5E163C6"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "65E2A161C8E07A19"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Complex Logistics"
+			tasks: [
+				{
+					id: "0CB1E5C46D2FE7A4"
+					item: {
+						Count: 1
+						id: "itemfilters:mod"
+						tag: {
+							value: "integrateddynamics"
+						}
+					}
+					title: "Integrated Dynamics"
+					type: "item"
+				}
+				{
+					id: "13F687E191E96E0F"
+					item: {
+						Count: 1
+						id: "itemfilters:mod"
+						tag: {
+							value: "integratedtunnels"
+						}
+					}
+					title: "Integrated Tunnels"
+					type: "item"
+				}
+			]
+			title: "Integrated Innovation"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: [
+				"Streamline item transportation with Create's Conveyor Belts. Effortlessly move items across your workshop or base, reducing manual effort and increasing efficiency."
+				""
+				"Master fluid management with Create's Fluid Pipes. Construct intricate networks to transport liquids across your installations, ensuring precise control and efficiency."
+			]
+			id: "5FE1E9AED9F818A7"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3080B75AC2604566"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "52D0A18E0A962484"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Createovations"
+			tasks: [
+				{
+					id: "6DEFE30D7F65F61D"
+					item: "create:belt_connector"
+					type: "item"
+				}
+				{
+					id: "6F2B0F21EDBA3A12"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+				{
+					id: "5610345BB63BE6A6"
+					item: "create:brass_funnel"
+					type: "item"
+				}
+				{
+					id: "079604A96E7CD15A"
+					item: "create:fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "6E78060244D1E0ED"
+					item: "create:smart_fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "1EA8FA11D7408D8D"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+			]
+			title: "Mechanical Conveyance"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Streamline item transport with Industrial Forgoing's advanced transporters and belts. Efficiently move materials within your base or across short distances using item filters and regulation, enhancing productivity and automation in your industrial operations."]
+			id: "2F6F1848A0729A7B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6482770B04322A77"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "37B7DAD89B660C6E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Industrial Forgoing Transporters and Belts"
+			tasks: [
+				{
+					id: "500396A66D9BF711"
+					item: "industrialforegoing:item_transporter_type"
+					type: "item"
+				}
+				{
+					id: "126A3670F44979CA"
+					item: "industrialforegoing:fluid_transporter_type"
+					type: "item"
+				}
+				{
+					id: "212FAF7A8A801524"
+					item: "industrialforegoing:world_transporter_type"
+					type: "item"
+				}
+				{
+					id: "6168FDFBC45F30BC"
+					item: "industrialforegoing:conveyor"
+					type: "item"
+				}
+				{
+					id: "26D09A59E0123838"
+					item: "industrialforegoing:conveyor_extraction_upgrade"
+					type: "item"
+				}
+				{
+					id: "7442CB2A306B7F95"
+					item: "industrialforegoing:conveyor_insertion_upgrade"
+					type: "item"
+				}
+			]
+			title: "Translocators"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: [
+				"Place your Factory Manager in the world, and connect it to your inventories using Inventory Cables."
+				""
+				"Place the Program Disk inside the Manager's GUI"
+				""
+				"Test some of the preset CODE!"
+				""
+				"Learn and find out the Power of SFM!"
+			]
+			id: "7A20C7CF8F03AC63"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "734ED8198B920437"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "21C44D6EA588B03E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Logistics with CODE"
+			tasks: [
+				{
+					id: "3B1F59C1C59ABA23"
+					item: "sfm:manager"
+					type: "item"
+				}
+				{
+					id: "4BD679319EC5452A"
+					item: "sfm:cable"
+					type: "item"
+				}
+				{
+					id: "38E833EFF8E909B6"
+					item: {
+						Count: 1
+						id: "sfm:disk"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "4DC8762AFEE03082"
+					item: {
+						Count: 1
+						id: "sfm:labelgun"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Super Factory Manager"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Deploy Ender Chests to facilitate seamless item transfer between remote locations. With customizable color coding and secure access, streamline logistics and enhance efficiency in your storage solutions."]
+			id: "7FE5E83672821930"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "08C0E71BEE0A47DE"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "5E34972875EDCDEA"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Global Item Transport"
+			tasks: [{
+				id: "653981D8318B0C65"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "enderstorage"
+					}
+				}
+				title: "Ender Storage"
+				type: "item"
+			}]
+			title: "Ender Chest Logistics"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Harness the power of Item Collectors, Vacuumulators, and Absorption Hoppers to effortlessly gather resources from your surroundings. Perfect for maintaining order and efficiency in your automated systems."]
+			id: "0D2C3D1BD9BAD133"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "27894CE1F67E2D76"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "45EE4A6992CDCCB8"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Automated Item Collection"
+			tasks: [
+				{
+					id: "50149C18119FD7F5"
+					item: "mob_grinding_utils:absorption_hopper"
+					type: "item"
+				}
+				{
+					id: "4E0356256F14DDCE"
+					item: "itemcollectors:basic_collector"
+					type: "item"
+				}
+				{
+					id: "5B9D0021A7B00444"
+					item: "itemcollectors:advanced_collector"
+					type: "item"
+				}
+				{
+					id: "161358D61FF83DFA"
+					item: "thermal:device_collector"
+					type: "item"
+				}
+			]
+			title: "Suck It Up!"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: [
+				"Take command of advanced machinery and digital logistics with Mekanism Mod. "
+				""
+				"The Logistical Sorter mod revolutionizes storage management in Minecraft. Effortlessly categorize and direct items with precision using advanced sorting technology. "
+			]
+			id: "2BB67A7DD4821F17"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2FDE7520EAF40408"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "55F5A768C4689EA3"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Organize with Precision!"
+			tasks: [
+				{
+					id: "6E3A60E5145E2CB7"
+					item: "mekanism:logistical_sorter"
+					type: "item"
+				}
+				{
+					id: "53B841CAACFA40A8"
+					item: "mekanism:basic_logistical_transporter"
+					type: "item"
+				}
+				{
+					id: "6A505B7168BAEBEE"
+					item: "mekanism:basic_mechanical_pipe"
+					type: "item"
+				}
+				{
+					id: "6817F6F14A9D41B2"
+					item: "mekanism:basic_universal_cable"
+					type: "item"
+				}
+				{
+					id: "12A1967094497793"
+					item: "mekanism:basic_pressurized_tube"
+					type: "item"
+				}
+				{
+					id: "190401731310E08E"
+					item: "mekanism:configurator"
+					type: "item"
+				}
+			]
+			title: "Logistical Mekanism"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Discover Modular Routers, a mod that adds versatile routing and manipulation capabilities to automate item transport and management efficiently."]
+			id: "7EB58CF827B325ED"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "40EFC26F302374A9"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "271C93C77087D941"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Versatile Item Manipulation"
+			tasks: [
+				{
+					id: "63E134A802D323FE"
+					item: {
+						Count: 1
+						id: "itemfilters:mod"
+						tag: {
+							value: "modularrouters"
+						}
+					}
+					title: "Modular Routers"
+					type: "item"
+				}
+				{
+					id: "30ED9A3B55135359"
+					item: "modularrouters:modular_router"
+					type: "item"
+				}
+			]
+			title: "Modular Routers"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			description: ["Explore logistical mods that streamline item management and automate processes, enhancing efficiency and organization in your worlds."]
+			icon: "supplementaries:cog_block"
+			id: "4AEDC2855CCFBDCD"
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "Efficiency Through Automation"
+			tasks: [{
+				id: "063864AF89FD193E"
+				title: "How To Logistics"
+				type: "checkmark"
+			}]
+			title: "Logistical Mods"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Step into the future of technology with LaserIO. Harness the power of lasers for advanced automation, precision filtering, energy transmission, and redstone."]
+			id: "428DC0121AA428F2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "268D1325D709BD39"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "6C7C914497FF458A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "EnderIO Without the Ender"
+			tasks: [{
+				id: "032089ABB1067E16"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "laserio"
+					}
+				}
+				title: "LaserIO"
+				type: "item"
+			}]
+			title: "LaserIO"
+			x: 1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4AEDC2855CCFBDCD"]
+			description: ["Explore XNet, a powerful mod offering efficient and customizable networking solutions for automating item, fluid, and energy transfer across your Minecraft world."]
+			id: "736D59DF4B009BC6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "113E81792AC38C2B"
+					table_id: 2747737080193151053L
+					type: "random"
+				}
+				{
+					id: "4BA75FDF5A23BC26"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			subtitle: "Efficient Networking"
+			tasks: [{
+				id: "3B13D2541D7F0AE7"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "xnet"
+					}
+				}
+				type: "item"
+			}]
+			title: "XNet"
+			x: 3.0d
+			y: -1.0d
+		}
+	]
+	title: "Logistics"
+}

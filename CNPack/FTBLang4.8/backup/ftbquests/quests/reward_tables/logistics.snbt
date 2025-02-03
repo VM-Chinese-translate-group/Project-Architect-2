@@ -1,0 +1,44 @@
+{
+	icon: "projecte:gray_alchemical_bag"
+	id: "2621EC50F914F04D"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ count: 6, item: "pipez:item_pipe" }
+		{ count: 6, item: "pipez:fluid_pipe" }
+		{ count: 6, item: "pipez:energy_pipe" }
+		{ count: 6, item: "pipez:universal_pipe" }
+		{ item: "pipez:basic_upgrade" }
+		{ item: "pipez:improved_upgrade" }
+		{ item: "pipez:advanced_upgrade" }
+		{ item: "pipez:ultimate_upgrade" }
+		{ count: 6, item: "mekanism:basic_mechanical_pipe" }
+		{ count: 6, item: "mekanism:advanced_mechanical_pipe" }
+		{ count: 6, item: "mekanism:elite_mechanical_pipe" }
+		{ count: 6, item: "mekanism:ultimate_mechanical_pipe" }
+		{ count: 6, item: "mekanism:basic_logistical_transporter" }
+		{ count: 6, item: "mekanism:advanced_logistical_transporter" }
+		{ count: 6, item: "mekanism:elite_logistical_transporter" }
+		{ count: 6, item: "mekanism:ultimate_logistical_transporter" }
+		{ item: "cyclic:wireless_energy" }
+		{ item: "cyclic:wireless_item" }
+		{ item: "cyclic:wireless_fluid" }
+		{ item: "cyclic:location_data" }
+		{ count: 6, item: "create:belt_connector" }
+		{ item: "fluxnetworks:basic_flux_storage" }
+		{ item: "fluxnetworks:herculean_flux_storage" }
+		{ item: "modularrouters:modular_router" }
+		{ count: 2, item: "modularrouters:augment_core" }
+		{ count: 2, item: "modularrouters:blank_module" }
+		{ count: 2, item: "modularrouters:blank_upgrade" }
+		{ count: 6, item: "thermal:energy_duct" }
+		{ item: "rftoolsutility:timer" }
+		{ item: "laserio:laser_node" }
+		{ count: 4, item: "laserio:overclocker_card" }
+		{ item: "laserio:overclocker_node" }
+		{ item: "xnet:controller" }
+		{ item: "xnet:advanced_connector_blue" }
+		{ count: 6, item: "xnet:netcable_blue" }
+	]
+	title: "Logistics"
+}

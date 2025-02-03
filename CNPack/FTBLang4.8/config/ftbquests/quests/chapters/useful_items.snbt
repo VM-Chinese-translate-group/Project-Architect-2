@@ -1,0 +1,781 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "useful_items"
+	group: ""
+	id: "6B91FC0BC2BC257E"
+	images: [
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/quality_of_life.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: -6.0d
+			y: -2.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/orange"
+			rotation: 0.0d
+			width: 5.0d
+			x: -6.0d
+			y: 0.0d
+		}
+	]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest1.description1}"]
+			id: "77A815B084782AD1"
+			rewards: [
+				{
+					id: "04A902DFBD749C20"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "buildinggadgets2:buildinggadgets2book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "36D8E71405E7AC1F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest1.subtitle}"
+			tasks: [
+				{
+					id: "17E19D7CDC9D9053"
+					item: "buildinggadgets2:gadget_building"
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "6520EACD82EAEA7B"
+					item: "buildinggadgets2:gadget_exchanging"
+					type: "item"
+				}
+				{
+					id: "3D0FCD2C6F87F763"
+					item: {
+						Count: 1
+						id: "buildinggadgets2:gadget_copy_paste"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "436ACC0A2006BF06"
+					item: {
+						Count: 1
+						id: "buildinggadgets2:gadget_cut_paste"
+						tag: {
+							pastereplace: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "751686F9F999B63F"
+					item: "buildinggadgets2:gadget_destruction"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest1.title}"
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			description: ["{ftbquests.chapter.useful_items.quest2.description1}"]
+			icon: "create:clipboard"
+			id: "764C4D6535BDEFCE"
+			rewards: [
+				{
+					id: "412CB7C7FD1C8AAA"
+					item: {
+						Count: 1
+						id: "constructionwand:diamond_wand"
+						tag: {
+							Damage: 0
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5B60A3B07C36D0CA"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "{ftbquests.chapter.useful_items.quest2.subtitle}"
+			tasks: [{
+				id: "3664EACD9C19839F"
+				title: "{ftbquests.chapter.useful_items.quest2.task_+3919515744527287199.title}"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest3.description1}"]
+			id: "05BF62BFCDE46A92"
+			rewards: [
+				{
+					id: "23B3193E24BA7409"
+					item: "crafting_on_a_stick:anvil"
+					type: "item"
+				}
+				{
+					id: "0F614CB4D745DA54"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest3.subtitle}"
+			tasks: [
+				{
+					id: "19E6782DFD6BFB69"
+					item: "crafting_on_a_stick:crafting_table"
+					type: "item"
+				}
+				{
+					id: "73846277B8C4585A"
+					item: "crafting_on_a_stick:loom"
+					type: "item"
+				}
+				{
+					id: "46DC522FE8AF85C3"
+					item: "crafting_on_a_stick:grindstone"
+					type: "item"
+				}
+				{
+					id: "2649B4D3426E4AF5"
+					item: "crafting_on_a_stick:cartography_table"
+					type: "item"
+				}
+				{
+					id: "757A1099569BD258"
+					item: "crafting_on_a_stick:stonecutter"
+					type: "item"
+				}
+				{
+					id: "30FE15381E4603A4"
+					item: "crafting_on_a_stick:smithing_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest3.title}"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest4.description1}"]
+			id: "1BA4593E1826A777"
+			rewards: [
+				{
+					id: "56A6D6026B077651"
+					item: "sophisticatedbackpacks:upgrade_base"
+					type: "item"
+				}
+				{
+					id: "26A9A0A2E9BC928D"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest4.subtitle}"
+			tasks: [{
+				id: "1FDB49F202F45B4E"
+				item: "sophisticatedbackpacks:backpack"
+				match_nbt: false
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.useful_items.quest4.title}"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest5.description1}"]
+			id: "46ADA718BA2413AA"
+			rewards: [
+				{
+					id: "7299A1AC0A4B1D2A"
+					item: "chipped:botanist_workbench"
+					type: "item"
+				}
+				{
+					id: "7E9C5A53A65452E4"
+					item: "chipped:loom_table"
+					type: "item"
+				}
+				{
+					id: "5BFE470144612838"
+					item: "chipped:alchemy_bench"
+					type: "item"
+				}
+				{
+					id: "6EE52AB85AFF6506"
+					item: "chipped:tinkering_table"
+					type: "item"
+				}
+				{
+					id: "75A644E7F4C16704"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest5.subtitle}"
+			tasks: [
+				{
+					id: "7F7168BD3500BAA6"
+					item: "chipped:glassblower"
+					type: "item"
+				}
+				{
+					id: "2DF4FEFBA5FF74B7"
+					item: "chipped:carpenters_table"
+					type: "item"
+				}
+				{
+					id: "4B1B08D423A06630"
+					item: "chipped:mason_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest5.title}"
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest6.description1}"]
+			id: "3F65A43A7641875A"
+			rewards: [
+				{
+					id: "11D97B0AAA9C179E"
+					item: "easy_villagers:trader"
+					type: "item"
+				}
+				{
+					id: "326B424727118CDE"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest6.subtitle}"
+			tasks: [
+				{
+					id: "7C749A7818585822"
+					item: "easy_villagers:villager"
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "16E6847C3D9D5176"
+					item: "easy_villagers:iron_farm"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest6.title}"
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest7.description1}"]
+			id: "04441ADE9330C23D"
+			rewards: [
+				{
+					id: "6F89727F11FEF801"
+					item: {
+						Count: 1
+						id: "entangled:item"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "32B9C31892B8B7E9"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest7.subtitle}"
+			tasks: [{
+				id: "228270FE926D0114"
+				item: {
+					Count: 1
+					id: "entangled:block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest8.description1}"]
+			id: "1A05063D95EB59D3"
+			rewards: [
+				{
+					id: "552BF6A54104A9DC"
+					item: "framedblocks:framed_hammer"
+					type: "item"
+				}
+				{
+					id: "2414882F4A09787A"
+					item: "framedblocks:framed_wrench"
+					type: "item"
+				}
+				{
+					id: "736D8C39CFA007B7"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest8.subtitle}"
+			tasks: [{
+				id: "15F1F8C801EABE54"
+				item: "framedblocks:framed_cube"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.useful_items.quest8.title}"
+			x: -9.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest9.description1}"]
+			id: "2EE2CC9B64908EF8"
+			rewards: [
+				{
+					id: "2E2BB3BFABFB2532"
+					item: "mob_grinding_utils:solid_xp_baby"
+					type: "item"
+				}
+				{
+					id: "3B55F8B924E69BD7"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "55A1584443FE8278"
+					item: "mob_grinding_utils:gm_chicken_feed"
+					type: "item"
+				}
+				{
+					id: "7AA29C3A2C321576"
+					item: "mob_grinding_utils:gm_chicken_feed_cursed"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest9.title}"
+			x: -10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest10.description1}"]
+			id: "77EDBB84989D1B26"
+			rewards: [
+				{
+					id: "79F30A18F0E029A0"
+					item: "itemcollectors:advanced_collector"
+					type: "item"
+				}
+				{
+					id: "32C8B6D81D17EF52"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest10.subtitle}"
+			tasks: [{
+				id: "2B25E3A4189496BE"
+				item: "itemcollectors:basic_collector"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "096659FC3A9AD7EF"
+			rewards: [{
+				id: "640325282EE3EBCA"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "{ftbquests.chapter.useful_items.quest11.subtitle}"
+			tasks: [{
+				id: "0B08BBB32F37D6B9"
+				item: {
+					Count: 1
+					id: "hangglider:hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest12.description1}"]
+			id: "2853C03018667258"
+			rewards: [
+				{
+					id: "674D47A8362F87E0"
+					item: "simplemagnets:advanced_demagnetization_coil"
+					type: "item"
+				}
+				{
+					id: "177E1E7160BF3559"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest12.subtitle}"
+			tasks: [{
+				id: "17493200E7F0F928"
+				item: {
+					Count: 1
+					id: "simplemagnets:basicmagnet"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"{ftbquests.chapter.useful_items.quest13.description1}"
+				""
+				"{ftbquests.chapter.useful_items.quest13.description2}"
+				""
+				"{ftbquests.chapter.useful_items.quest13.description3}"
+			]
+			id: "69C2D2CE0D927CC2"
+			rewards: [{
+				id: "17BD14A8A6599203"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "{ftbquests.chapter.useful_items.quest13.subtitle}"
+			tasks: [{
+				id: "54BF1082F71936E9"
+				item: {
+					Count: 1
+					id: "shrink:shrinking_device"
+					tag: { }
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.useful_items.quest13.title}"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest14.description1}"]
+			id: "147F2EEADDAC9B6E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1489961037CD025B"
+					table_id: 3638666773780251567L
+					type: "random"
+				}
+				{
+					id: "1299856EA14C4268"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest14.subtitle}"
+			tasks: [{
+				id: "7C814096F4D283CB"
+				item: {
+					Count: 1
+					id: "utilitix:mob_yoinker"
+					tag: {
+						filled: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: ["{ftbquests.chapter.useful_items.quest15.description1}"]
+			id: "34A29B45B62CCADE"
+			rewards: [
+				{
+					count: 2
+					id: "60A4ACCAF70F69D6"
+					item: "elevatorid:elevator_white"
+					type: "item"
+				}
+				{
+					id: "7BEDEF00506DB420"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest15.subtitle}"
+			tasks: [{
+				id: "6E3694304A43D937"
+				item: "elevatorid:elevator_white"
+				match_nbt: false
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"{ftbquests.chapter.useful_items.quest16.description1}"
+				""
+				"{ftbquests.chapter.useful_items.quest16.description2}"
+			]
+			id: "40A262250EDD876A"
+			rewards: [
+				{
+					id: "31090FD817739503"
+					item: "rftoolsbase:manual"
+					type: "item"
+				}
+				{
+					id: "105536D7795E4634"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest16.subtitle}"
+			tasks: [
+				{
+					id: "7DB0E62E2E65B386"
+					item: "rftoolsutility:matter_receiver"
+					type: "item"
+				}
+				{
+					id: "083DA088C7C8B62A"
+					item: {
+						Count: 1
+						id: "rftoolsutility:charged_porter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest16.title}"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"{ftbquests.chapter.useful_items.quest17.description1}"
+				""
+				"{ftbquests.chapter.useful_items.quest17.description2}"
+				""
+				"{ftbquests.chapter.useful_items.quest17.description3}"
+				""
+				"{ftbquests.chapter.useful_items.quest17.description4}"
+			]
+			id: "2BB0CEB2BDCB2F06"
+			rewards: [
+				{
+					id: "16A9692029847A65"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "supplementaries:stasis"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "797E45CD30F00060"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest17.subtitle}"
+			tasks: [{
+				id: "0F753EB858F41FA8"
+				item: {
+					Count: 1
+					id: "supplementaries:slingshot"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			description: [
+				"{ftbquests.chapter.useful_items.quest18.description1}"
+				""
+				"{ftbquests.chapter.useful_items.quest18.description2}"
+				""
+				"{ftbquests.chapter.useful_items.quest18.description3}"
+			]
+			id: "7A627A935A840AC4"
+			rewards: [
+				{
+					id: "5B24052F1048D18D"
+					item: "torchmaster:frozen_pearl"
+					type: "item"
+				}
+				{
+					id: "162335D3CCA4DA01"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "{ftbquests.chapter.useful_items.quest18.subtitle}"
+			tasks: [
+				{
+					id: "2C0D327D36ACC7B4"
+					item: "torchmaster:megatorch"
+					type: "item"
+				}
+				{
+					id: "456076F494546BED"
+					item: "torchmaster:dreadlamp"
+					type: "item"
+				}
+				{
+					id: "776957A696A60B2A"
+					item: "torchmaster:feral_flare_lantern"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.useful_items.quest18.title}"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "3E9A55528FC45B5C"
+			rewards: [{
+				id: "5B5C871BE8ECA034"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "{ftbquests.chapter.useful_items.quest19.subtitle}"
+			tasks: [{
+				id: "01BD0C9FA6624992"
+				item: {
+					Count: 1
+					id: "itemfilters:mod"
+					tag: {
+						value: "rftoolsutility"
+					}
+				}
+				title: "{ftbquests.chapter.useful_items.quest19.task_+125270244467034514.title}"
+				type: "item"
+			}]
+			title: "{ftbquests.chapter.useful_items.quest19.title}"
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "7F87DA5E70323961"
+			rewards: [{
+				id: "22C1CE724FF283F0"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "{ftbquests.chapter.useful_items.quest20.subtitle}"
+			tasks: [
+				{
+					id: "2F77B7755CF802FB"
+					item: {
+						Count: 1
+						id: "usefulslime:slime_sling"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "00CB468B8FBF8A14"
+					item: {
+						Count: 1
+						id: "usefulslime:slime_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["764C4D6535BDEFCE"]
+			id: "1FFE52A9DE54D85B"
+			rewards: [{
+				id: "55307FE30C955A71"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "{ftbquests.chapter.useful_items.quest21.subtitle}"
+			tasks: [{
+				id: "1156D42BD7F5D06D"
+				item: "energymeter:meter"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+	]
+	title: "{ftbquests.chapter.useful_items.title}"
+}

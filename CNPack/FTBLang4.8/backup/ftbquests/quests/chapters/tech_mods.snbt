@@ -1,0 +1,362 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tech_mods"
+	group: ""
+	id: "64B31D54C21D34E8"
+	images: [
+		{
+			height: 5.0d
+			image: "lollipop:textures/misc/magic/rune_circle.png"
+			rotation: 0.0d
+			width: 5.0d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			height: 4.0d
+			image: "packmenu:textures/gui/magic.png"
+			rotation: 0.0d
+			width: 20.0d
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			alpha: 75
+			height: 17.0d
+			image: "kubejs:textures/quests/splash.png"
+			order: -2
+			rotation: 0.0d
+			width: 23.0d
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			height: 5.0d
+			image: "refinedstorage:block/relay/cutouts/purple"
+			rotation: 0.0d
+			width: 5.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["In this quest, you'll embark on a magical journey into the enchanting realms of mystical and arcane mods. These mods introduce powerful spells, ancient artifacts, and mysterious dimensions that can transform your Minecraft world into a realm of wonder and sorcery. From mastering the art of spellcasting to summoning otherworldly creatures, you'll delve into the enchanting side of Minecraft. Get ready to explore the captivating and spellbinding possibilities that magic mods have to offer!"]
+			icon: {
+				Count: 1
+				id: "starbunclemania:star_wand"
+				tag: { }
+			}
+			id: "214D647C4918E13D"
+			rewards: [{
+				id: "031264CD11551000"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 3.0d
+			subtitle: "Spell crafting \\& more"
+			tasks: [{
+				id: "58F552A9D9CC938B"
+				title: "WIP"
+				type: "checkmark"
+			}]
+			title: "&dMagic Starts Here"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: ["Ars Nouveau is a magic mod inspired by Ars Magicka that allows players to craft their own spells, create magical artifacts, perform rituals, and much more."]
+			id: "5513B8281E672711"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "08BAFD09CDF13BCB"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "17493EDB8856EA56"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "'Tech'nically MAGIC"
+			tasks: [{
+				id: "7647C283C8B110D8"
+				item: "ars_nouveau:apprentice_spell_book"
+				type: "item"
+			}]
+			title: "&dArs Nouveau"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: [
+				"Apotheosis is a content mod that allows you to become stronger than ever before, while trying to stay true to vanilla mechanics at heart. Every feature is carefully put together to feel cohesive and complete."
+				""
+				"Features range from simple changes, like taller sugarcane, to massive overhauls of core systems such as Enchanting."
+			]
+			icon: "apotheosis:ender_library"
+			id: "663B5408E4F4F141"
+			rewards: [
+				{
+					id: "1EAAAC5653E40B8F"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "apotheosis:apoth_chronicle"
+						}
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7578C96B5DD4F2C3"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "106CA76DB4C544D4"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "I'm not OP, you are!"
+			tasks: [{
+				id: "1E2C4C8FC187721F"
+				item: "apotheosis:gem"
+				title: "Any Apotheosis Gem"
+				type: "item"
+			}]
+			title: "&dApotheosis"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: ["Reliquary offers a range of magical items and blocks that might pose a challenge to obtain but significantly improve various aspects of a player's life in Minecraft."]
+			icon: {
+				Count: 1
+				id: "reliquary:alkahestry_tome"
+				tag: {
+					Damage: 1001
+				}
+			}
+			id: "4BD2613F66A49FEB"
+			rewards: [
+				{
+					id: "3AEE50EE5EFF3F61"
+					item: "reliquary:pedestals/passive/white_passive_pedestal"
+					type: "item"
+				}
+				{
+					id: "7B718BC3D84E2E53"
+					item: "reliquary:glowing_bread"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5BBD7FAC370EBD66"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "07AFF0990DF1BEA2"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "You wanted MORE mob loot?"
+			tasks: [{
+				id: "31ECC0C9170675B6"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "reliquary:zombie_heart"
+							}
+							{
+								Count: 1b
+								id: "reliquary:squid_beak"
+							}
+							{
+								Count: 1b
+								id: "reliquary:rib_bone"
+							}
+							{
+								Count: 1b
+								id: "reliquary:catalyzing_gland"
+							}
+							{
+								Count: 1b
+								id: "reliquary:chelicerae"
+							}
+							{
+								Count: 1b
+								id: "reliquary:slime_pearl"
+							}
+							{
+								Count: 1b
+								id: "reliquary:kraken_shell_fragment"
+							}
+							{
+								Count: 1b
+								id: "reliquary:bat_wing"
+							}
+							{
+								Count: 1b
+								id: "reliquary:withered_rib"
+							}
+							{
+								Count: 1b
+								id: "reliquary:molten_core"
+							}
+							{
+								Count: 1b
+								id: "reliquary:eye_of_the_storm"
+							}
+							{
+								Count: 1b
+								id: "reliquary:frozen_core"
+							}
+							{
+								Count: 1b
+								id: "reliquary:nebulous_heart"
+							}
+						]
+					}
+				}
+				title: "Reliquary Drops"
+				type: "item"
+			}]
+			title: "&dReliquary Reincarnations"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["214D647C4918E13D"]
+			description: [
+				"Through a process called &6Godforged Infusion&r you can enchant a lot of unenchantable items, those items being:"
+				""
+				"&bSwords:&r "
+				"&oMeka-Tana, Red Katar, Red Matter Sword, Dark Matter Sword&r"
+				""
+				"&bBows:&r"
+				"&oMeka-Bow, Electric Bow&r"
+				""
+				"&bTools:&r"
+				"&oAtomic Disassembler, Meka-Tool, Red Morning Star&r"
+				""
+				"&bArmor Sets:&r"
+				"&oMeka-Suit, Gem Armor, Red Matter Armor, Dark Matter Armor&r"
+				""
+				"&bChestplate:&r"
+				"&oJetpack Armored&r"
+				""
+				"&bBoots:&r "
+				"&oFree Runners Armored&r"
+				""
+				"&bElytra:&r "
+				"&oHDPE Elytra&r"
+				""
+				"All items follow their Netherite counter part, this is also valid for all Dark and Red Matter tools. The only exception is the &lTools&r defined above which is based of the Draconic Staff."
+				""
+				"Hammers use the same enchantments as pickaxes."
+				""
+				"{@pagebreak}"
+				"{image:pa2_extras:textures/altar/base_altar.png width:825 height:536 align:center fit:true}"
+				""
+				"To start the process you need to build this altar, you have to have 2 source jars, a center platform with an arcane core underneath it, and 3 pedestals or platforms around it."
+				""
+				"The center piece detects things in a single block radius, and you can add up to 5 source jars."
+				""
+				"&lNote:&r The Source Jars can be Creative or from ME."
+				""
+				"{@pagebreak}"
+				"{image:pa2_extras:textures/altar/altar_items.png width:787 height:525 align:center fit:true}"
+				""
+				"Now, to use the altar you should add the item you want to enchant in the center, then add a &6Godforged Pearl&r and an &dInfused Dragon Breath&r."
+				""
+				"You need an &d&lInfused Archiveau&r to be in one of the 3 pedestals around the center, but it does not get consumed."
+				""
+				"The enchantment process is going to require levels and source, which is based on the enchants on your enchanted book. To know how much, you can left-click with the book on the center platform."
+				""
+				"{@pagebreak}"
+				"{image:pa2_extras:textures/altar/altar_result.png width:913 height:582 align:center fit:true}"
+				""
+				"To activate the ritual of the altar, you can right click the pedestal with the enchanted book. The requirements will be consumed, and the item will remain on the center platform with the enchantments applied. The item remains as you might want to add more books to it."
+				""
+				"That is it, have fun enchanting those OP items!"
+			]
+			icon: "apotheosis:mythic_material"
+			id: "1AA05277FF3EC40C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0DA3CD4E1F3A433C"
+					table_id: 3257286137767134486L
+					type: "random"
+				}
+				{
+					id: "301D16A037C81409"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "No longer unenchantable"
+			tasks: [
+				{
+					id: "7B887462BF80E437"
+					item: "apotheosis:mythic_material"
+					type: "item"
+				}
+				{
+					id: "5F0543AE3A3CE45D"
+					item: "apotheosis:infused_breath"
+					type: "item"
+				}
+				{
+					id: "01E3EB842038EDF6"
+					item: "pa2_extras:inf_archiveau"
+					type: "item"
+				}
+				{
+					id: "68D0F44737A5037E"
+					item: "ars_nouveau:arcane_platform"
+					type: "item"
+				}
+				{
+					id: "22DEDF8DF23B8053"
+					item: "ars_nouveau:arcane_core"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "422FBC61CBC14454"
+					item: { Count: 2, id: "ars_nouveau:source_jar" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5B7483372F366C76"
+					item: { Count: 3, id: "ars_nouveau:arcane_pedestal" }
+					type: "item"
+				}
+			]
+			title: "&6Godforged Infusion"
+			x: 0.0d
+			y: -2.0d
+		}
+	]
+	title: "&dMagic"
+}

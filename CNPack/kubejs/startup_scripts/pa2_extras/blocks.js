@@ -18,126 +18,126 @@ global.compressedBlocks = [
 	// The following ones are from AllTheCompressed but they don't get added unless ATO is present which sucks, this fixes it
 	{
 		base: "thermal:invar_block",
-		name: "Block of Invar",
+		name: "殷钢块",
 		texture: "thermal:block/invar_block",
 		modelPrefix: "invar",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:silver_block",
-		name: "Block of Silver",
+		name: "银块",
 		texture: "thermal:block/silver_block",
 		modelPrefix: "silver",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:tin_block",
-		name: "Block of Tin",
+		name: "锡块",
 		texture: "thermal:block/tin_block",
 		modelPrefix: "tin",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:lumium_block",
-		name: "Block of Lumium",
+		name: "流明块",
 		texture: "thermal:block/lumium_block",
 		modelPrefix: "lumium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:steel_block",
-		name: "Block of Steel",
+		name: "钢块",
 		texture: "thermal:block/steel_block",
 		modelPrefix: "steel",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:ruby_block",
-		name: "Block of Ruby",
+		name: "红宝石块",
 		texture: "thermal:block/ruby_block",
 		modelPrefix: "ruby",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:enderium_block",
-		name: "Block of Enderium",
+		name: "末影块",
 		texture: "thermal:block/enderium_block",
 		modelPrefix: "enderium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:lead_block",
-		name: "Block of Lead",
+		name: "铅块",
 		texture: "thermal:block/lead_block",
 		modelPrefix: "lead",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:bronze_block",
-		name: "Block of Bronze",
+		name: "青铜块",
 		texture: "thermal:block/bronze_block",
 		modelPrefix: "bronze",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:sapphire_block",
-		name: "Block of Sapphire",
+		name: "蓝宝石块",
 		texture: "thermal:block/sapphire_block",
 		modelPrefix: "sapphire",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:signalum_block",
-		name: "Block of Signalum",
+		name: "信素块",
 		texture: "thermal:block/signalum_block",
 		modelPrefix: "signalum",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:constantan_block",
-		name: "Block of Constantan",
+		name: "康铜块",
 		texture: "thermal:block/constantan_block",
 		modelPrefix: "constantan",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:nickel_block",
-		name: "Block of Nickel",
+		name: "镍块",
 		texture: "thermal:block/nickel_block",
 		modelPrefix: "nickel",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "thermal:electrum_block",
-		name: "Block of Electrum",
+		name: "琥珀金块",
 		texture: "thermal:block/electrum_block",
 		modelPrefix: "electrum",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "mekanism:block_uranium",
-		name: "Uranium Block",
+		name: "铀块",
 		texture: "mekanism:block/block_uranium",
 		modelPrefix: "uranium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "mekanism:block_osmium",
-		name: "Osmium Block",
+		name: "锇块",
 		texture: "mekanism:block/block_osmium",
 		modelPrefix: "osmium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:zinc_block",
-		name: "Block of Zinc",
+		name: "锌块",
 		texture: "create:block/zinc_block",
 		modelPrefix: "zinc",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "kubejs:blaze_block",
-		name: "Blaze Block",
+		name: "烈焰块",
 		texture: "kubejs:block/blaze_block",
 		modelPrefix: "blaze",
 		tags: ["minecraft:mineable/pickaxe"]
@@ -146,189 +146,189 @@ global.compressedBlocks = [
 	// Some blocks that made sense, and can be used to make end-game challenges
 	{
 		base: "ars_nouveau:source_gem_block",
-		name: "Source Gem Block",
+		name: "魔源宝石块",
 		texture: "ars_nouveau:block/source_gem_block",
 		modelPrefix: "source_gem",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "draconicevolution:awakened_draconium_block",
-		name: "Awakened Draconium Block",
+		name: "觉醒龙块",
 		texture: "draconicevolution:block/awakened_draconium_block_side",
 		modelPrefix: "awakened_draconium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "draconicevolution:draconium_block",
-		name: "Draconium Block",
+		name: "龙块",
 		texture: "draconicevolution:block/draconium_block",
 		modelPrefix: "draconium",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:andesite_alloy_block",
-		name: "Block of Andesite Alloy",
+		name: "安山合金块",
 		texture: "create:block/andesite_block",
 		modelPrefix: "andesite_alloy",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:brass_block",
-		name: "Block of Brass",
+		name: "黄铜块",
 		texture: "create:block/brass_block",
 		modelPrefix: "brass",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:experience_block",
-		name: "Block of Experience",
+		name: "经验块",
 		texture: "create:block/experience_block",
 		modelPrefix: "experience",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:industrial_iron_block",
-		name: "Block of Industrial Iron",
+		name: "工业铁块",
 		texture: "create:block/industrial_iron_block",
 		modelPrefix: "industrial_iron",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "refinedstorage:quartz_enriched_iron_block",
-		name: "Block of Quartz Enriched Iron",
+		name: "富石英铁块",
 		texture: "refinedstorage:block/quartz_enriched_iron_block",
 		modelPrefix: "quartz_enriched_iron",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "create:rose_quartz_block",
-		name: "Block of Rose Quartz",
+		name: "玫瑰石英块",
 		texture: "create:block/palettes/rose_quartz_side",
 		modelPrefix: "rose_quartz",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "ae2:quartz_block",
-		name: "Certus Quartz Block",
+		name: "赛特斯石英块",
 		texture: "ae2:block/quartz_block",
 		modelPrefix: "certus_quartz",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "phantasm:fallen_star",
-		name: "Fallen Star",
+		name: "陨落之星",
 		texture: "phantasm:block/fallen_star",
 		modelPrefix: "fallen_star",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "ae2:fluix_block",
-		name: "Fluix Block",
+		name: "福鲁伊克斯块",
 		texture: "ae2:block/fluix_block",
 		modelPrefix: "fluix",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "the_bumblezone:royal_jelly_block",
-		name: "Royal Jelly Block",
+		name: "蜂王浆块",
 		texture: "the_bumblezone:block/royal_jelly_block_side",
 		modelPrefix: "royal_jelly",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:blue_matter_block",
-		name: "Blue Matter Block",
+		name: "蓝物质方块",
 		texture: "projectexpansion:block/matter/blue",
 		modelPrefix: "blue_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:cyan_matter_block",
-		name: "Cyan Matter Block",
+		name: "青物质方块",
 		texture: "projectexpansion:block/matter/cyan",
 		modelPrefix: "cyan_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:fading_matter_block",
-		name: "Fading Matter Block",
+		name: "渐消物质方块",
 		texture: "projectexpansion:block/matter/fading",
 		modelPrefix: "fading_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:green_matter_block",
-		name: "Green Matter Block",
+		name: "绿物质方块",
 		texture: "projectexpansion:block/matter/green",
 		modelPrefix: "green_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:lime_matter_block",
-		name: "Lime Matter Block",
+		name: "黄绿物质方块",
 		texture: "projectexpansion:block/matter/lime",
 		modelPrefix: "lime_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:magenta_matter_block",
-		name: "Magenta Matter Block",
+		name: "品红物质方块",
 		texture: "projectexpansion:block/matter/magenta",
 		modelPrefix: "magenta_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:orange_matter_block",
-		name: "Orange Matter Block",
+		name: "橙物质方块",
 		texture: "projectexpansion:block/matter/orange",
 		modelPrefix: "orange_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:pink_matter_block",
-		name: "Pink Matter Block",
+		name: "粉红物质方块",
 		texture: "projectexpansion:block/matter/pink",
 		modelPrefix: "pink_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:purple_matter_block",
-		name: "Purple Matter Block",
+		name: "紫物质方块",
 		texture: "projectexpansion:block/matter/purple",
 		modelPrefix: "purple_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:violet_matter_block",
-		name: "Violet Matter Block",
+		name: "紫罗兰物质方块",
 		texture: "projectexpansion:block/matter/violet",
 		modelPrefix: "violet_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:white_matter_block",
-		name: "White Matter Block",
+		name: "白物质方块",
 		texture: "projectexpansion:block/matter/white",
 		modelPrefix: "white_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projectexpansion:yellow_matter_block",
-		name: "Yellow Matter Block",
+		name: "黄物质方块",
 		texture: "projectexpansion:block/matter/yellow",
 		modelPrefix: "yellow_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projecte:dark_matter_block",
-		name: "Dark Matter Block",
+		name: "暗物质方块",
 		texture: "projecte:block/dark_matter_block",
 		modelPrefix: "dark_matter",
 		tags: ["minecraft:mineable/pickaxe"]
 	},
 	{
 		base: "projecte:red_matter_block",
-		name: "Red Matter Block",
+		name: "红物质方块",
 		texture: "projecte:block/red_matter_block",
 		modelPrefix: "red_matter",
 		tags: ["minecraft:mineable/pickaxe"]
@@ -345,7 +345,7 @@ Platform.getInfo("pa2_compressed").name = "PA2 Compressed (kJS)";
 StartupEvents.registry("block", event => {
 	// Dyeable Fire
 	event.create("pa2_extras:dyeable_fire")
-		.displayName("Dyeable Fire")
+		.displayName("可染色的火")
 		.hardness(0.0)
 		.resistance(-1)
 		.mapColor("none")
@@ -395,7 +395,7 @@ StartupEvents.registry("block", event => {
 				.requiresTool(true)
 				.model(`pa2_compressed:block/${entry.modelPrefix}_compressed_${i}x`)
 				.item(builder => {
-					builder.tooltip("Total blocks: " + ((9 ** i).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
+					builder.tooltip("总方块数：" + ((9 ** i).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
 				});
 			
 			entry.tags.forEach(tag => {
