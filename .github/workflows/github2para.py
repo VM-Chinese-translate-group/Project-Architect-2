@@ -40,7 +40,7 @@ def get_filelist(dir):
 
 
 async def main():
-    files = get_filelist("./")
+    files = get_filelist("./Source")
     tasks = []
 
     for file in files:
