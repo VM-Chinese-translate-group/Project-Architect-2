@@ -226,8 +226,8 @@ BlockEvents.broken(event => {
         });
         heldItem.nbt.Enchantments = enchants;
 
-        event.player.tell(Text.of("The Excavating Enchantment is incompatible with Draconic items, removing it to prevent crashes").red());
-        event.player.tell(Text.of("Granted you an enchantment book with the enchant").yellow());
+        event.player.tell(Text.of("警告，当前的附魔如果在龙之研究的物品上，将会导致游戏崩溃，所以我要把这个附魔移除掉。").red());
+        event.player.tell(Text.of("作为赔偿给你本带有这个附魔的附魔书。").yellow());
     }
 });
 

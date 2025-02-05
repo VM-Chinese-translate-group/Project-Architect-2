@@ -367,7 +367,7 @@ StartupEvents.registry("block", event => {
 		
 	// Infused Archiveau
 	event.create("pa2_extras:inf_archiveau")
-        .displayName('§d§lInfused Archiveau')
+        .displayName('§d§l灌注过的原始能量基底')
         .soundType('shroomlight')
         .hardness(1.0)
         .resistance(-1)

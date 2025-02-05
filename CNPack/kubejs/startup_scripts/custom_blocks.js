@@ -26,7 +26,7 @@ StartupEvents.registry('block', event => {
 		.tagBlock('mineable/pickaxe')
     
     event.create('archimeat')
-        .displayName('§4§lArchimeat')
+        .displayName('§4§l原始肉块')
         .soundType('slime_block')
         .hardness(1.0)
         .resistance(-1)
@@ -38,7 +38,7 @@ StartupEvents.registry('block', event => {
         .placementState(event => event.set(BlockProperties.FACING, event.clickedFace));
 
     event.create('archiveau')
-        .displayName('§d§lArchiveau')
+        .displayName('§d§l原始能量基底')
         .soundType('shroomlight')
         .hardness(1.0)
         .resistance(-1)
@@ -49,7 +49,7 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe');
     
     event.create('architron')
-        .displayName('§c§lArchitron')
+        .displayName('§c§l不纯原始能量块')
         .soundType('shroomlight')
         .hardness(1.0)
         .resistance(-1)
@@ -60,7 +60,7 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe');
 
     event.create('archimorph')
-        .displayName('§6§lArchimorph')
+        .displayName('§6§l原始能量嬗变块')
         .soundType('shroomlight')
         .hardness(1.0)
         .resistance(-1)
@@ -76,7 +76,7 @@ StartupEvents.registry('block', event => {
 
 function createArchilution(event) {
     event.create('archilution')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -93,7 +93,7 @@ function createArchilution(event) {
 		});;
 
     event.create('archilution_d')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -108,7 +108,7 @@ function createArchilution(event) {
 		});;
 
     event.create('archilution_n')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -123,7 +123,7 @@ function createArchilution(event) {
 		});;
 
     event.create('archilution_s')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -138,7 +138,7 @@ function createArchilution(event) {
 		});;
 
     event.create('archilution_e')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -153,7 +153,7 @@ function createArchilution(event) {
 		});;
 
     event.create('archilution_w')
-        .displayName('§b§lArchilution')
+        .displayName('§b§l洁净原始能量块')
         .soundType('bamboo_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -170,7 +170,7 @@ function createArchilution(event) {
 
 function createArchium(event) {
     event.create('archium')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -187,7 +187,7 @@ function createArchium(event) {
 		});;
 
         event.create('archium_d')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -202,7 +202,7 @@ function createArchium(event) {
 		});;
 
         event.create('archium_n')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -217,7 +217,7 @@ function createArchium(event) {
 		});;
 
         event.create('archium_s')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -232,7 +232,7 @@ function createArchium(event) {
 		});;
 
         event.create('archium_e')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)
@@ -247,7 +247,7 @@ function createArchium(event) {
 		});;
 
         event.create('archium_w')
-        .displayName('§5§lArchium')
+        .displayName('§5§l原始纯能量块')
         .soundType('nether_wood_hanging_sign')
         .hardness(1.0)
         .resistance(-1)

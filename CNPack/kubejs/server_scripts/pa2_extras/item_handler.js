@@ -109,7 +109,7 @@ BlockEvents.rightClicked(event => {
         // Fixing the Building Gadget exploits with creative bins
         if (held.getId() === "buildinggadgets2:gadget_building" || held.getId() === "buildinggadgets2:gadget_exchanging")
         {
-            player.tell(Text.of("You can't use this building gadget on a Creative Bin").red());
+            player.tell(Text.of("不不不，你不能在创造箱柜上用这个建筑小帮手。").red());
             server.schedule(0, _ => delete(held.nbt.blockstate));
 			event.cancel();
 			return;
@@ -117,7 +117,7 @@ BlockEvents.rightClicked(event => {
 
         if (held.getId() === "buildinggadgets2:gadget_copy_paste")
         {
-            player.tell(Text.of("You can't copy Creative Bins. Resetting selection!").red());
+            player.tell(Text.of("你敢复制创造箱柜？！我否了！").red());
             server.schedule(0, callback => {
                 delete(held.nbt.copyend);
                 delete(held.nbt.copystart);
@@ -130,7 +130,7 @@ BlockEvents.rightClicked(event => {
 		// Prevents getting empty
 		if (!player.creative && held.getId() === "mekanism:configurator" && held.nbt.mekData.state == 8)
 		{
-			player.tell(Text.of("Creative Bins can't be emptied").red());
+			player.tell(Text.of("创造箱柜不能清空，别试了。").red());
 			event.cancel();
 			return;
 		}
@@ -139,7 +139,7 @@ BlockEvents.rightClicked(event => {
 		creativeBinBlacklist.forEach(item => {
 			if (held.getId().match(item))
 			{
-				player.tell(Text.of("This item cannot be put into a Creative Bin").red());
+				player.tell(Text.of("别试了，我不允许这件物品进创造箱柜。").red());
 				event.cancel();
 				return;
 			}
@@ -332,14 +332,14 @@ ItemEvents.entityInteracted(event => {
 		if (totalMeat >= meatToEgg)
 		{
 			target.mergeNbt({ForgeData: {meatGiven: 0}});
-			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"The ","italic":true,"color":"light_gray"},{"text":"Queen Bee","italic":true,"color":"yellow"},{"text":" thanks you with one of her eggs!","italic":true,"color":"light_gray"}]`);
+			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"伟大的","italic":true,"color":"light_gray"},{"text":"蜂后","italic":true,"color":"yellow"},{"text":"为了感谢你，送你了一颗蛋！","italic":true,"color":"light_gray"}]`);
 			
 			player.give(Item.of("the_bumblezone:bee_queen_spawn_egg", 1));
 		}
 		else // Counts and tells you
 		{
 			target.mergeNbt({ForgeData: {meatGiven: totalMeat}});
-			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A meat a day keeps the spiders away! (${totalMeat}/${meatToEgg})","italic":true,"color":"light_gray"}]`);
+			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一天一肉球，蜘蛛远离我！ (${totalMeat}/${meatToEgg})","italic":true,"color":"light_gray"}]`);
 		}
 		
 		if (!player.creative)
@@ -429,19 +429,19 @@ ItemEvents.entityInteracted(event => {
 			if (!multi)
 			{
 				if (item.startsWith("projecte:klein_"))
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Klein Star","italic":true,"color":"yellow"},{"text":" weaved from the Cosmos!","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"从宇宙中凝练而出的","italic":true,"color":"yellow"},{"text":"卡莱恩能量之星！","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item.startsWith("projectexpansion:magnum_"))
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Magnum Star","italic":true,"color":"gold"},{"text":" that warps the cosmic space!","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"可以扭曲宇宙的","italic":true,"color":"gold"},{"text":"马格南能量之星！","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item === "projectexpansion:colossal_star_ein")
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Colossal Star","italic":true,"color":"red"},{"text":" where the nothing and the everything overlap!","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"自虚无诞生之始便存在的","italic":true,"color":"red"},{"text":"终焉之星！","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item === "the_bumblezone:royal_jelly_bucket")
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Bucket of Royal Jelly","italic":true,"color":"light_purple"},{"text":" from my own collection!","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一桶","italic":true,"color":"dark_aqua"},{"text":"我自己收藏的","italic":true,"color":"light_purple"},{"text":"蜂王浆！","italic":true,"color":"dark_aqua"}]`);
 			}
 			else
-				server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"The ","italic":true,"color":"dark_aqua"},{"text":"Queen's Power","italic":true,"color":"yellow"},{"text":" brings the Cosmos to you!","italic":true,"color":"dark_aqua"}]`);
+				server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一股","italic":true,"color":"dark_aqua"},{"text":"蜂后之力，","italic":true,"color":"yellow"},{"text":"可以让你将宇宙如掌中玩物一样随意操弄！","italic":true,"color":"dark_aqua"}]`);
 			
 			if (!player.creative || multi)
 				event.getItem().shrink(1);

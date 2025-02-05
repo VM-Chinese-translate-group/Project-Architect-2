@@ -13,51 +13,51 @@
 // - This is English Only, mainly just a quick fix for some annoyances
 const langs = {
 	// Entities
-	"entity.minecraft.villager.ae2:fluix_researcher": "Fluix Researcher",
-	"entity.minecraft.villager.advancedperipherals:computer_scientist": "Computer Scientist",
-	"entity.minecraft.villager.spelunkers_charm:spelunker": "Spelunker",
+	"entity.minecraft.villager.ae2:fluix_researcher": "福鲁伊克斯研究学家",
+	"entity.minecraft.villager.advancedperipherals:computer_scientist": "计算机学家",
+	"entity.minecraft.villager.spelunkers_charm:spelunker": "洞穴探险者",
 	
 	// Biomes
-	"biome.deeperdarker.echoing_forest": "Echoing Forest",
-	"biome.deeperdarker.overcast_columns": "Overcast Columns",
-	"biome.deeperdarker.deeplands": "Deeplands",
+	"biome.deeperdarker.echoing_forest": "回响森林",
+	"biome.deeperdarker.overcast_columns": "阴云柱",
+	"biome.deeperdarker.deeplands": "深暗大陆",
 	
 	// Fluids
-	"fuild_type.biggerreactors.liquid_uranium": "Liquid Uranium",
-	"fluid_type.biggerreactors.liquid_obsidian": "Liquid Obsidian",
-	"fluid_type.biggerreactors.steam": "Steam",
+	"fuild_type.biggerreactors.liquid_uranium": "熔融铀",
+	"fluid_type.biggerreactors.liquid_obsidian": "熔融黑曜石",
+	"fluid_type.biggerreactors.steam": "蒸汽",
 	"fluid_type.thermal.latex": "Dirty Latex",
 	
 	// Blocks
-	"block.rftoolsstorage.crafting_manager": "Crafting Manager",
-	"block.starbunclemania.source_fluid_block": "Liquefied Source", // Used 'Liquefied' because all other items related to it have the typo.
-	"block.thermal.crude_oil_fluid": "Crude Oil",
-	"block.thermal.ender_fluid": "Ender Fluid",
-	"block.thermal.glowstone_mushroom": "Glowstone Mushroom",
-	"block.thermal.gunpowder_mushroom": "Gunpowder Mushroom",
-	"block.thermal.redstone_fluid": "Redstone Fluid",
-	"block.thermal.redstone_mushroom": "Redstone Mushroom",
-	"block.thermal.slime_mushroom": "Slime Mushroom",
-	"block.draconicevolution.chaos_crystal_part": "Chaos Crystal Shard",
+	"block.rftoolsstorage.crafting_manager": "合成管理器",
+	"block.starbunclemania.source_fluid_block": "熔融态魔源", // Used 'Liquefied' because all other items related to it have the typo.
+	"block.thermal.crude_oil_fluid": "石油",
+	"block.thermal.ender_fluid": "末影流体",
+	"block.thermal.glowstone_mushroom": "萤石菇",
+	"block.thermal.gunpowder_mushroom": "火药菇",
+	"block.thermal.redstone_fluid": "液态红石",
+	"block.thermal.redstone_mushroom": "红石蘑菇",
+	"block.thermal.slime_mushroom": "史莱姆菇",
+	"block.draconicevolution.chaos_crystal_part": "混沌水晶碎片",
 	
 	// Items
-	"item.rftoolsutility.teleport_probe": "Teleport Probe",
+	"item.rftoolsutility.teleport_probe": "维度传送基点探测器",
 	
 	// Enchantments
-	"enchantment.draconicevolution.reaper_enchantment.desc": "Mobs have a chance to drop the corresponding Mob Soul.",
+	"enchantment.draconicevolution.reaper_enchantment.desc": "生物有概率掉落自身的生物灵魂。",
 	
 	// Game Rules
 	"gamerule.brandonscore:allowSignEditing": "Should signs be editable?",
 	"gamerule.decorative_blocks:disableThatch": "Should Thatch be disabled?",
 	
 	// Effects
-	"effect.reliquary.pacification": "Pacification",
+	"effect.reliquary.pacification": "和平",
 	
 	// Advancements
-	"advancements.projectexpansion.yellow_fuel": "Yellow Fuel",
-	"advancements.projectexpansion.yellow_fuel.description": "Obtain yellow fuel.",
-	"advancements.projectexpansion.yellow_fuel_block": "Yellow Fuel Block",
-	"advancements.projectexpansion.yellow_fuel_block.description": "Obtain a yellow fuel block."
+	"advancements.projectexpansion.yellow_fuel": "黄色燃料",
+	"advancements.projectexpansion.yellow_fuel.description": "获得黄色染料。",
+	"advancements.projectexpansion.yellow_fuel_block": "黄色燃料块",
+	"advancements.projectexpansion.yellow_fuel_block.description": "获得黄色燃料块"
 };
 
 // Same as above but allows multiple entries to map to the same description
@@ -71,67 +71,67 @@ const multiLang = [
 	{
 		baseEntry: "item.cyclic.crystal_%entry.guide", 
 		entries: ["boots", "helmet", "chestplate", "leggings"], 
-		description: "A relatively strong armor!\n\n§8Not an official description" 
+		description: "很强大的一套护甲！\n\n§8注意这不是模组官方给出的描述" 
 	},
 	{ 
 		baseEntry: "item.cyclic.crystal_%entry.guide", 
 		entries: ["pickaxe", "axe", "hoe", "shovel", "sword"], 
-		description: "An exceptional strong tool!\n\n§8Not an official description" 
+		description: "极为强大的一套装备！\n\n§8注意这不是模组官方给出的描述" 
 	},
 	{ 
 		baseEntry: "item.cyclic.emerald_%entry.guide", 
 		entries: ["boots", "helmet", "chestplate", "leggings", "pickaxe", "axe", "hoe", "shovel", "sword"], 
-		description: "Good use for spare emeralds!\n\n§8Not an official description" 
+		description: "非常适合拿来糟蹋你的绿宝石！\n\n§8注意这不是模组官方给出的描述" 
 	},
 	{ 
 		baseEntry: "item.cyclic.copper_%entry.guide", 
 		entries: ["pickaxe", "axe", "hoe", "shovel", "sword"], 
-		description: "Better than stone I guess?!\n\n§8Not an official description" 
+		description: "这个属性比我想的还要好一点？！\n\n§8注意这不是模组官方给出的描述" 
 	},
 	{ 
 		baseEntry: "item.cyclic.amethyst_%entry.guide", 
 		entries: ["pickaxe", "axe", "hoe", "shovel", "sword"], 
-		description: "We gotta use amethyst for something right?\n\n§8Not an official description"
+		description: "咱总得在某个地方拿紫水晶当合成原料不是？\n\n§8注意这不是模组官方给出的描述"
 	},
 	{
 		baseEntry: "item.cyclic.sandstone_%entry.guide",
 		entries: ["pickaxe", "axe", "hoe", "shovel", "sword"],
-		description: "I guess that in the desert this is more common...\n\n§8Not an official description"
+		description: "我感觉吧，这个应该在沙漠里头更常见……\n\n§8注意这不是模组官方给出的描述"
 	},
 	{ 
 		baseEntry: "item.cyclic.netherbrick_%entry.guide", 
 		entries: ["pickaxe", "axe", "hoe", "shovel", "sword"], 
-		description: "It is not netherite, that is for sure!\n\n§8Not an official description"
+		description: "这玩意绝对不是下界合金啥的！\n\n§8注意这不是模组官方给出的描述"
 	},
 	{
 		baseEntry: "block.colored_water.%entry_fluid_block",
 		entries: [
-			"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black",
+			"白色", "橙色", "品红色", "浅蓝色", "黄色", "黄绿色", "粉色", "灰色", "淡灰色", "青色", "紫色", "蓝色", "棕色", "绿色", "红色", "黑色",
 			
-			"condense_white", "condense_orange", "condense_magenta", "condense_light_blue", "condense_yellow", "condense_lime", "condense_pink", "condense_gray", "condense_light_gray",
-			"condense_cyan", "condense_purple", "condense_blue", "condense_brown", "condense_green", "condense_red", "condense_black",
+			"加深的白色", "加深的橙色", "加深的品红色", "加深的浅蓝色", "加深的黄色", "加深的黄绿色", "加深的粉色", "加深的灰色", "加深的淡灰色",
+			"加深的青色", "加深的紫色", "加深的蓝色", "加深的棕色", "加深的绿色", "加深的红", "加深的黑色",
 			
-			"luminous_white", "luminous_orange", "luminous_magenta", "luminous_light_blue", "luminous_yellow", "luminous_lime", "luminous_pink", "luminous_gray", "luminous_light_gray",
-			"luminous_cyan", "luminous_purple", "luminous_blue", "luminous_brown", "luminous_green", "luminous_red", "luminous_black",
+			"发光的白色", "发光的橙色", "发光的品红色", "发光的浅蓝色", "发光的黄色", "发光的黄绿色", "发光的粉色", "发光的灰色", "发光的淡灰色",
+			"发光的青色", "发光的紫色", "发光的蓝色", "发光的棕色", "发光的绿色", "发光的红", "发光的黑色",
 			
-			"luminous_condense_white", "luminous_condense_orange", "luminous_condense_magenta", "luminous_condense_light_blue", "luminous_condense_yellow", "luminous_condense_lime",
-			"luminous_condense_pink", "luminous_condense_gray", "luminous_condense_light_gray", "luminous_condense_cyan", "luminous_condense_purple", "luminous_condense_blue",
-			"luminous_condense_brown", "luminous_condense_green", "luminous_condense_red", "luminous_condense_black"
+			"发光的加深的白色", "发光的加深的橙色", "发光的加深的品红色", "发光的加深的浅蓝色", "发光的加深的黄色", "发光的加深的黄绿色",
+			"发光的加深的粉色", "发光的加深的灰色", "发光的加深的淡灰色", "发光的加深的青色", "发光的加深的紫色", "发光的加深的蓝色",
+			"发光的加深的棕色", "发光的加深的绿色", "发光的加深的红", "发光的加深的黑色"
 		],
 		names: [
-			"White", "Orange", "Magenta", "Light Blue", "Yellow", "Lime", "Pink", "Gray", "Light Gray", "Cyan", "Purple", "Blue", "Brown", "Green", "Red", "Black",
+			"白色", "橙色", "品红色", "Light 蓝色", "黄色", "黄绿色", "粉色", "灰色", "淡灰色", "青色", "紫色", "蓝色", "棕色", "绿色", "红色", "黑色",
 			
-			"Condense White", "Condense Orange", "Condense Magenta", "Condense Light Blue", "Condense Yellow", "Condense Lime", "Condense Pink", "Condense Gray", "Condense Light Gray",
-			"Condense Cyan", "Condense Purple", "Condense Blue", "Condense Brown", "Condense Green", "Condense Red", "Condense Black",
+			"加深的白色", "加深的橙色", "加深的品红色", "加深的浅蓝色", "加深的黄色", "加深的黄绿色", "加深的粉色", "加深的灰色", "加深的淡灰色",
+			"加深的青色", "加深的紫色", "加深的蓝色", "加深的棕色", "加深的绿色", "加深的红", "加深的黑色",
 			
-			"Luminous White", "Luminous Orange", "Luminous Magenta", "Luminous Light Blue", "Luminous Yellow", "Luminous Lime", "Luminous Pink", "Luminous Gray", "Luminous Light Gray",
-			"Luminous Cyan", "Luminous Purple", "Luminous Blue", "Luminous Brown", "Luminous Green", "Luminous Red", "Luminous Black",
+			"发光的白色", "发光的橙色", "发光的品红色", "发光的浅蓝色", "发光的黄色", "发光的黄绿色", "发光的粉色", "发光的灰色", "发光的淡灰色",
+			"发光的青色", "发光的紫色", "发光的蓝色", "发光的棕色", "发光的绿色", "发光的红色", "发光的黑色",
 			
-			"Luminous Condense White", "Luminous Condense Orange", "Luminous Condense Magenta", "Luminous Condense Light Blue", "Luminous Condense Yellow", "Luminous Condense Lime",
-			"Luminous Condense Pink", "Luminous Condense Gray", "Luminous Condense Light Gray", "Luminous Condense Cyan", "Luminous Condense Purple", "Luminous Condense Blue",
-			"Luminous Condense Brown", "Luminous Condense Green", "Luminous Condense Red", "Luminous Condense Black"
+			"发光的加深白色", "发光的加深的橙色", "发光的加深的品红色", "发光的加深的浅蓝色", "发光的加深的黄色", "发光的加深的黄绿色",
+			"发光的加深的粉色", "发光的加深的灰色", "发光的加深的淡灰色", "发光的加深的青色", "发光的加深的紫色", "发光的加深的蓝色",
+			"发光的加深的棕色", "发光的加深的绿色", "发光的加深的红", "发光的加深的黑色"
 		],
-		description: "%name Water"
+		description: "%name的水"
 	}
 ]
 

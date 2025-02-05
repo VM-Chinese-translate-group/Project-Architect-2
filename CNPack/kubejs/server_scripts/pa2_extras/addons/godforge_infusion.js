@@ -250,7 +250,7 @@ BlockEvents.leftClicked(event => {
 		let target = data.itemStack.id;
 		if (!infuseable[target])
 		{
-			fail(event, "§cThe target item it not valid for Godforge Infusion");
+			fail(event, "§c注意：目标物品不能进行灌注。");
 			return;
 		}
 		
@@ -261,7 +261,7 @@ BlockEvents.leftClicked(event => {
 		// Validate the book
 		if (!held.nbt || held.nbt.StoredEnchantments.length <= 0)
 		{
-			fail(event, "§cInvalid enchantment book, contains no enchants");
+			fail(event, "§c这本附魔书无效，里头根本就没有附魔！");
 			return;
 		}
 		
@@ -286,9 +286,9 @@ BlockEvents.leftClicked(event => {
 		});
 		
 		// Display the requirements
-		player.tell(Text.of("§b§lRequirements:"));
-		player.tell(Text.of(`§b- §e${cost} §dSource`));
-		player.tell(Text.of(`§b- §e${lvls} §aLevels`));
+		player.tell(Text.of("§b§l本次附魔将会消耗："));
+		player.tell(Text.of(`§b- §e${cost} §d的魔源。`));
+		player.tell(Text.of(`§b- §e${lvls} §a级的经验。`));
 		
 		// Locks and cancels
 		global.requirementShow = true;
@@ -328,7 +328,7 @@ BlockEvents.rightClicked(event => {
 		let target = data.itemStack.id;
 		if (!infuseable[target])
 		{
-			fail(event, "§cThe target item it not valid for Godforge Infusion");
+			fail(event, "§c注意：目标物品不能进行灌注。");
 			return;
 		}
 		
@@ -339,7 +339,7 @@ BlockEvents.rightClicked(event => {
 		// Validate the book
 		if (!held.nbt || held.nbt.StoredEnchantments.length <= 0)
 		{
-			fail(event, "§cInvalid enchantment book, contains no enchants");
+			fail(event, "§c这本附魔书无效，里头根本就没有附魔！");
 			return;
 		}
 		
@@ -366,40 +366,40 @@ BlockEvents.rightClicked(event => {
 		// Check costs
 		if (cost > 10000 * struct.source.length) // cap check
 		{
-			fail(event, `§cThe cost is higher than the maximum source supported. §bNeeds §e${cost}§b but can only handle §e${10000 * struct.source.length}`);
+			fail(event, `§c注意，本次灌注将要消耗的魔源量比你提供的总量要高，附魔§b需要消耗§e${cost}§b，但你目前只提供了§e${10000 * struct.source.length}`);
 			return;
 		}
 		
 		if (cost > struct.totalSource) // current check
 		{
-			fail(event, `§cThe cost is higher than the source available. §bNeeds §e${cost}§b but has §e${struct.totalSource}`);
+			fail(event, `§c注意：本次灌注将要消耗的魔源量比你提供的量要多，附魔需要消耗§b§e${cost}§b，但你目前只提供了§e${struct.totalSource}`);
 			return;
 		}
 		
 		if (lvls > player.experienceLevel && !player.creative) // levels check
 		{
-			fail(event, `§cYou don't have enough levels. §bNeeds §e${lvls}§b but you have §e${player.experienceLevel}`);
+			fail(event, `§c你的等级不足，附魔§b§e需要消耗${lvls}点经验，§b但你目前只有§e${player.experienceLevel}`);
 			return;
 		}
 		
 		if (!struct.infuser)
 		{
 			let ingredient = Item.of(infuser, 1);
-			failComp(event, Text.of("§bYou are missing §e1 ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
+			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
 			return;
 		}
 		
 		if (!struct.catalyst)
 		{
 			let ingredient = Item.of(catalyst, 1);
-			failComp(event, Text.of("§bYou are missing §e1 ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
+			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
 			return;
 		}
 		
 		if (!struct.driver)
 		{
 			let ingredient = Item.of(driver, 1);
-			failComp(event, Text.of("§bYou are missing §e1 ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
+			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
 			return;
 		}
 		
@@ -465,7 +465,7 @@ BlockEvents.rightClicked(event => {
 		}
 		else
 		{
-			player.tell(Text.of("The book as no enchantments to apply to the item").yellow());
+			player.tell(Text.of("这本书没有什么附魔能附到目标物品上。").yellow());
 		}
 		
 		// Make the event succeed but cancels block interaction
