@@ -101,7 +101,7 @@ def process_translation(file_id: int, path: Path) -> dict[str, str]:
     zh_cn_dict = {key: re.sub(r"\\n", "\n", value) for key, value in zip(keys, values)}
 
     # 特殊处理：ftbquest 文件
-    if "ftbquest" in path.name:
+    if "quests" in path.name:
         zh_cn_dict = {
             key: value.replace(" ", "\u00A0") if "image" not in value else value
             for key, value in zip(keys, values)
