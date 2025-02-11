@@ -14,7 +14,7 @@
 		{
 			click: "https://github.com/shiftthedev"
 			height: 1.0d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext1"]
+			hover: ["@ShiftTheDev"]
 			image: "supplementaries:textures/gui/book/icon/github.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -24,7 +24,7 @@
 		{
 			click: "https://github.com/IRicTheCoder"
 			height: 1.0d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext2"]
+			hover: ["@IRicTheCoder"]
 			image: "supplementaries:textures/gui/book/icon/github.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -34,7 +34,7 @@
 		{
 			click: "#"
 			height: 1.0d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext3"]
+			hover: ["@ShiftTheDev"]
 			image: "supplementaries:textures/gui/book/icon/discord.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -44,7 +44,7 @@
 		{
 			click: "#"
 			height: 1.0d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext4"]
+			hover: ["@RicTheCoder"]
 			image: "supplementaries:textures/gui/book/icon/discord.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -54,7 +54,7 @@
 		{
 			click: "https://www.youtube.com/@ChosenArchitect"
 			height: 1.5d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext5"]
+			hover: ["Subscribe to ChosenArchitect's on YouTube"]
 			image: "kubejs:textures/quests/youtube.png"
 			rotation: 0.0d
 			width: 1.5d
@@ -64,7 +64,7 @@
 		{
 			click: "https://www.twitch.tv/chosenarchitect"
 			height: 0.95d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext6"]
+			hover: ["Follow ChosenArchitect's on Twitch"]
 			image: "kubejs:textures/quests/twitch.png"
 			rotation: 0.0d
 			width: 0.95d
@@ -74,7 +74,7 @@
 		{
 			click: "https://discord.gg/ChosenArchitect"
 			height: 1.22d
-			hover: ["ftbquests.chapter.issues__credits.image.hovertext7"]
+			hover: ["Chosen's Discord!"]
 			image: "kubejs:textures/quests/discord.png"
 			rotation: 0.0d
 			width: 1.22d
@@ -130,13 +130,13 @@
 			id: "629C7BD320C62BF6"
 			shape: "octagon"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.issues__credits.quest1.subtitle}"
+			subtitle: "Creator of the Pack!"
 			tasks: [{
 				icon: "projectexpansion:fading_matter"
 				id: "636DDD41B13FA277"
 				type: "custom"
 			}]
-			title: "{ftbquests.chapter.issues__credits.quest1.title}"
+			title: "&cChosenArchitect &f[&6Creator&f]"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -167,13 +167,13 @@
 			id: "1C1B641C139F09D2"
 			shape: "gear"
 			size: 2.0d
-			subtitle: "{ftbquests.chapter.issues__credits.quest2.subtitle}"
+			subtitle: "Designed and developed some of the pack's content. Bug fixing, content creation, etc."
 			tasks: [{
 				icon: "projectexpansion:orange_matter"
 				id: "0E60CF97E62A572F"
 				type: "custom"
 			}]
-			title: "{ftbquests.chapter.issues__credits.quest2.title}"
+			title: "&eShiftTheDev &f[&bCollaborator&f]"
 			x: -2.0d
 			y: 3.0d
 		}
@@ -202,17 +202,17 @@
 			id: "4631A867A37D8D0F"
 			shape: "gear"
 			size: 2.0d
-			subtitle: "{ftbquests.chapter.issues__credits.quest3.subtitle}"
+			subtitle: "Fixed some bugs and designed minor content. Also made the end-game challenges."
 			tasks: [{
 				icon: "projectexpansion:purple_matter"
 				id: "7DD1A3A9980A3C22"
 				type: "custom"
 			}]
-			title: "{ftbquests.chapter.issues__credits.quest3.title}"
+			title: "&eRicTheCoder &f[&bCollaborator&f]"
 			x: 2.0d
 			y: 3.0d
 		}
 	]
-	subtitle: ["{ftbquests.chapter.issues__credits.subtitle0}"]
-	title: "{ftbquests.chapter.issues__credits.title}"
+	subtitle: ["List of Collaborators"]
+	title: "Pack Credits"
 }

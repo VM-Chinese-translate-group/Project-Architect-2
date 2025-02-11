@@ -53,9 +53,9 @@
 				"18139C1F54C47255"
 			]
 			description: [
-				"{ftbquests.chapter.0lbeyondr_6creative.quest1.description1}"
+				"Completing this set of challenges allows you to gain a &l&eCreative Bin&r, however the items you can put inside are limited, and after puting something in it you can't change it anymore."
 				""
-				"{ftbquests.chapter.0lbeyondr_6creative.quest1.description2}"
+				"&cYou need to submit these items into the quest, so be sure to use the &l&dFTB Quest Task Screens &r&cto make the task faster!"
 			]
 			icon: "mekanism:creative_bin"
 			icon_scale: 0.75d
@@ -67,10 +67,10 @@
 			}]
 			shape: "octagon"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.0lbeyondr_6creative.quest1.subtitle}"
+			subtitle: "Another one?!"
 			tasks: [{
 				id: "34D5F8CD5E060A99"
-				title: "{ftbquests.chapter.0lbeyondr_6creative.quest1.task_3807222620941060761.title}"
+				title: "&d&lCrafting with creative is fun! Or is it?"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -78,7 +78,7 @@
 		}
 		{
 			dependencies: ["2E18DC6E87A8340C"]
-			description: ["{ftbquests.chapter.0lbeyondr_6creative.quest2.description1}"]
+			description: ["&dCreative Bin&r? Do I have one laying around for this?"]
 			icon: {
 				Count: 1
 				ForgeCaps: {
@@ -92,7 +92,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.0lbeyondr_6creative.quest2.subtitle}"
+			subtitle: "Queen Bee Drops Klein Stars?"
 			tasks: [{
 				consume_items: true
 				count: 8L
@@ -106,7 +106,7 @@
 				}
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest2.title}"
+			title: "Final? No Gargantuan!"
 			x: -2.0d
 			y: 0.0d
 		}
@@ -142,7 +142,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest3.title}"
+			title: "The Truest Finalest Star"
 			x: 0.0d
 			y: -2.0d
 		}
@@ -163,7 +163,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest4.title}"
+			title: "Plurality of Singularities"
 			x: 2.0d
 			y: 0.0d
 		}
@@ -256,7 +256,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest5.title}"
+			title: "Chaotic Energy"
 			x: 0.0d
 			y: 2.0d
 		}
@@ -269,7 +269,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.0lbeyondr_6creative.quest6.subtitle}"
+			subtitle: "Rainbow Furnace Goes BOOM?"
 			tasks: [{
 				consume_items: true
 				count: 1024L
@@ -278,7 +278,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest6.title}"
+			title: "Over the Rainbow"
 			x: 0.0d
 			y: 3.5d
 		}
@@ -309,7 +309,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest7.title}"
+			title: "The Cell Games"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -348,7 +348,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest8.title}"
+			title: "Antimekanism"
 			x: -1.5d
 			y: 1.5d
 		}
@@ -379,7 +379,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest9.title}"
+			title: "Archi-Experience"
 			x: -1.5d
 			y: -1.5d
 		}
@@ -410,13 +410,13 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest10.title}"
+			title: "Heart \\& Soul"
 			x: -2.0d
 			y: -3.0d
 		}
 		{
 			dependencies: ["2E18DC6E87A8340C"]
-			description: ["{ftbquests.chapter.0lbeyondr_6creative.quest11.description1}"]
+			description: ["&lThe cells need to be full of energy!&r"]
 			icon: {
 				Count: 1
 				id: "appflux:fe_256k_cell"
@@ -444,7 +444,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest11.title}"
+			title: "Hyper Fluxing"
 			x: 2.0d
 			y: -3.0d
 		}
@@ -457,7 +457,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.0lbeyondr_6creative.quest12.subtitle}"
+			subtitle: "You can Copy Enchants?"
 			tasks: [{
 				consume_items: true
 				count: 256L
@@ -466,7 +466,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest12.title}"
+			title: "Enchanting Breakdown"
 			x: 2.0d
 			y: 3.0d
 		}
@@ -497,7 +497,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest13.title}"
+			title: "Partial Infinity"
 			x: -2.0d
 			y: 3.0d
 		}
@@ -510,7 +510,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.0lbeyondr_6creative.quest14.subtitle}"
+			subtitle: "Check Advancements Queens Desire Line"
 			tasks: [
 				{
 					advancement: "the_bumblezone:essence/bee_essence_infusion"
@@ -556,13 +556,13 @@
 					type: "advancement"
 				}
 			]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest14.title}"
+			title: "Just Bee'cause"
 			x: 0.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["2E18DC6E87A8340C"]
-			description: ["{ftbquests.chapter.0lbeyondr_6creative.quest15.description1}"]
+			description: ["&lThe cells need to be full of Source!&r"]
 			icon: {
 				Count: 1
 				id: "megacells:source_storage_cell_256m"
@@ -589,10 +589,10 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.0lbeyondr_6creative.quest15.title}"
+			title: "A reliable source"
 			x: 1.5d
 			y: 1.5d
 		}
 	]
-	title: "{ftbquests.chapter.0lbeyondr_6creative.title}"
+	title: "&7&lBeyond&r &dCreative"
 }

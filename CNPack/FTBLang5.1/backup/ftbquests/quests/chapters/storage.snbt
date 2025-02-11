@@ -52,13 +52,13 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest1.subtitle}"
+			subtitle: "I'm better than RS"
 			tasks: [{
 				id: "3AE95135CE2138E9"
 				item: "ae2:crafting_terminal"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest1.title}"
+			title: "&6Applied Energistics 2"
 			x: -2.0d
 			y: 0.0d
 		}
@@ -78,13 +78,13 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest2.subtitle}"
+			subtitle: "I'm better than AE2"
 			tasks: [{
 				id: "6CAC0BBE3B20C113"
 				item: "refinedstorage:crafting_grid"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest2.title}"
+			title: "&6Refined Storage"
 			x: 2.0d
 			y: 0.0d
 		}
@@ -112,7 +112,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest3.subtitle}"
+			subtitle: "Near infinate Storage Solution"
 			tasks: [{
 				id: "5FFB1C349936A325"
 				item: {
@@ -122,10 +122,10 @@
 						value: "functionalstorage:drawer"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest3.task_6916152664991900453.title}"
+				title: "Storage Drawer"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest3.title}"
+			title: "&6Deeper Storage"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -154,7 +154,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest4.subtitle}"
+			subtitle: "Chests With Upgrades"
 			tasks: [{
 				id: "390834CC871688C6"
 				item: {
@@ -164,16 +164,16 @@
 						value: "sophisticatedstorage:base_tier_wooden_storage"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest4.task_4109592713019951302.title}"
+				title: "Sophisticated Storage"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest4.title}"
+			title: "&6More Then Just a Chest"
 			x: -1.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
-			description: ["{ftbquests.chapter.storage.quest5.description1}"]
+			description: ["Just connect the Item Interface to a storage container, link it with Logic Cables, and then connect a Storage Terminal, and you'll have a storage interface!"]
 			id: "6F93293DB7949E1B"
 			rewards: [
 				{
@@ -193,19 +193,19 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest5.subtitle}"
+			subtitle: "Simple yet complicated"
 			tasks: [{
 				id: "52C4894852C7AACE"
 				item: "integratedterminals:part_terminal_storage"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest5.title}"
+			title: "&6Intagrated Storage"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
-			description: ["{ftbquests.chapter.storage.quest6.description1}"]
+			description: ["Shift-click the Bookwyrm Charm onto the Lectern, and then use the Dominion Wand to link the inventories to the Lectern.\""]
 			id: "2C0223969EDA5D51"
 			rewards: [
 				{
@@ -225,7 +225,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest6.subtitle}"
+			subtitle: "Simple RS-Like Storage Solution"
 			tasks: [
 				{
 					id: "6C66F22793AB6558"
@@ -247,7 +247,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.storage.quest6.title}"
+			title: "&6Magic Storage"
 			x: 0.0d
 			y: 2.0d
 		}
@@ -267,7 +267,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest7.subtitle}"
+			subtitle: "Early Game of Early Game Storage"
 			tasks: [
 				{
 					id: "5C68E00EFE6586ED"
@@ -280,13 +280,13 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.storage.quest7.title}"
+			title: "&6Modular Storage"
 			x: -1.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["65C1FDA613BB02BD"]
-			description: ["{ftbquests.chapter.storage.quest8.description1}"]
+			description: ["Storage cells that can store 1k, 4k, 16k and 64k items without any type limit."]
 			id: "19498192E8A72760"
 			rewards: [
 				{
@@ -302,7 +302,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest8.subtitle}"
+			subtitle: "RS Drives but for AE2"
 			tasks: [{
 				id: "1C0B624F6AC8DC4E"
 				item: {
@@ -313,16 +313,16 @@
 					}
 				}
 				match_nbt: false
-				title: "{ftbquests.chapter.storage.quest8.task_2020816951039286350.title}"
+				title: "Anything from AE2 Things"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest8.title}"
+			title: "&6AE2 Things"
 			x: -3.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["65C1FDA613BB02BD"]
-			description: ["{ftbquests.chapter.storage.quest9.description1}"]
+			description: ["The ME Requester can host 5 requests by default. You can place as many of them as you like on your system and remote access them through the ME Requester Terminal. The terminal allows you to configure the requests and monitor the status remotely."]
 			id: "3E48A070FDA2ED76"
 			rewards: [
 				{
@@ -338,13 +338,13 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest9.subtitle}"
+			subtitle: "Keep me stocked"
 			tasks: [{
 				id: "400193D5AB56ADFC"
 				item: "merequester:requester"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest9.title}"
+			title: "&6ME Requester"
 			x: -4.0d
 			y: -1.0d
 		}
@@ -365,7 +365,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest10.subtitle}"
+			subtitle: "Easy Wireless AE2?"
 			tasks: [{
 				id: "64382AEA10AC7CA1"
 				item: {
@@ -375,16 +375,16 @@
 						value: "expatternprovider"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest10.task_7221569187279043745.title}"
+				title: "Anything from ExtendedAE"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest10.title}"
+			title: "&6ExtendedAE"
 			x: -4.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["65C1FDA613BB02BD"]
-			description: ["{ftbquests.chapter.storage.quest11.description1}"]
+			description: ["MEGA Cells is an add-on for Applied Energistics 2 providing higher tiers of storage, ranging in capacity from 1M to as high as 256M, similarly to add-ons of old such as Extra Cells 2 and its successors."]
 			id: "4271E4FF9D79951E"
 			rewards: [
 				{
@@ -400,7 +400,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.storage.quest11.subtitle}"
+			subtitle: "Cells but they are MEGA"
 			tasks: [{
 				id: "1E1B525247424CCC"
 				item: {
@@ -411,16 +411,16 @@
 					}
 				}
 				match_nbt: false
-				title: "{ftbquests.chapter.storage.quest11.task_2169418158845349068.title}"
+				title: "Anything from MEGA Cells"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest11.title}"
+			title: "&6MEGA Cells"
 			x: -3.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["4EF5C73B68262E4F"]
-			description: ["{ftbquests.chapter.storage.quest12.description1}"]
+			description: ["This mod adds better Importer, Exporter, Constructor, Destructor, Disk Manipulator, Interface, Requester from Refined Storage and RSRequestify."]
 			id: "4FB054BF96BF6E4F"
 			rewards: [
 				{
@@ -435,7 +435,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest12.subtitle}"
+			subtitle: "Better Porters"
 			tasks: [{
 				id: "0C4D4126E5FB8A6D"
 				item: {
@@ -445,10 +445,10 @@
 						value: "cabletiers"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest12.task_886436336984885869.title}"
+				title: "Anything from Cable Tiers"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest12.title}"
+			title: "&6Cable Tiers"
 			x: 4.0d
 			y: 1.0d
 		}
@@ -468,13 +468,13 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest13.subtitle}"
+			subtitle: "Keep it in stock"
 			tasks: [{
 				id: "15994CE45C7E6289"
 				item: "rsrequestify:requester"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest13.title}"
+			title: "&6Requester"
 			x: 4.0d
 			y: -1.0d
 		}
@@ -494,23 +494,23 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest14.subtitle}"
+			subtitle: "Wireless Crafting GRID!!!"
 			tasks: [{
 				id: "09D0FE0110866FAB"
 				item: "refinedstorageaddons:wireless_crafting_grid"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest14.title}"
+			title: "&6Refined Storage Addons"
 			x: 3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4EF5C73B68262E4F"]
 			description: [
-				"{ftbquests.chapter.storage.quest15.description1}"
-				"{ftbquests.chapter.storage.quest15.description2}"
-				"{ftbquests.chapter.storage.quest15.description3}"
-				"{ftbquests.chapter.storage.quest15.description4}"
+				"ExtraStorage is an addon from Refined Storage."
+				"It adds 4 levels of crafters, each of which increases the crafting speed and the number of patterns it can hold."
+				"Adds an advanced exporter/importer that has 18 slots instead of 9."
+				"It adds the disks that Reborn Storage added, moreover for each added disk its relative Storage Block and Fluid Storage Block is implemented."
 			]
 			id: "3F79228DB39C4E36"
 			rewards: [
@@ -526,7 +526,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest15.subtitle}"
+			subtitle: "Better Crafters"
 			tasks: [{
 				id: "17290C540EF3651F"
 				item: {
@@ -536,19 +536,19 @@
 						value: "extrastorage"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest15.task_1668878692085097759.title}"
+				title: "Anything from ExtraStorage"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest15.title}"
+			title: "&6ExtraStorage"
 			x: 3.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["4EF5C73B68262E4F"]
 			description: [
-				"{ftbquests.chapter.storage.quest16.description1}"
+				"Adds a multiblock pattern crafter and drives. It works just the same as it did back in AE 1. "
 				""
-				"{ftbquests.chapter.storage.quest16.description2}"
+				"The max size is 16x16 and it must have at least one CPU and one storage block."
 			]
 			id: "21330FE64BC67971"
 			rewards: [
@@ -564,7 +564,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest16.subtitle}"
+			subtitle: "Multiblock Crafters"
 			tasks: [{
 				id: "51D0F6EC93A55E0E"
 				item: {
@@ -575,10 +575,10 @@
 					}
 				}
 				match_nbt: false
-				title: "{ftbquests.chapter.storage.quest16.task_5895483408177782286.title}"
+				title: "Anything from Reborn Storage"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest16.title}"
+			title: "&6Reborn Storage"
 			x: 3.0d
 			y: -1.0d
 		}
@@ -598,7 +598,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest17.subtitle}"
+			subtitle: "RANGE of the GODS"
 			tasks: [
 				{
 					id: "302E6B7D200B813B"
@@ -611,13 +611,13 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.storage.quest17.title}"
+			title: "&6RS Infinity Booster"
 			x: 4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
-			description: ["{ftbquests.chapter.storage.quest18.description1}"]
+			description: ["Step into the future with QIO Storage from the Mekanism mod. This revolutionary system leverages quantum technology to offer virtually limitless storage for all your items. Seamlessly manage and access your inventory with unparalleled efficiency and speed, transforming the way you organize and utilize resources in your Minecraft world"]
 			id: "1BB2C5DC68FA6011"
 			rewards: [
 				{
@@ -638,16 +638,16 @@
 				item: "mekanism:qio_drive_array"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest18.title}"
+			title: "&6QIO Storage"
 			x: 1.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
 			description: [
-				"{ftbquests.chapter.storage.quest19.description1}"
+				"Seamlessly blend the mystical energies of Ars Nouveau with the technological prowess of Applied Energistics 2. Ars Energistics provides integration for managing and storing Source, the magical power from Ars Nouveau, within the sophisticated storage networks of AE2. "
 				""
-				"{ftbquests.chapter.storage.quest19.description2}"
+				"Empower your magical endeavors with the precision and efficiency of advanced tech, creating a synergy that elevates both your spellcraft and automation capabilities to new heights."
 			]
 			id: "0A8C3CDF9522C92C"
 			rewards: [
@@ -663,7 +663,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest19.subtitle}"
+			subtitle: "Harmonizing Magic and Technology"
 			tasks: [{
 				id: "4A1EFE34A1982015"
 				item: {
@@ -673,19 +673,19 @@
 						value: "arseng"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest19.task_5340985710110842901.title}"
+				title: "Ars Energistics"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest19.title}"
+			title: "&6Ars Energistics"
 			x: -3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
 			description: [
-				"{ftbquests.chapter.storage.quest20.description1}"
+				"Combine the robust technology of Applied Energistics 2 with the advanced machinery of Mekanism. Applied Mekanistics bridges the gap between these two powerful mods, allowing you to integrate Mekanism's Chemical systems and processing capabilities into AE2's intricate storage networks. "
 				""
-				"{ftbquests.chapter.storage.quest20.description2}"
+				"Streamline your resource management, automate complex processes, and create a seamlessly connected base that harnesses the best of both technological worlds."
 			]
 			id: "46DCD79CC4EA44A8"
 			rewards: [
@@ -701,7 +701,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest20.subtitle}"
+			subtitle: "Fusing High Tech and Energy Mastery"
 			tasks: [{
 				id: "078EE2E6F2DF3B06"
 				item: {
@@ -711,19 +711,19 @@
 						value: "appmek"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest20.task_544622086503480070.title}"
+				title: "Applied Mekanistics"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest20.title}"
+			title: "&6Applied Mekanistics"
 			x: -4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["6C37FFC2DE8BB6F3"]
 			description: [
-				"{ftbquests.chapter.storage.quest21.description1}"
+				"Harness the power of Applied Flux to seamlessly store and distribute energy within your Applied Energistics 2 system. This mod allows you to integrate power storage solutions directly into your AE2 networks, ensuring efficient energy management and uninterrupted operations. "
 				""
-				"{ftbquests.chapter.storage.quest21.description2}"
+				"Automate your power needs, streamline resource flow, and optimize your base's performance with the perfect fusion of energy and storage technologies."
 			]
 			id: "784031796E242D21"
 			rewards: [
@@ -739,7 +739,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest21.subtitle}"
+			subtitle: "Power Storage and Distribution Mastery"
 			tasks: [{
 				id: "7315C09D60987131"
 				item: {
@@ -749,15 +749,15 @@
 						value: "appflux"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest21.task_8292746071035638065.title}"
+				title: "Applied Flux"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest21.title}"
+			title: "&6Applied Flux"
 			x: -5.0d
 			y: 1.0d
 		}
 		{
-			description: ["{ftbquests.chapter.storage.quest22.description1}"]
+			description: ["Storage Mods and Addons Showcase: This quest is a straightforward exploration of various storage mods and their addons. It provides you with a clear list of storage solutions to help expand your inventory, organize resources, and improve your Minecraft storage experience."]
 			icon: "ae2:chest"
 			id: "6C37FFC2DE8BB6F3"
 			rewards: [{
@@ -767,19 +767,19 @@
 			}]
 			shape: "diamond"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.storage.quest22.subtitle}"
+			subtitle: "Where does all of this stuff go?"
 			tasks: [{
 				id: "3C5E22B9D44E881B"
-				title: "{ftbquests.chapter.storage.quest22.task_4349952471612688411.title}"
+				title: "Storage Options"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.storage.quest22.title}"
+			title: "&6Storage Options"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["65C1FDA613BB02BD"]
-			description: ["{ftbquests.chapter.storage.quest23.description1}"]
+			description: ["Unlock the power of quantum tech! Build advanced machines, automate crafting, and harness limitless storage. The future of automation is in your hands!"]
 			id: "0E13B177E884D397"
 			rewards: [
 				{
@@ -794,7 +794,7 @@
 					xp: 100
 				}
 			]
-			subtitle: "{ftbquests.chapter.storage.quest23.subtitle}"
+			subtitle: "Efficiency Overload"
 			tasks: [{
 				id: "37D14A00D98C4F76"
 				item: {
@@ -804,13 +804,13 @@
 						value: "advanced_ae"
 					}
 				}
-				title: "{ftbquests.chapter.storage.quest23.task_4022077309728870262.title}"
+				title: "Advanced AE"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.storage.quest23.title}"
+			title: "&6Advanced AE"
 			x: -5.0d
 			y: -1.0d
 		}
 	]
-	title: "{ftbquests.chapter.storage.title}"
+	title: "&6Storage"
 }

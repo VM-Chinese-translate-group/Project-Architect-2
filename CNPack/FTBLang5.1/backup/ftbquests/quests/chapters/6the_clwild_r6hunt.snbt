@@ -52,9 +52,9 @@
 				"3C2E6543D586AC71"
 			]
 			description: [
-				"{ftbquests.chapter.6the_clwild_r6hunt.quest1.description1}"
+				"Completing this set of challenges allows you to gain a &l&eCreative Bin&r, however the items you can put inside are limited, and after puting something in it you can't change it anymore."
 				""
-				"{ftbquests.chapter.6the_clwild_r6hunt.quest1.description2}"
+				"&cYou need to submit these items into the quest, so be sure to use the &l&dFTB Quest Task Screens &r&cto make the task faster!"
 			]
 			icon: "mekanism:creative_bin"
 			icon_scale: 0.75d
@@ -66,10 +66,10 @@
 			}]
 			shape: "octagon"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.6the_clwild_r6hunt.quest1.subtitle}"
+			subtitle: "CREATIVE ITEM!"
 			tasks: [{
 				id: "24F13D0DCD2733B3"
-				title: "{ftbquests.chapter.6the_clwild_r6hunt.quest1.task_2661975984238441395.title}"
+				title: "&6&lAre you up to the challenge?"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -84,7 +84,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.6the_clwild_r6hunt.quest2.subtitle}"
+			subtitle: "Critical Role"
 			tasks: [
 				{
 					entity: "ars_nouveau:wilden_stalker"
@@ -115,7 +115,7 @@
 					value: 20L
 				}
 			]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest2.title}"
+			title: "The Wilden Butcher"
 			x: 2.0d
 			y: 0.0d
 		}
@@ -127,7 +127,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.6the_clwild_r6hunt.quest3.subtitle}"
+			subtitle: "Ok, so the Queen Bee is BROKEN!!!"
 			tasks: [{
 				consume_items: true
 				count: 1024L
@@ -135,7 +135,7 @@
 				item: { Count: 1024, id: "minecraft:dragon_head" }
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest3.title}"
+			title: "OMEGA Queen Bee"
 			x: -2.0d
 			y: 0.0d
 		}
@@ -147,7 +147,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.6the_clwild_r6hunt.quest4.subtitle}"
+			subtitle: "Don't Let IT OUT!"
 			tasks: [{
 				consume_items: true
 				id: "18FC694CB27333FE"
@@ -277,7 +277,7 @@
 				}
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest4.title}"
+			title: "Contain the Chaos"
 			x: 1.5d
 			y: 1.5d
 		}
@@ -313,7 +313,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest5.title}"
+			title: "Dimensional Slayer"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -334,7 +334,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest6.title}"
+			title: "Withering Eggs"
 			x: -1.5d
 			y: -1.5d
 		}
@@ -355,7 +355,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest7.title}"
+			title: "A Deep Heart"
 			x: -1.5d
 			y: 1.5d
 		}
@@ -388,7 +388,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest8.title}"
+			title: "Charming Vexes"
 			x: -3.0d
 			y: -1.5d
 		}
@@ -421,7 +421,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest9.title}"
+			title: "Fragmented Phantoms"
 			x: -3.0d
 			y: 1.5d
 		}
@@ -454,7 +454,7 @@
 				match_nbt: true
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest10.title}"
+			title: "Elder Bits"
 			x: -3.5d
 			y: 0.0d
 		}
@@ -481,7 +481,7 @@
 				type: "kill"
 				value: 9001L
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest11.title}"
+			title: "It hides in the stones"
 			x: 3.0d
 			y: -1.5d
 		}
@@ -508,7 +508,7 @@
 				type: "kill"
 				value: 9001L
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest12.title}"
+			title: "It is drawn to the Pearl"
 			x: 3.0d
 			y: 1.5d
 		}
@@ -535,7 +535,7 @@
 				type: "kill"
 				value: 9001L
 			}]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest13.title}"
+			title: "It lives in the dark"
 			x: 3.5d
 			y: 0.0d
 		}
@@ -590,10 +590,10 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.6the_clwild_r6hunt.quest14.title}"
+			title: "The Flying B's"
 			x: 0.0d
 			y: -2.5d
 		}
 	]
-	title: "{ftbquests.chapter.6the_clwild_r6hunt.title}"
+	title: "&6The &c&lWild &r&6Hunt!"
 }

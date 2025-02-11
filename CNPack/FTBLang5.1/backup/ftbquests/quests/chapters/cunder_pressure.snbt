@@ -58,7 +58,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest1.title}"
+			title: "Compressing Dragons!"
 			x: -2.0d
 			y: 0.0d
 		}
@@ -82,9 +82,9 @@
 				"18B358DB4AEDD17B"
 			]
 			description: [
-				"{ftbquests.chapter.cunder_pressure.quest2.description1}"
+				"Completing this set of challenges allows you to gain a &l&eCreative Bin&r, however the items you can put inside are limited, and after puting something in it you can't change it anymore. "
 				""
-				"{ftbquests.chapter.cunder_pressure.quest2.description2}"
+				"&cYou need to submit these items into the quest, so be sure to use the &l&dFTB Quest Task Screens &r&cto make the task faster!"
 			]
 			icon: "mekanism:creative_bin"
 			icon_scale: 0.75d
@@ -96,10 +96,10 @@
 			}]
 			shape: "octagon"
 			size: 3.0d
-			subtitle: "{ftbquests.chapter.cunder_pressure.quest2.subtitle}"
+			subtitle: "Creative Item?"
 			tasks: [{
 				id: "3FA7A8BAD944E7FD"
-				title: "{ftbquests.chapter.cunder_pressure.quest2.task_4586820265962694653.title}"
+				title: "&c&lCan you compress them all?!"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -119,7 +119,7 @@
 				item: "pa2_compressed:fallen_star_5x"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.cunder_pressure.quest3.title}"
+			title: "The Star Compression"
 			x: 0.0d
 			y: -2.0d
 		}
@@ -183,7 +183,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest4.title}"
+			title: "Infinite Trees it Seems!"
 			x: 2.0d
 			y: 0.0d
 		}
@@ -240,7 +240,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest5.title}"
+			title: "Compressing Carpenter"
 			x: 3.0d
 			y: 0.0d
 		}
@@ -367,7 +367,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest6.title}"
+			title: "Sticks and Stones?!"
 			x: 1.5d
 			y: 1.5d
 		}
@@ -449,7 +449,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest7.title}"
+			title: "Flawless Cut!"
 			x: -1.5d
 			y: 1.5d
 		}
@@ -562,7 +562,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest8.title}"
+			title: "Whats the matter?"
 			x: -1.5d
 			y: -1.5d
 		}
@@ -589,7 +589,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest9.title}"
+			title: "Royal Honey!"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -667,7 +667,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest10.title}"
+			title: "Goint at it Soil'o!"
 			x: 0.0d
 			y: 2.0d
 		}
@@ -745,7 +745,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest11.title}"
+			title: "Nature \\& Glass"
 			x: 0.0d
 			y: 3.0d
 		}
@@ -796,7 +796,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest12.title}"
+			title: "This compression is Powah!"
 			x: -3.0d
 			y: 0.0d
 		}
@@ -824,7 +824,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest13.title}"
+			title: "An Enchanting Experience"
 			x: -2.5d
 			y: 2.5d
 		}
@@ -852,7 +852,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest14.title}"
+			title: "Technical Compression"
 			x: 0.0d
 			y: -3.0d
 		}
@@ -881,7 +881,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest15.title}"
+			title: "Let there be Light!"
 			x: 2.5d
 			y: 2.5d
 		}
@@ -962,7 +962,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest16.title}"
+			title: "I'm Alloy in!"
 			x: -2.5d
 			y: -2.5d
 		}
@@ -1043,10 +1043,10 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.cunder_pressure.quest17.title}"
+			title: "Metallic Radiation"
 			x: 2.5d
 			y: -2.5d
 		}
 	]
-	title: "{ftbquests.chapter.cunder_pressure.title}"
+	title: "&cUnder &lPressure"
 }

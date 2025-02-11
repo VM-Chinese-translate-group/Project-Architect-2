@@ -54,9 +54,9 @@
 	quests: [
 		{
 			description: [
-				"{ftbquests.chapter.final_star.quest1.description1}"
+				"Archium Block is subjected to a torrent of antimatter within an Antiprotonic Nucleosynthesizer, yielding the elusive Fading Matter—a substance of fleeting yet potent EMC essence!"
 				""
-				"{ftbquests.chapter.final_star.quest1.description2}"
+				"EMC Gains of 890,415,519,104"
 			]
 			icon: "projectexpansion:fading_matter"
 			id: "5522988427784F15"
@@ -80,7 +80,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.final_star.quest1.subtitle}"
+			subtitle: "Substance Fleeting"
 			tasks: [
 				{
 					id: "099653C69E5ECB84"
@@ -99,7 +99,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.final_star.quest1.title}"
+			title: "Fading Matter"
 			x: 1.0d
 			y: -1.0d
 		}
@@ -108,7 +108,7 @@
 				"5522988427784F15"
 				"729A3DF6A6EF0A35"
 			]
-			description: ["{ftbquests.chapter.final_star.quest2.description1}"]
+			description: ["Taking the Fading Matter and dropping it alongside a Transmutation Tablet, then detonating TNT nearby, triggers a cataclysmic reaction. The explosive force ruptures the fabric of space, unleashing a shard of the Final Star into the world—an artifact of unparalleled EMC potential."]
 			icon: "projectexpansion:final_star_shard"
 			id: "0C71B92339EB6066"
 			rewards: [
@@ -130,7 +130,7 @@
 				}
 			]
 			shape: "square"
-			subtitle: "{ftbquests.chapter.final_star.quest2.subtitle}"
+			subtitle: "From Another Universe"
 			tasks: [
 				{
 					count: 4L
@@ -149,13 +149,13 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.final_star.quest2.title}"
+			title: "Final Star Shards"
 			x: 3.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["0C71B92339EB6066"]
-			description: ["{ftbquests.chapter.final_star.quest3.description1}"]
+			description: ["After meticulously gathering enough Final Star Shards, you embark on a Precision Assembly Process, infusing each shard with the essence of raw Hyper Experience. With each shard carefully aligned, you merge them seamlessly into a complete Final Star, unleashing a surge of unparalleled Creativity and boundless potential into your Minecraft world."]
 			icon: "projectexpansion:final_star"
 			id: "5D87067819791D1A"
 			rewards: [
@@ -231,7 +231,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.final_star.quest3.title}"
+			title: "&k;&r&dFinal Star&r&k;&r"
 			x: 6.0d
 			y: -1.0d
 		}
@@ -243,7 +243,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.final_star.quest4.subtitle}"
+			subtitle: "Fast... Maybe Too Fast!"
 			tasks: [{
 				id: "51F1621A943C48D8"
 				item: "pipez:infinity_upgrade"
@@ -260,7 +260,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.final_star.quest5.subtitle}"
+			subtitle: "DEEP Storage"
 			tasks: [{
 				id: "56848ADE6936FEDD"
 				item: "functionalstorage:max_storage_upgrade"
@@ -277,7 +277,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.final_star.quest6.subtitle}"
+			subtitle: "Pre Unlimited Power"
 			tasks: [{
 				id: "3CAE111CA9A5BD76"
 				item: "thermal:machine_efficiency_creative_augment"
@@ -293,7 +293,7 @@
 				type: "xp"
 				xp: 100
 			}]
-			subtitle: "{ftbquests.chapter.final_star.quest7.subtitle}"
+			subtitle: "Unlimited What?"
 			tasks: [{
 				id: "605242F014EADCF3"
 				item: "thermal:machine_catalyst_creative_augment"
@@ -303,5 +303,5 @@
 			y: 1.5d
 		}
 	]
-	title: "{ftbquests.chapter.final_star.title}"
+	title: "Final Star"
 }

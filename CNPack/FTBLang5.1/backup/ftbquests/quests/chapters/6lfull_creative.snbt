@@ -110,7 +110,7 @@
 			"4D2CBA45211C47B6"
 			"3557C8BB66FC15A4"
 		]
-		description: ["{ftbquests.chapter.6lfull_creative.quest1.description1}"]
+		description: ["You have now full creative items! WELL DONE!"]
 		icon: "mekanism:creative_bin"
 		icon_scale: 0.75d
 		id: "1DD0894D9EAF09CD"
@@ -136,14 +136,14 @@
 		}]
 		shape: "octagon"
 		size: 4.0d
-		subtitle: "{ftbquests.chapter.6lfull_creative.quest1.subtitle}"
+		subtitle: "There you go!"
 		tasks: [{
 			id: "6E71BC742FC94B22"
-			title: "{ftbquests.chapter.6lfull_creative.quest1.task_7958349223744326434.title}"
+			title: "&8&lThe final challenge!"
 			type: "checkmark"
 		}]
 		x: 2.0d
 		y: 1.25d
 	}]
-	title: "{ftbquests.chapter.6lfull_creative.title}"
+	title: "&6&lFull Creative"
 }
