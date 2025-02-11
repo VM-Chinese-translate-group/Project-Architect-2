@@ -173,7 +173,6 @@ BlockEvents.rightClicked(event => {
 	const block = event.getBlock();
 	
 	const held = event.getItem();
-	const hand = event.getHand();
 	
 	const world = event.getLevel();
 	const aabb = new $AABB(block.getPos());

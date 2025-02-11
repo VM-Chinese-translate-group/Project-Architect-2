@@ -2,6 +2,7 @@
 // PA2 Extras - Item Handler
 //------------------------------------------------------------------------------------------------------------------------------------------------
 // Author: RicTheCoder
+// Contributors: ShiftTheDev
 //
 // A script to handle the right clicking and interaction of items, this allows for special behaviors to be added where they should already exist
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,6 +24,16 @@ const blobFeedChance = 0.25;
 // Set to true if the Heart of the Deep is stackable
 // - This prevents using the entire stack to open the gate
 const fixHeartStackUsage = true;
+
+// Set to true to fix the issue where some items converts from Experience Crystals in the wrong way
+const fixExperienceCrystalConversion = true;
+
+// A quick fix for invisible modular routers
+// - The list below if the blocks to ignore
+const fixInvisibleMR = true;
+const routerCamoBlacklist = [
+    "ae2:cable_bus"
+];
 
 // Create custom hidden trades for the Queen Bee, Archium to EMC Stars (up to first colossal line) + Royal Jelly Farming
 // - The list below has the trades, you can alter it, just do item id as key, and weight as value
@@ -75,6 +86,9 @@ function compareCable(type, block, held) {
 	}
 }
 
+// Check function for edge cases
+function check(cond) { return cond !== false; }
+
 // Block right click
 BlockEvents.rightClicked(event => {
 	// Get Contants
@@ -82,6 +96,63 @@ BlockEvents.rightClicked(event => {
 	const server = player.getServer();
 	const block = event.getBlock();
 	const held = event.getItem();
+
+		// Fix the modular routers camouflage bug
+		if (fixInvisibleMR && routerCamoBlacklist.includes(block.getId()) && held.getId() === "modularrouters:camouflage_upgrade")
+			{
+				let amount = held.count;
+				player.setHeldItem(event.getHand(), Item.of("minecraft:air"));
+		
+				server.schedule(0, _ => {
+					player.give(Item.of("modularrouters:camouflage_upgrade", amount));
+				});
+		
+				player.tell(Text.of("You can't use the camouflage upgrade on this block. It is bugged, so it has been blacklisted!").red());
+				event.cancel();
+				return;
+			}
+		
+			// Fix Experience Crystal interactions
+			if (block.getId() === "utilitix:experience_crystal" && fixExperienceCrystalConversion)
+			{
+				let nbt = block.getEntityData();
+				if (!nbt || !nbt.Xp || !held.nbt || nbt.Xp === 0)
+					return;
+		
+				// Fix Insightful Crystal
+				if (held.getId() === "thermal:xp_crystal")
+				{
+					if (!held.nbt.Xp)
+						held.nbt.Xp = 0;
+		
+					server.schedule(1, _ => {
+						held.nbt.Xp += nbt.Xp;
+						nbt.Xp = 0;
+						block.setEntityData(nbt);
+					});
+		
+					event.cancel();
+					return;
+				}
+		
+				// Fix Hero Medallion
+				if (held.getId() === "reliquary:hero_medallion")
+				{
+					console.log("here");
+					if (!held.nbt.experience)
+						held.nbt.experience = 0;
+		
+					server.schedule(1, _ => {
+						console.log("and here");
+						held.nbt.experience += nbt.Xp;
+						nbt.Xp = 0;
+						block.setEntityData(nbt);
+					});
+		
+					event.cancel();
+					return;
+				}
+			}
 	
 	// Transmutation Interface learning system
 	if (block.getId() === "projectexpansion:transmutation_interface")
@@ -118,7 +189,7 @@ BlockEvents.rightClicked(event => {
         if (held.getId() === "buildinggadgets2:gadget_copy_paste")
         {
             player.tell(Text.of("你敢复制创造箱柜？！我否了！").red());
-            server.schedule(0, callback => {
+            server.schedule(0, _ => {
                 delete(held.nbt.copyend);
                 delete(held.nbt.copystart);
                 delete(held.nbt.copyuuid);
@@ -178,7 +249,7 @@ BlockEvents.rightClicked(event => {
 		let count = inv.count("deeperdarker:heart_of_the_deep") - 1;
 		
 		// Uses a single tick callback to recheck the item, and give back the stack if needed
-		server.schedule(1, callback => {
+		server.schedule(1, _ => {
 			if (player.getHeldItem(hand).getId() === "minecraft:air")
 				player.setHeldItem(hand, leftOver);
 			
@@ -264,48 +335,58 @@ BlockEvents.rightClicked(event => {
 // Checks for right clicks
 ItemEvents.rightClicked(event => {
 	// Get constants
+    const held = event.getItem();
 	const server = event.getEntity().getServer();
+    const target = event.getTarget();
+
+    // Fix the Old Miners Bundle
+    if (held.getId() === "spelunkers_charm:old_miners_bundle")
+    {
+        if(event.hand.toString() === "OFF_HAND")
+        {
+            server.schedule(0, _ => { held.shrink(1); });
+        }
+    }
 	
 	// Adds right clicking to the FS upgrades
 	if (stackFSCycle && ["functionalstorage:puller_upgrade", "functionalstorage:pusher_upgrade", "functionalstorage:collector_upgrade"].includes(event.getItem().getId()))
 	{
-		let item = event.getItem();
 		let player = event.getEntity().getName().getString();
-		let dirMsg = (dir) => server.runCommandSilent(`title ${player} actionbar ["",{"text":"Direction: ","color":"yellow"},"${dir}"]`);
+		let dirMsg = (dir) => server.runCommandSilent(`title ${player.getUsername()} actionbar ["",{"text":":方向： ","color":"yellow"},"${dir}"]`);
 		
-		if (!item.nbt)
+		if (!held.nbt)
 		{
-			item.nbt = {Direction:"down"};
-			dirMsg("Down");
+			held.nbt = {Direction:"down"};
+			dirMsg("下");
 		}
 		else
 		{
-			switch (item.nbt.Direction)
+			switch (held.nbt.Direction)
 			{
 				case "down":
-					item.nbt.Direction = "up";
-					dirMsg("Up");
+					held.nbt.Direction = "up";
+					dirMsg("上");
 					break;
 				case "up":
-					item.nbt.Direction = "north";
-					dirMsg("North");
+					held.nbt.Direction = "north";
+					dirMsg("北");
 					break;
 				case "north":
-					item.nbt.Direction = "south";
-					dirMsg("South");
+					held.nbt.Direction = "south";
+					dirMsg("南");
 					break;
 				case "south":
-					item.nbt.Direction = "west";
-					dirMsg("West");
+					held.nbt.Direction = "west";
+					dirMsg("西");
 					break;
 				case "west":
-					item.nbt.Direction = "east";
-					dirMsg("East");
+					held.nbt.Direction = "east";
+					dirMsg("东");
 					break;
 				case "east":
 				default:
-					item.nbt.Direction = "down";
-					dirMsg("Down");
+					held.nbt.Direction = "down";
+					dirMsg("下");
 					break;
 			}
 		}

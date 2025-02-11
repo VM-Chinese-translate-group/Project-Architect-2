@@ -131,15 +131,60 @@ const tooltipToItem = [
 		tips: ["tooltip.easy_villagers.trader.1"]
 	},
 	{
-		// Camo Upgrade - MR
-		items: ["modularrouters:camouflage_upgrade"],
-		tips: ["tooltip.modularrouters.camouflage_upgrade.1"]
-	},
-	{
 		// Void Motor
 		items: "createutilities:void_motor",
-		tips: ["tooltip.createutilities.void_motor.1"]
-	}
+		tips: "tooltip.createutilities.void_motor.1"
+	},
+	{
+        // Industrial Foregoing - Upgrades
+        items: [/industrialforegoing:.+_addon_?\d+/, /mifa:.+_addon_\d/],
+        tips: "tooltip.industrialforegoing.addon.1"
+    },
+    {
+        // LaserIO - Items
+        items: /laserio:.+/,
+        tips: "tooltip.laserio.items.1"
+    },
+    {
+        // Resonarium Items
+        items: /(deeperdarker|delightful):resonarium_(knife|shovel|pickaxe|axe|sword|hoe|helmet|chestplate|leggings|boots)/,
+        tips: ["tooltip.resonarium.items.1", "tooltip.resonarium.items.2"]
+    },
+    {
+        // Archimeat
+        items: "kubejs:archimeat",
+        tips: ["tooltip.kubejs.archimeat.1", "tooltip.kubejs.archimeat.2"]
+    },
+    {
+        // Archi-blocks
+        items: /kubejs:archi(veau|tron|lution)/,
+        tips: ["tooltip.kubejs.archiveau.1"]
+    },
+    {
+        // Cyanite Ingot
+        items: "biggerreactors:cyanite_ingot",
+        tips: ["tooltip.kubejs.cyanite_ingot.1"]
+    },
+    {
+        // Blutonium Ingot
+        items: "biggerreactors:blutonium_ingot",
+        tips: ["tooltip.kubejs.blutonium_ingot.1"]
+    },
+    {
+        // Chromatic Compound
+        items: "create:chromatic_compound",
+        tips: ["tooltip.create.chromatic_compound.1"]
+    },
+    {
+        // Shadow Steel
+        items: "create:shadow_steel",
+        tips: ["tooltip.create.shadow.steel.1"]
+    },
+    {
+        // Refined Radiance
+        items: "create:refined_radiance",
+        tips: ["tooltip.create.refined_radiance.1"]
+    }
 ];
 
 // Fixes the name of some items
@@ -171,6 +216,19 @@ ItemEvents.tooltip(event => {
 
 	// Fixes incorrect names
 	Object.keys(nameFixer).forEach(item => {
-		event.addAdvanced(item, (stack, adv, text) => text.set(0, nameFixer[item].replace("%name", text.get(0).getString())));
+		event.addAdvanced(item, (_, __, text) => text.set(0, nameFixer[item].replace("%name", text.get(0).getString())));
 	});
+	
+    // Fixes the names for the items from the Thermal Extras Fixer
+    global.teFixer.forEach(entry => {
+        Object.keys(entry.localFix).forEach(old => {
+            const $Style = Java.loadClass("net.minecraft.network.chat.Style");
+
+            const info = entry.localFix[old];
+            const name = Text.translate(info[0]).append(" (Legacy)");
+
+            event.addAdvanced("thermal_extra:" + old, (_, __, text) => text.set(0, name.setStyle(info[1].getStyleModifier().apply($Style.EMPTY))));
+            event.add("thermal_extra:" + old, "§aTo turn this into the new item just put in a crafting table");
+        })
+    });
 });

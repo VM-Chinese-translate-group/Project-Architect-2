@@ -2,6 +2,7 @@
 // PA2 Extras - Drop Handler
 //------------------------------------------------------------------------------------------------------------------------------------------------
 // Author: RicTheCoder
+// Contributor: ShiftTheDev
 //
 // This script includes a bunch of things, the ability to quickly fix blocks that are either bugged and should drop, or drops that should drop
 // but for some reason never were added (no reason why some blocks like Reinforced Deepslate shouldn't be mineable, at least with silk touch).
@@ -104,7 +105,7 @@ const mineFixBlocks = [
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
 // Block Break Functions
-function breakBlock(event, heldItem, fixDrop) {
+function breakBlock(event, fixDrop) {
 	// Get server for easy use
 	const server = event.player.getServer();
 	
@@ -128,7 +129,7 @@ function breakBlock(event, heldItem, fixDrop) {
 			event.block.popItem(event.block.getItem().withCount(1));
 			global.dropped = true;
 			
-			server.schedule(1, callback => global.dropped = false);
+			server.schedule(1, _ => global.dropped = false);
 		}
 	}
 	else
@@ -140,7 +141,6 @@ BlockEvents.broken(event => {
 	// Get server for easy use & the block
 	const server = event.player.getServer();
 	const block = event.block;
-    const level = event.level;
 	
 	// Checks for Modular Routers
 	if (fixMRWrongDrop && event.block.getId() === "modularrouters:modular_router")
@@ -160,36 +160,39 @@ BlockEvents.broken(event => {
 	// Silk Touch Drops
 	if (dropsSilk.length !== 0 && dropsSilk.includes(event.block.getId()) && heldItem.hasEnchantment("minecraft:silk_touch", 1))
 	{
-		breakBlock(event, heldItem, fixDrop);
+		breakBlock(event, fixDrop);
 		return;
 	}
 	
 	// Non Silk Touch Drops
 	if (drops.length !== 0 && drops.includes(event.block.getId()))
 	{
-		breakBlock(event, heldItem, fixDrop);
+		breakBlock(event, fixDrop);
 		return;
 	}
 	
 	// Checks for Alchemical Collection usage
 	if (fixACEnchant && heldItem.nbt && heldItem.nbt.AlchemicalCollectionEnabled && heldItem.nbt.AlchemicalCollectionEnabled == 1)
-		server.runCommandSilent(`execute as ${event.player.getUsername()} run projecte knowledge learn @s ${event.block.getItem().getId()}`); // Force learns the item being broken with AC active
+		server.runCommandSilent(`projecte knowledge learn ${event.player.getUsername()} ${event.block.getItem().getId()}`); // Force learns the item being broken with AC active
 	
 	// Fix Tool Duping
-	if (fixDrop && ( doubleDropBlocks.includes(block.getItem().getMod()) || doubleDropBlocks.includes(block.getId()) ))
-	{	
-		// Breaks with commands to allow event cancelling
-		let pos = `${block.getX()} ${block.getY()} ${block.getZ()}`;
-		
-		if (block.getId().startsWith("chisel_chipped_integration:"))
-			server.runCommandSilent(`setblock ${pos} air`);
-		else
-			server.runCommandSilent(`setblock ${pos} air destroy`);
-		
-		// Cancels the event
-		event.cancel();
+    if (doubleDropBlocks.length !== 0)
+	{
+		if (fixDrop && ( doubleDropBlocks.includes(block.getItem().getMod()) || doubleDropBlocks.includes(block.getId()) ))
+			{	
+				// Breaks with commands to allow event cancelling
+				let pos = `${block.getX()} ${block.getY()} ${block.getZ()}`;
+				
+				if (block.getId().startsWith("chisel_chipped_integration:"))
+					server.runCommandSilent(`setblock ${pos} air`);
+				else
+					server.runCommandSilent(`setblock ${pos} air destroy`);
+				
+				// Cancels the event
+				event.cancel();
+			}
 	}
-	
+		
 	// Fix Block Drops
 	if (Object.keys(tagToTool).length > 0 && ( mineFixBlocks.includes(block.getItem().getMod()) || mineFixBlocks.includes(block.getId()) ))
 	{

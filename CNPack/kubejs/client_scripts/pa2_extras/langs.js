@@ -42,6 +42,22 @@ const langs = {
 	
 	// Items
 	"item.rftoolsutility.teleport_probe": "维度传送基点探测器",
+	"item.thermal_extra.soul_infused_ingot": "Soul Infused Ingot",
+    "item.thermal_extra.shellite_ingot": "Shellite Ingot",
+    "item.thermal_extra.twinite_ingot": "Twinite Ingot",
+    "item.thermal_extra.dragonsteel_ingot": "Dragonsteel Ingot",
+    "item.thermal_extra.abyssal_ingot": "Abyssal Ingot",
+    "item.thermal_extra.soul_infused_nugget": "Soul Infused Nugget",
+    "item.thermal_extra.shellite_nugget": "Shellite Nugget",
+    "item.thermal_extra.twinite_nugget": "Twinite Nugget",
+    "item.thermal_extra.dragonsteel_nugget": "Dragonsteel Nugget",
+    "item.thermal_extra.abyssal_nugget": "Abyssal Nugget",
+    "item.thermal_extra.soul_infused_dust": "Soul Infused Dust",
+    "item.thermal_extra.shellite_dust": "Shellite Dust",
+    "item.thermal_extra.twinite_dust": "Twinite Dust",
+    "item.thermal_extra.dragonsteel_dust": "Dragonsteel Dust",
+    "item.thermal_extra.abyssal_dust": "Abyssal Dust",
+    "item.thermal.latex_bucket": "Dirty Latex Bucket",
 	
 	// Enchantments
 	"enchantment.draconicevolution.reaper_enchantment.desc": "生物有概率掉落自身的生物灵魂。",
@@ -57,7 +73,17 @@ const langs = {
 	"advancements.projectexpansion.yellow_fuel": "黄色燃料",
 	"advancements.projectexpansion.yellow_fuel.description": "获得黄色染料。",
 	"advancements.projectexpansion.yellow_fuel_block": "黄色燃料块",
-	"advancements.projectexpansion.yellow_fuel_block.description": "获得黄色燃料块"
+	"advancements.projectexpansion.yellow_fuel_block.description": "获得黄色燃料块",
+	// Information
+    "block.cyclic.battery_infinite.guide": "Generate an infinite amount of energy\n\n§8Not an official description",
+    "item.cyclic.replace_scepter.guide": "The Building Scepter is a powerful tool that comes in three forms - Fill, Place, and Exchange. " +
+                                         "For each left clicking on any block will change the size of the area that will be affected. " +
+                                         "Sneak-left-clicking will select the block to be placed by the scepter. " +
+                                         "Right-click with the scepter to place or exchange blocks from your inventory.",
+    "item.cyclic.offset_scepter.guide": "The Building Scepter is a powerful tool that comes in three forms - Fill, Place, and Exchange. " +
+                                         "For each left clicking on any block will change the size of the area that will be affected. " +
+                                         "Sneak-left-clicking will select the block to be placed by the scepter. " +
+                                         "Right-click with the scepter to place or exchange blocks from your inventory.",
 };
 
 // Same as above but allows multiple entries to map to the same description
@@ -65,6 +91,7 @@ const langs = {
 //   - 'baseEntry' is optional, and it will be used as the base for the entries, replacing '%entry' with the actual entry from the provided list
 //   - 'entries' is required, and it will work as above the 'baseEntry' is provided, or it will work as a full localized string for translation
 //   - 'description' is required, the translated value to add
+//   - 'names' is optional and uses the content to replace '%name' in the description with the name on the same index as the entry
 //   - 'namespace' is optional, used when the default 'pa2' is not wanted, or another namespace might be required
 // - Again mainly fixes for annoyances and only applied for English.
 const multiLang = [

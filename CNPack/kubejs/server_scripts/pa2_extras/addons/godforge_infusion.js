@@ -83,8 +83,47 @@ const infuseable = {
 	"projecte:dm_shovel": "shovel",
 	"projecte:dm_hoe": "hoe",
 	"projecte:dm_shears": "shears",
-	"projecte:dm_hammer": "hammer"
+	"projecte:dm_hammer": "hammer",
+
+    // Advanced AE
+    "advanced_ae:quantum_helmet": "helmet",
+    "advnaced_ae:quantum_chestplate": "chestplate",
+    "advanced_ae:quantum_leggings": "leggings",
+    "advanced_ae:quantum_boots": "boots",
+
+    // Draconic Evolution
+    "draconicevolution:chaotic_axe": "axe",
+    "draconicevolution:chaotic_bow": "bow",
+    "draconicevolution:chaotic_chestpiece": "chestplate",
+    "draconicevolution:chaotic_hoe": "hoe",
+    "draconicevolution:chaotic_pickaxe": "pickaxe",
+    "draconicevolution:chaotic_shovel": "shovel",
+    "draconicevolution:chaotic_staff": "tool",
+    "draconicevolution:chaotic_sword": "sword"
 };
+
+// Structure Definition
+// - Contains a list of items used to build the structure
+// - 'source' contains the recepients that contain source in them, such need to have a {source} NBT tag to be valid
+// - 'creativeSource' contains the recepients that count as creative sources
+// - 'holder' contains the blocks that hold the items to use for the infusion
+// - 'lowerHolder' the holders that contain the item inside their own block space instead of above
+// - 'core' the block that needs to be under the center platform
+// - 'platform' the block that works as the center platform
+// - 'isPlatformLower' is set to 'true' if the platform holds the item within its own block space
+const structure = {
+    source: ["ars_nouveau:source_jar", "arseng:me_source_jar", "ars_nouveau:creative_source_jar"],
+    creativeSource: ["ars_nouveau:creative_source_jar"],
+    holder: ["ars_nouveau:arcane_pedestal", "ars_nouveau:arcane_platform"],
+    lowerHolder: ["ars_nouveau:arcane_platform"],
+    core: "ars_nouveau:arcane_core",
+    platform: "ars_nouveau:arcane_platform",
+    isPlatformLower: true
+};
+
+// Items that can Hold enchants to enchant others
+// - Some mods add custom enchanted books or enchantment holders, this allows to account for that
+const enchantHolder = ["minecraft:enchanted_book"];
 
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -115,10 +154,10 @@ function checkBlock(block)
 {
 	let id = block.getId();
 	
-	if (id === "ars_nouveau:source_jar" || id === "arseng:me_source_jar" || id === "ars_nouveau:creative_source_jar")
+	if (structure.source.includes(id))
 		return "source";
 	
-	if (id === "ars_nouveau:arcane_pedestal" || id === "ars_nouveau:arcane_platform")
+	if (structure.holder.includes(id))
 		return "holder";
 	
 	return "empty";
@@ -131,7 +170,7 @@ function checkAround(pos)
 	let result = { source: [], holder: [], totalSource: 0, driver: false, catalyst: false, infuser: false };
 	
 	// Check for the core
-	if (pos.getDown().getId() !== "ars_nouveau:arcane_core")
+	if (pos.getDown().getId() !== structure.core)
 		return false;
 	
 	// Get the blocks around
@@ -167,7 +206,7 @@ function checkAround(pos)
 			
 			if (type === "source")
 			{
-				result.source.push({ block: coords, data: data, creative: coords.getId() === "ars_nouveau:creative_source_jar" ? true : false });
+				result.source.push({ block: coords, data: data, creative: structure.creativeSource.includes(coords.getId()) ? true : false });
 				result.totalSource += data.source;
 				continue;
 			}
@@ -218,15 +257,68 @@ function failComp(event, comp)
 	event.cancel();
 }
 
+// Validation Methods
+function testEnchant(event, data, held)
+{
+    // Validate enchanting item
+    let target = data.itemStack.id;
+    if (!infuseable[target])
+    {
+        fail(event, "§cThe target item is not valid for Godforge Infusion");
+        return false;
+    }
+
+    let type = infuseable[target];
+    let targetEnchants = data.itemStack.tag && data.itemStack.tag.Enchantments ? data.itemStack.tag.Enchantments : [];
+    let test = Item.of(testItem[type]).withNBT({ Enchantments: targetEnchants });
+
+    // Validate the book
+    if (!held.nbt || held.nbt.StoredEnchantments.length <= 0)
+    {
+        fail(event, "§cInvalid enchantment book, contains no enchants");
+        return false;
+    }
+    
+    let heldEnchants = held.nbt.get("StoredEnchantments");
+
+    // Gather the enchants that are valid and calculate costs
+    let enchanted = false;
+    let cost = sourceBase;
+    let lvls = 0;
+    
+    heldEnchants.forEach(enchant => {		
+        if ($Enchants.get(enchant.id).canEnchant(test))
+        {
+            let state = enchantItem(test, enchant);
+            if (state)
+            {
+                enchanted = true;
+                cost += sourceAmount;
+                lvls += levelCost;
+            }
+        }
+    });
+
+    // Check if it would be enchanted
+    if (!enchanted)
+    {
+        event.getPlayer().tell(Text.of("The book as no enchantments to apply to the item").yellow());
+        return false;
+    }
+
+    // Return the results
+    return { cost: cost, lvls: lvls, enchants: test.nbt.Enchantments };
+}
+
 // Block left click for handling requirements
 global.requirementShow = false;
 BlockEvents.leftClicked(event => {
 	// Get Constants
 	const block = event.getBlock();
 	const player = event.getPlayer();
-	const server = player.getServer();
 	const held = event.getItem();
 	const data = block.getEntityData();
+    const server = player.getServer();
 	
 	// If player is sneaking ignore this
 	if (player.isCrouching())
@@ -236,63 +328,36 @@ BlockEvents.leftClicked(event => {
 	}
 	
 	// Triggers only when the platform is clicked and the item is an enchanted book
-	if (block.getId() === "ars_nouveau:arcane_platform" && held.getId() === "minecraft:enchanted_book" && data.itemStack.id !== "minecraft:air")
+    const isInfusion = block.getId() === structure.platform && enchantHolder.includes(held.getId()) && data.itemStack.id !== "minecraft:air";
+	if (isInfusion)
 	{
 		// Prevents double
 		if (global.requirementShow)
 		{
 			global.requirementShow = false;
+            server.schedule(0, _ => { block.getEntity().updateBlock(); });
 			event.cancel();
 			return;
 		}
 		
-		// Validate enchanting item
-		let target = data.itemStack.id;
-		if (!infuseable[target])
-		{
-			fail(event, "§c注意：目标物品不能进行灌注。");
-			return;
-		}
-		
-		let type = infuseable[target];
-		let targetEnchants = data.itemStack.tag && data.itemStack.tag.Enchantments ? data.itemStack.tag.Enchantments : [];
-		let test = Item.of(testItem[type]).withNBT({ Enchantments: targetEnchants });
-		
-		// Validate the book
-		if (!held.nbt || held.nbt.StoredEnchantments.length <= 0)
-		{
-			fail(event, "§c这本附魔书无效，里头根本就没有附魔！");
-			return;
-		}
-		
-		let heldEnchants = held.nbt.get("StoredEnchantments");
-		
-		// Gather the enchants that are valid and calculate costs
-		let enchanted = false;
-		let cost = sourceBase;
-		let lvls = 0;
-		
-		heldEnchants.forEach(enchant => {		
-			if ($Enchants.get(enchant.id).canEnchant(test))
-			{
-				let state = enchantItem(test, enchant);
-				if (state)
-				{
-					enchanted = true;
-					cost += sourceAmount;
-					lvls += levelCost;
-				}
-			}
-		});
+		// Test Enchant
+        let test = testEnchant(event, data, held);
+        if (test === false)
+        {
+            server.schedule(0, _ => { block.getEntity().updateBlock(); });
+            event.cancel();
+            return;
+        }
 		
 		// Display the requirements
-		player.tell(Text.of("§b§l本次附魔将会消耗："));
-		player.tell(Text.of(`§b- §e${cost} §d的魔源。`));
-		player.tell(Text.of(`§b- §e${lvls} §a级的经验。`));
+		player.tell(Text.of("§b§lRequirements:"));
+		player.tell(Text.of(`§b- §e${test.cost} §dSource`));
+		player.tell(Text.of(`§b- §e${test.lvls} §aLevels`));
 		
 		// Locks and cancels
 		global.requirementShow = true;
-		event.success();
+        server.schedule(0, _ => { block.getEntity().updateBlock(); });
+		event.cancel();
 	}
 	else
 	{
@@ -315,7 +380,8 @@ BlockEvents.rightClicked(event => {
 		return;
 	
 	// Triggers only when the platform is clicked and the item is an enchanted book
-	if (block.getId() === "ars_nouveau:arcane_platform" && held.getId() === "minecraft:enchanted_book" && data.itemStack.id !== "minecraft:air")
+    const isInfusion = block.getId() === structure.platform && enchantHolder.includes(held.getId()) && data.itemStack.id !== "minecraft:air";
+	if (isInfusion)
 	{			
 		// Validate structure
 		let struct = checkAround(block);
@@ -324,149 +390,117 @@ BlockEvents.rightClicked(event => {
 		if (struct === false)
 			return;
 		
-		// Validate enchanting item
-		let target = data.itemStack.id;
-		if (!infuseable[target])
-		{
-			fail(event, "§c注意：目标物品不能进行灌注。");
-			return;
-		}
+		// Test Enchant
+        let test = testEnchant(event, data, held);
+        if (test === false)
+        {
+            event.cancel();
+            return;
+        }
 		
-		let type = infuseable[target];
-		let targetEnchants = data.itemStack.tag && data.itemStack.tag.Enchantments ? data.itemStack.tag.Enchantments : [];
-		let test = Item.of(testItem[type]).withNBT({ Enchantments: targetEnchants });
-		
-		// Validate the book
-		if (!held.nbt || held.nbt.StoredEnchantments.length <= 0)
-		{
-			fail(event, "§c这本附魔书无效，里头根本就没有附魔！");
-			return;
-		}
-		
-		let heldEnchants = held.nbt.get("StoredEnchantments");
-		
-		// Gather the enchants that are valid and calculate costs
-		let enchanted = false;
-		let cost = sourceBase;
-		let lvls = 0;
-		
-		heldEnchants.forEach(enchant => {
-			if ($Enchants.get(enchant.id).canEnchant(test))
-			{
-				let state = enchantItem(test, enchant);
-				if (state)
-				{
-					enchanted = true;
-					cost += sourceAmount;
-					lvls += levelCost;
-				}
-			}
-		});
-		
+        let cost = test.cost;
+        let lvls = test.lvls;
+
 		// Check costs
 		if (cost > 10000 * struct.source.length) // cap check
 		{
-			fail(event, `§c注意，本次灌注将要消耗的魔源量比你提供的总量要高，附魔§b需要消耗§e${cost}§b，但你目前只提供了§e${10000 * struct.source.length}`);
+			fail(event, `§cThe cost is higher than the maximum source supported. §bNeeds §e${cost}§b but can only handle §e${10000 * struct.source.length}`);
 			return;
 		}
 		
 		if (cost > struct.totalSource) // current check
 		{
-			fail(event, `§c注意：本次灌注将要消耗的魔源量比你提供的量要多，附魔需要消耗§b§e${cost}§b，但你目前只提供了§e${struct.totalSource}`);
+			fail(event, `§cThe cost is higher than the source available. §bNeeds §e${cost}§b but has §e${struct.totalSource}`);
 			return;
 		}
 		
 		if (lvls > player.experienceLevel && !player.creative) // levels check
 		{
-			fail(event, `§c你的等级不足，附魔§b§e需要消耗${lvls}点经验，§b但你目前只有§e${player.experienceLevel}`);
+			fail(event, `§cYou don't have enough levels. §bNeeds §e${lvls}§b but you have §e${player.experienceLevel}`);
 			return;
 		}
 		
 		if (!struct.infuser)
 		{
 			let ingredient = Item.of(infuser, 1);
-			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
+			failComp(event, Text.of("§bYou are missing §e1x ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
 			return;
 		}
 		
 		if (!struct.catalyst)
 		{
 			let ingredient = Item.of(catalyst, 1);
-			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
+			failComp(event, Text.of("§bYou are missing §e1x ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
 			return;
 		}
 		
 		if (!struct.driver)
 		{
 			let ingredient = Item.of(driver, 1);
-			failComp(event, Text.of("§b仪式材料缺失：§e1 ").append(ingredient.getDisplayName()).append("§b不在底座上。"));
+			failComp(event, Text.of("§bYou are missing §e1x ").append(ingredient.getDisplayName()).append("§b from your pedestals"));
 			return;
 		}
 		
-		// Transfer enchants		
-		if (enchanted)
-		{
-			if (!data.itemStack.tag)
-				data.itemStack.tag = {};
-			
-			// Take levels
-			if (!player.creative)
-				player.addXPLevels(-lvls);
-			
-			// Take source
-			struct.source.forEach(jar => {
-				if (cost === 0)
-					return;
-				
-				cost -= jar.data.source;
-				
-				if (jar.creative)
-					return;
-				
-				jar.data.source = cost < 0 ? cost * -1 : 0;
-				jar.block.setEntityData(jar.data);
-				jar.block.getEntity().updateBlock();
-				
-				if (cost < 0)
-					cost = 0;
-			});
-			
-			// Take ingredients
-			struct.holder.forEach(hold => {
-				if (hold.item !== infuser && hold.item !== catalyst)
-					return;
-				
-				hold.data.itemStack.id = "minecraft:air";
-				hold.block.setEntityData(hold.data);
-				hold.block.getEntity().updateBlock();
-				
-				let pos = "";
-				
-				if (hold.block.getId().endsWith("platform"))
-					pos = `${hold.block.getX()} ${hold.block.getY()+0.5} ${hold.block.getZ()}`;
-				else
-					pos = `${hold.block.getX()} ${hold.block.getY()+1} ${hold.block.getZ()}`;
-				
-				for (let i = 0; i < 19; i++)
-					server.schedule(i, cb => server.runCommandSilent(`particle minecraft:dragon_breath ${pos} 0.2 0.2 0.2 0.01 2 normal`));
-			});
-			
-			// Place enchantments
-			let pos = `${block.getX()} ${block.getY()+0.75} ${block.getZ()}`;
-			for (let i = 0; i < 19; i++)
-				server.schedule(i, cb => server.runCommandSilent(`particle minecraft:dragon_breath ${pos} 0.2 0.2 0.2 0.01 2 normal`));
-			
-			data.itemStack.tag.Enchantments = test.nbt.Enchantments;
-			block.setEntityData(data);
-			
-			// Take book
-			if (!player.creative)
-				held.shrink(1);
-		}
-		else
-		{
-			player.tell(Text.of("这本书没有什么附魔能附到目标物品上。").yellow());
-		}
+		// Transfer enchants
+        if (!data.itemStack.tag)
+            data.itemStack.tag = {};
+        
+        // Take levels
+        if (!player.creative)
+            player.addXPLevels(-lvls);
+        
+        // Take source
+        struct.source.forEach(jar => {
+            if (cost === 0)
+                return;
+            
+            cost -= jar.data.source;
+            
+            if (jar.creative)
+                return;
+            
+            jar.data.source = cost < 0 ? cost * -1 : 0;
+            jar.block.setEntityData(jar.data);
+            jar.block.getEntity().updateBlock();
+            
+            if (cost < 0)
+                cost = 0;
+        });
+        
+        // Take ingredients
+        struct.holder.forEach(hold => {
+            if (hold.item !== infuser && hold.item !== catalyst)
+                return;
+            
+            hold.data.itemStack.id = "minecraft:air";
+            hold.block.setEntityData(hold.data);
+            hold.block.getEntity().updateBlock();
+            
+            let pos = "";
+            
+            if (structure.lowerHolder.includes(hold.block.getId()))
+                pos = `${hold.block.getX()} ${hold.block.getY()+0.5} ${hold.block.getZ()}`;
+            else
+                pos = `${hold.block.getX()} ${hold.block.getY()+1} ${hold.block.getZ()}`;
+            
+            for (let i = 0; i < 19; i++)
+                server.schedule(i, _ => server.runCommandSilent(`particle minecraft:dragon_breath ${pos} 0.2 0.2 0.2 0.01 2 normal`));
+        });
+        
+        // Place enchantments
+        let pos = structure.isPlatformLower ? `${block.getX()} ${block.getY()+0.75} ${block.getZ()}` : `${block.getX()} ${block.getY()+1.25} ${block.getZ()}`;
+        for (let i = 0; i < 19; i++)
+            server.schedule(i, _ => server.runCommandSilent(`particle minecraft:dragon_breath ${pos} 0.2 0.2 0.2 0.01 2 normal`));
+        
+        data.itemStack.tag.Enchantments = test.enchants;
+        block.setEntityData(data);
+        block.getEntity().updateBlock();
+        
+        // Take book
+        if (!player.creative)
+            held.shrink(1);
+
+        player.tell(Text.of("Item successfully enchanted").green());
 		
 		// Make the event succeed but cancels block interaction
 		event.success();
