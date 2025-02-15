@@ -228,7 +228,7 @@ ItemEvents.tooltip(event => {
             const name = Text.translate(info[0]).append(" (Legacy)");
 
             event.addAdvanced("thermal_extra:" + old, (_, __, text) => text.set(0, name.setStyle(info[1].getStyleModifier().apply($Style.EMPTY))));
-            event.add("thermal_extra:" + old, "§aTo turn this into the new item just put in a crafting table");
+            event.add("thermal_extra:" + old, "§a把它放在工作台合成就可以变为新物品");
         })
     });
 });

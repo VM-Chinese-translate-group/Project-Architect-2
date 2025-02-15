@@ -107,7 +107,7 @@ BlockEvents.rightClicked(event => {
 					player.give(Item.of("modularrouters:camouflage_upgrade", amount));
 				});
 		
-				player.tell(Text.of("You can't use the camouflage upgrade on this block. It is bugged, so it has been blacklisted!").red());
+				player.tell(Text.of("这个方块不能加装伪装升级，因为这样会出bug，所以我把它禁了！").red());
 				event.cancel();
 				return;
 			}

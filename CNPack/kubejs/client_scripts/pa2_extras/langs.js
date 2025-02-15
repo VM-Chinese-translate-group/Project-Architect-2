@@ -42,22 +42,22 @@ const langs = {
 	
 	// Items
 	"item.rftoolsutility.teleport_probe": "维度传送基点探测器",
-	"item.thermal_extra.soul_infused_ingot": "Soul Infused Ingot",
-    "item.thermal_extra.shellite_ingot": "Shellite Ingot",
-    "item.thermal_extra.twinite_ingot": "Twinite Ingot",
-    "item.thermal_extra.dragonsteel_ingot": "Dragonsteel Ingot",
-    "item.thermal_extra.abyssal_ingot": "Abyssal Ingot",
-    "item.thermal_extra.soul_infused_nugget": "Soul Infused Nugget",
-    "item.thermal_extra.shellite_nugget": "Shellite Nugget",
-    "item.thermal_extra.twinite_nugget": "Twinite Nugget",
-    "item.thermal_extra.dragonsteel_nugget": "Dragonsteel Nugget",
-    "item.thermal_extra.abyssal_nugget": "Abyssal Nugget",
-    "item.thermal_extra.soul_infused_dust": "Soul Infused Dust",
-    "item.thermal_extra.shellite_dust": "Shellite Dust",
-    "item.thermal_extra.twinite_dust": "Twinite Dust",
-    "item.thermal_extra.dragonsteel_dust": "Dragonsteel Dust",
-    "item.thermal_extra.abyssal_dust": "Abyssal Dust",
-    "item.thermal.latex_bucket": "Dirty Latex Bucket",
+	"item.thermal_extra.soul_infused_ingot": "浸魂锭",
+    "item.thermal_extra.shellite_ingot": "潜影合金锭",
+    "item.thermal_extra.twinite_ingot": "双子物质锭",
+    "item.thermal_extra.dragonsteel_ingot": "龙钢锭",
+    "item.thermal_extra.abyssal_ingot": "深渊锭",
+    "item.thermal_extra.soul_infused_nugget": "浸魂粒",
+    "item.thermal_extra.shellite_nugget": "潜影合金粒",
+    "item.thermal_extra.twinite_nugget": "双子物质粒",
+    "item.thermal_extra.dragonsteel_nugget": "龙钢粒t",
+    "item.thermal_extra.abyssal_nugget": "深渊粒",
+    "item.thermal_extra.soul_infused_dust": "浸魂粉",
+    "item.thermal_extra.shellite_dust": "潜影合金粉",
+    "item.thermal_extra.twinite_dust": "双子物质粉",
+    "item.thermal_extra.dragonsteel_dust": "龙钢粉",
+    "item.thermal_extra.abyssal_dust": "深渊粉",
+    "item.thermal.latex_bucket": "脏乳胶桶",
 	
 	// Enchantments
 	"enchantment.draconicevolution.reaper_enchantment.desc": "生物有概率掉落自身的生物灵魂。",
@@ -75,15 +75,15 @@ const langs = {
 	"advancements.projectexpansion.yellow_fuel_block": "黄色燃料块",
 	"advancements.projectexpansion.yellow_fuel_block.description": "获得黄色燃料块",
 	// Information
-    "block.cyclic.battery_infinite.guide": "Generate an infinite amount of energy\n\n§8Not an official description",
-    "item.cyclic.replace_scepter.guide": "The Building Scepter is a powerful tool that comes in three forms - Fill, Place, and Exchange. " +
-                                         "For each left clicking on any block will change the size of the area that will be affected. " +
-                                         "Sneak-left-clicking will select the block to be placed by the scepter. " +
-                                         "Right-click with the scepter to place or exchange blocks from your inventory.",
-    "item.cyclic.offset_scepter.guide": "The Building Scepter is a powerful tool that comes in three forms - Fill, Place, and Exchange. " +
-                                         "For each left clicking on any block will change the size of the area that will be affected. " +
-                                         "Sneak-left-clicking will select the block to be placed by the scepter. " +
-                                         "Right-click with the scepter to place or exchange blocks from your inventory.",
+    "block.cyclic.battery_infinite.guide": "可以产生无限的能量。\n\n§8注意，这不是官方的物品描述。",
+    "item.cyclic.replace_scepter.guide": "建筑权杖是个非常强大的工具，有三种工作模式填充、放置和交换。 " +
+                                         "对着任意方块左击可以改变其作用范围。 " +
+                                         "潜行左击方块可以选定它为交换目标。" +
+                                         "拿着权杖右击方块就可以替换它，或者放置背包里的方块。",
+    "item.cyclic.offset_scepter.guide": "建筑权杖是个非常强大的工具，有三种工作模式填充、放置和交换。 " +
+                                         "对着任意方块左击可以改变其作用范围。" +
+                                         "潜行左击方块可以选定它为交换目标。 " +
+                                         "拿着权杖右击方块就可以替换它，或者放置背包里的方块。",
 };
 
 // Same as above but allows multiple entries to map to the same description
@@ -165,7 +165,7 @@ const multiLang = [
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
 // The language event to apply the fixes in
-ClientEvents.lang("zh_cn", event => {
+ClientEvents.lang("en_us", event => {
 	Object.keys(langs).forEach(key => {
 		event.add("pa2", key, langs[key]);
 	});
