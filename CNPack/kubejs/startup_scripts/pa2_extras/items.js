@@ -248,23 +248,24 @@ StartupEvents.registry("item", event => {
         .maxStackSize(64)
         .tooltip(Text.of("§aTo turn this into the new item just put in a crafting table"))
         .displayName("Zinc Dust (Legacy)")
-        .modelJson({ parent: "thermal_extra:item/zinc_dust" })
+        .modelJson({ parent: "thermal_extra:item/zinc_dust" });
+
+    event.create("pa2_extras:gem_leggings", "leggings")
+        .displayName("Gem Leggings")
+        .tooltip(Text.of("§fNo Gravity"))
+        .unstackable()
+        .tier("fake_gem_armor")
+        .modelJson({ parent: "projecte:item/gem_leggings" }); 
 });
 
-/*
-jaopca:dusts.zinc
-
-thermal_extra:area_radius_augment_1-4
-thermal_extra:dynamo_fuel_augment_1-4
-thermal_extra:dynamo_output_augment_1-4
-thermal_extra:fluid_tank_augment_1-6
-thermal_extra:machine_catalyst_augment_1-3
-thermal_extra:machine_efficiency_augment_1-4
-thermal_extra:machine_output_augment_1-3
-thermal_extra:machine_speed_augment_1-4
-thermal_extra:potion_amplifier_augment_1-5
-thermal_extra:potion_duration_augment_1-5
-thermal_extra:rf_coil_augment_1-5
-thermal_extra:rf_coil_storage_augment_1-5
-thermal_extra:rf_coil_xfer_augment_1-5
-*/
+ItemEvents.armorTierRegistry(event => {
+    event.add("fake_gem_armor", tier => {
+        tier.durabilityMultiplier = 0;
+        tier.slotProtections = [3, 6, 8, 3];
+        tier.enchantmentValue = 0;
+        tier.equipSound = "minecraft:item.armor.equip_diamond";
+        tier.repairIngredient = "minecraft:air";
+        tier.toughness = 2.0
+        tier.knockbackResistance = 0.25
+    });
+})

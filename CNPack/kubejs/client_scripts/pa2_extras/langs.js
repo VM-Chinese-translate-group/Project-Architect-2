@@ -27,6 +27,8 @@ const langs = {
 	"fluid_type.biggerreactors.liquid_obsidian": "熔融黑曜石",
 	"fluid_type.biggerreactors.steam": "蒸汽",
 	"fluid_type.thermal.latex": "Dirty Latex",
+	"fluid.create_enchantment_industry.experience": "Liquid Experience",
+	"fluid.create_enchantment_industry.hyper_experience": "Liquid Hyper Experience",
 	
 	// Blocks
 	"block.rftoolsstorage.crafting_manager": "合成管理器",

@@ -28,6 +28,12 @@ const fixHeartStackUsage = true;
 // Set to true to fix the issue where some items converts from Experience Crystals in the wrong way
 const fixExperienceCrystalConversion = true;
 
+// Should iron furnaces also behave like the other furnaces when fixed by FuelGoesHere mod
+const fixIronFurnacesFuelInput = true;
+
+// Should the Gem Leggings Dive ability not work while flying?
+const fixGemLegginsDiveWhileFlying = true;
+
 // A quick fix for invisible modular routers
 // - The list below if the blocks to ignore
 const fixInvisibleMR = true;
@@ -64,6 +70,10 @@ const creativeItemsForEmpty = [
 	"mekanism:creative_fluid_tank"
 ]
 
+// Classes needed for learning tome
+const $TransmutationInventory = Java.loadClass("moze_intel.projecte.gameObjs.container.inventory.TransmutationInventory")
+const $BigInteger = Java.loadClass("java.math.BigInteger")
+
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
 // Cable compare function
@@ -97,81 +107,89 @@ BlockEvents.rightClicked(event => {
 	const block = event.getBlock();
 	const held = event.getItem();
 
-		// Fix the modular routers camouflage bug
-		if (fixInvisibleMR && routerCamoBlacklist.includes(block.getId()) && held.getId() === "modularrouters:camouflage_upgrade")
-			{
-				let amount = held.count;
-				player.setHeldItem(event.getHand(), Item.of("minecraft:air"));
-		
-				server.schedule(0, _ => {
-					player.give(Item.of("modularrouters:camouflage_upgrade", amount));
-				});
-		
-				player.tell(Text.of("这个方块不能加装伪装升级，因为这样会出bug，所以我把它禁了！").red());
-				event.cancel();
-				return;
-			}
-		
-			// Fix Experience Crystal interactions
-			if (block.getId() === "utilitix:experience_crystal" && fixExperienceCrystalConversion)
-			{
-				let nbt = block.getEntityData();
-				if (!nbt || !nbt.Xp || !held.nbt || nbt.Xp === 0)
-					return;
-		
-				// Fix Insightful Crystal
-				if (held.getId() === "thermal:xp_crystal")
-				{
-					if (!held.nbt.Xp)
-						held.nbt.Xp = 0;
-		
-					server.schedule(1, _ => {
-						held.nbt.Xp += nbt.Xp;
-						nbt.Xp = 0;
-						block.setEntityData(nbt);
-					});
-		
-					event.cancel();
-					return;
-				}
-		
-				// Fix Hero Medallion
-				if (held.getId() === "reliquary:hero_medallion")
-				{
-					console.log("here");
-					if (!held.nbt.experience)
-						held.nbt.experience = 0;
-		
-					server.schedule(1, _ => {
-						console.log("and here");
-						held.nbt.experience += nbt.Xp;
-						nbt.Xp = 0;
-						block.setEntityData(nbt);
-					});
-		
-					event.cancel();
-					return;
-				}
-			}
+    // Fixes the modular routers camouflage bug
+    if (fixInvisibleMR && routerCamoBlacklist.includes(block.getId()) && held.getId() === "modularrouters:camouflage_upgrade")
+    {
+        let amount = held.count;
+        player.setHeldItem(event.getHand(), Item.of("minecraft:air"));
+
+        server.schedule(0, _ => {
+            player.give(Item.of("modularrouters:camouflage_upgrade", amount));
+        });
+
+        player.tell(Text.of("You can't use the camouflage upgrade on this block. It is bugged, so it has been blacklisted!").red());
+        event.cancel();
+        return;
+    }
+
+    // Fixes Experience Crystal interactions
+    if (block.getId() === "utilitix:experience_crystal" && fixExperienceCrystalConversion)
+    {
+        let nbt = block.getEntityData();
+        if (!nbt || !nbt.Xp || !held.nbt || nbt.Xp === 0)
+            return;
+
+        // Fixes Insightful Crystal
+        if (held.getId() === "thermal:xp_crystal")
+        {
+            if (!held.nbt.Xp)
+                held.nbt.Xp = 0;
+
+            server.schedule(1, _ => {
+                held.nbt.Xp += nbt.Xp;
+                nbt.Xp = 0;
+                block.setEntityData(nbt);
+            });
+
+            event.cancel();
+            return;
+        }
+
+        // Fixes Hero Medallion
+        if (held.getId() === "reliquary:hero_medallion")
+        {
+            console.log("here");
+            if (!held.nbt.experience)
+                held.nbt.experience = 0;
+
+            server.schedule(1, _ => {
+                console.log("and here");
+                held.nbt.experience += nbt.Xp;
+                nbt.Xp = 0;
+                block.setEntityData(nbt);
+            });
+
+            event.cancel();
+            return;
+        }
+    }
 	
 	// Transmutation Interface learning system
 	if (block.getId() === "projectexpansion:transmutation_interface")
 	{
 		if (held.getId() !== "minecraft:air")
 		{
-			if (server.runCommandSilent(`/projecte knowledge learn RicTheCoder ${held.getId()}`) === 1)
+			if (server.runCommandSilent(`/projecte knowledge learn ${player.getUsername()} ${held.getId()}`) === 1)
 			{
 				player.tell(Text.of("Learned ").yellow().append(Text.of(held.getDisplayName())).append(" into your transmutation knowledge"));
 				event.success();
 			}
 		}
-		
-		/*if (held.getId() === "projecte:tome")
+	
+		// Alternative to learn Tome of Knowledge
+		if (held.getId() === "projecte:tome")
 		{
-            let world = block.getLevel();
-            player.tell(Object.keys(world.levelData).reduce((p, c, i, a) => p + ", " + c, ""));
-            event.success();
-		}*/
+			let inv = new $TransmutationInventory(player);
+			if (inv != null && inv.isServer())
+			{
+				inv.handleKnowledge(held);
+				inv.addEmc($BigInteger.valueOf(0));
+				
+				server.runCommandSilent(`title ${player.getUsername()} actionbar ["",{"text":"Tome of Knowledge learned!","color":"yellow"}]`);
+				server.schedule(0, _ => { held.shrink(1); });
+				event.success();
+			}
+		}
 	}
 	
 	// Prevent adding items to creative bins
@@ -180,7 +198,7 @@ BlockEvents.rightClicked(event => {
         // Fixing the Building Gadget exploits with creative bins
         if (held.getId() === "buildinggadgets2:gadget_building" || held.getId() === "buildinggadgets2:gadget_exchanging")
         {
-            player.tell(Text.of("不不不，你不能在创造箱柜上用这个建筑小帮手。").red());
+            player.tell(Text.of("You can't use this building gadget on a Creative Bin").red());
             server.schedule(0, _ => delete(held.nbt.blockstate));
 			event.cancel();
 			return;
@@ -188,7 +206,7 @@ BlockEvents.rightClicked(event => {
 
         if (held.getId() === "buildinggadgets2:gadget_copy_paste")
         {
-            player.tell(Text.of("你敢复制创造箱柜？！我否了！").red());
+            player.tell(Text.of("You can't copy Creative Bins. Resetting selection!").red());
             server.schedule(0, _ => {
                 delete(held.nbt.copyend);
                 delete(held.nbt.copystart);
@@ -201,7 +219,7 @@ BlockEvents.rightClicked(event => {
 		// Prevents getting empty
 		if (!player.creative && held.getId() === "mekanism:configurator" && held.nbt.mekData.state == 8)
 		{
-			player.tell(Text.of("创造箱柜不能清空，别试了。").red());
+			player.tell(Text.of("Creative Bins can't be emptied").red());
 			event.cancel();
 			return;
 		}
@@ -210,7 +228,7 @@ BlockEvents.rightClicked(event => {
 		creativeBinBlacklist.forEach(item => {
 			if (held.getId().match(item))
 			{
-				player.tell(Text.of("别试了，我不允许这件物品进创造箱柜。").red());
+				player.tell(Text.of("This item cannot be put into a Creative Bin").red());
 				event.cancel();
 				return;
 			}
@@ -236,7 +254,7 @@ BlockEvents.rightClicked(event => {
 		}
 	}
 	
-	// Fix Heart of the Deep stack usage (doesn't run on creative)
+	// Fixes Heart of the Deep stack usage (doesn't run on creative)
 	if (fixHeartStackUsage && block.getId() === "minecraft:reinforced_deepslate" && held.getId() === "deeperdarker:heart_of_the_deep" && !player.creative)
 	{
 		// Load Values
@@ -338,8 +356,10 @@ ItemEvents.rightClicked(event => {
     const held = event.getItem();
 	const server = event.getEntity().getServer();
     const target = event.getTarget();
+	
+	
 
-    // Fix the Old Miners Bundle
+    // Fixesthe Old Miners Bundle
     if (held.getId() === "spelunkers_charm:old_miners_bundle")
     {
         if(event.hand.toString() === "OFF_HAND")
@@ -352,12 +372,12 @@ ItemEvents.rightClicked(event => {
 	if (stackFSCycle && ["functionalstorage:puller_upgrade", "functionalstorage:pusher_upgrade", "functionalstorage:collector_upgrade"].includes(event.getItem().getId()))
 	{
 		let player = event.getEntity().getName().getString();
-		let dirMsg = (dir) => server.runCommandSilent(`title ${player.getUsername()} actionbar ["",{"text":":方向： ","color":"yellow"},"${dir}"]`);
+		let dirMsg = (dir) => server.runCommandSilent(`title ${player.getUsername()} actionbar ["",{"text":"Direction: ","color":"yellow"},"${dir}"]`);
 		
 		if (!held.nbt)
 		{
 			held.nbt = {Direction:"down"};
-			dirMsg("下");
+			dirMsg("Down");
 		}
 		else
 		{
@@ -365,28 +385,28 @@ ItemEvents.rightClicked(event => {
 			{
 				case "down":
 					held.nbt.Direction = "up";
-					dirMsg("上");
+					dirMsg("Up");
 					break;
 				case "up":
 					held.nbt.Direction = "north";
-					dirMsg("北");
+					dirMsg("North");
 					break;
 				case "north":
 					held.nbt.Direction = "south";
-					dirMsg("南");
+					dirMsg("South");
 					break;
 				case "south":
 					held.nbt.Direction = "west";
-					dirMsg("西");
+					dirMsg("West");
 					break;
 				case "west":
 					held.nbt.Direction = "east";
-					dirMsg("东");
+					dirMsg("East");
 					break;
 				case "east":
 				default:
 					held.nbt.Direction = "down";
-					dirMsg("下");
+					dirMsg("Down");
 					break;
 			}
 		}
@@ -413,14 +433,14 @@ ItemEvents.entityInteracted(event => {
 		if (totalMeat >= meatToEgg)
 		{
 			target.mergeNbt({ForgeData: {meatGiven: 0}});
-			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"伟大的","italic":true,"color":"light_gray"},{"text":"蜂后","italic":true,"color":"yellow"},{"text":"为了感谢你，送你了一颗蛋！","italic":true,"color":"light_gray"}]`);
+			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"The ","italic":true,"color":"light_gray"},{"text":"Queen Bee","italic":true,"color":"yellow"},{"text":" thanks you with one of her eggs!","italic":true,"color":"light_gray"}]`);
 			
 			player.give(Item.of("the_bumblezone:bee_queen_spawn_egg", 1));
 		}
 		else // Counts and tells you
 		{
 			target.mergeNbt({ForgeData: {meatGiven: totalMeat}});
-			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一天一肉球，蜘蛛远离我！ (${totalMeat}/${meatToEgg})","italic":true,"color":"light_gray"}]`);
+			server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A meat a day keeps the spiders away! (${totalMeat}/${meatToEgg})","italic":true,"color":"light_gray"}]`);
 		}
 		
 		if (!player.creative)
@@ -510,19 +530,19 @@ ItemEvents.entityInteracted(event => {
 			if (!multi)
 			{
 				if (item.startsWith("projecte:klein_"))
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"从宇宙中凝练而出的","italic":true,"color":"yellow"},{"text":"卡莱恩能量之星！","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Klein Star","italic":true,"color":"yellow"},{"text":" weaved from the Cosmos!","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item.startsWith("projectexpansion:magnum_"))
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"可以扭曲宇宙的","italic":true,"color":"gold"},{"text":"马格南能量之星！","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Magnum Star","italic":true,"color":"gold"},{"text":" that warps the cosmic space!","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item === "projectexpansion:colossal_star_ein")
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一颗","italic":true,"color":"dark_aqua"},{"text":"自虚无诞生之始便存在的","italic":true,"color":"red"},{"text":"终焉之星！","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Colossal Star","italic":true,"color":"red"},{"text":" where the nothing and the everything overlap!","italic":true,"color":"dark_aqua"}]`);
 				
 				if (item === "the_bumblezone:royal_jelly_bucket")
-					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一桶","italic":true,"color":"dark_aqua"},{"text":"我自己收藏的","italic":true,"color":"light_purple"},{"text":"蜂王浆！","italic":true,"color":"dark_aqua"}]`);
+					server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"A ","italic":true,"color":"dark_aqua"},{"text":"Bucket of Royal Jelly","italic":true,"color":"light_purple"},{"text":" from my own collection!","italic":true,"color":"dark_aqua"}]`);
 			}
 			else
-				server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"一股","italic":true,"color":"dark_aqua"},{"text":"蜂后之力，","italic":true,"color":"yellow"},{"text":"可以让你将宇宙如掌中玩物一样随意操弄！","italic":true,"color":"dark_aqua"}]`);
+				server.runCommandSilent(`title ${player.getName().getString()} actionbar ["",{"text":"The ","italic":true,"color":"dark_aqua"},{"text":"Queen's Power","italic":true,"color":"yellow"},{"text":" brings the Cosmos to you!","italic":true,"color":"dark_aqua"}]`);
 			
 			if (!player.creative || multi)
 				event.getItem().shrink(1);
@@ -541,3 +561,138 @@ ItemEvents.entityInteracted(event => {
 		event.success();
 	}
 });
+
+// Fixes the fuel issues with the iron furnaces
+PlayerEvents.inventoryOpened(event => {
+    // Prevents running if disabled
+    if (!fixIronFurnacesFuelInput)
+        return;
+
+    // Get constants
+    const player = event.getEntity();
+    const server = player.getServer();
+    const inventory = event.getInventoryContainer();
+
+    // Check for the right menu
+    if (!inventory.class.getName().startsWith("ironfurnaces.container.furnaces."))
+        return;
+
+    // Start Scheduling
+    server.scheduleRepeatingInTicks(1, cb => {
+        // Get Internal Player
+        const intPlayer = server.getPlayerList().getPlayer(player.uuid);
+
+        // Repeats if valid
+        if (!intPlayer.containerMenu.class.getName().startsWith("ironfurnaces.container.furnaces."))
+        {
+            cb.clear();
+            return;
+        }
+
+        // Ignores if not shift click
+        if (!intPlayer.getData().get("isShiftDown"))
+            return;
+
+        // Checks
+        const menu = player.containerMenu;
+        const burnSlot = menu.getSlot(0);
+        const fuelSlot = menu.getSlot(1);
+
+        if (burnSlot.getItem().hasTag("fuelgoeshere:forced_fuels") && !fuelSlot.hasItem())
+        {
+            fuelSlot.setByPlayer(burnSlot.getItem());
+            fuelSlot.setChanged();
+
+            burnSlot.set("minecraft:air");
+            burnSlot.setChanged();
+        }
+    })
+});
+
+// Handles the Shift State
+NetworkEvents.dataReceived("shift_press_channel", event => {
+    const player = event.getEntity();
+    const data = event.getData();
+
+    player.getData().put("isShiftDown", data.isShiftDown === 1 ? true : false);
+});
+
+// Fixing the Gem Leggings
+if (fixGemLegginsDiveWhileFlying)
+{
+    PlayerEvents.tick(event => {
+        // Get Constants
+        const player = event.getEntity();
+        const legs = player.getLegsArmorItem();
+        const abs = player.getAbilities();
+        const inv = player.getInventory();
+
+        // Solves if the No Dive is found in the inventory
+        const item = Item.of("pa2_extras:gem_leggings").getItem();
+        const count = inv.countItem(item);
+
+        //console.log(Item.of("projecte:gem_leggings").getItem().material.getName());
+        if (count > 0 && !(count == 1 && legs.getId() === "pa2_extras:gem_leggings"))
+        {
+            for (let i = 0; i < 35; i++)
+            {
+                let slot = inv.getStackInSlot(i);
+                if (slot.getId() === "pa2_extras:gem_leggings")
+                {
+                    let item = Item.of("projecte:gem_leggings", slot.amount);
+                    item.nbt = slot.nbt;
+                    inv.setStackInSlot(i, item);
+                }
+            }
+        }
+
+        const data = player.getServer().getPersistentData();
+        if (!data["PE_DiveLeggings"] || data["PE_DiveLeggings"][player.uuid.toString()])
+            return;
+        
+        // Ignore if player can't fly
+        if (!abs.mayfly)
+            return;
+
+        // Checks if the player has the Gem Leggings
+        if (legs.getId() === "projecte:gem_leggings" && abs.flying)
+        {
+            let item = Item.of("pa2_extras:gem_leggings");
+            item.nbt = legs.nbt;
+            player.setLegsArmorItem(item);
+            return;
+        }
+
+        if (legs.getId() === "pa2_extras:gem_leggings" && !abs.flying)
+        {
+            let item = Item.of("projecte:gem_leggings");
+            item.nbt = legs.nbt;
+            player.setLegsArmorItem(item);
+            return;
+        }
+    });
+
+    // Server Commands for Toggling Dive Leggings
+    ServerEvents.customCommand("togglePEGemDive", event => {
+        if (event.getEntity().isPlayer())
+        {
+            const player = event.getEntity();
+            const server = player.getServer();
+            const data = server.getPersistentData();
+
+            if (!data["PE_DiveLeggings"])
+                data["PE_DiveLeggings"] = {};
+
+            if (data["PE_DiveLeggings"][player.uuid.toString()] !== undefined)
+            {
+                data["PE_DiveLeggings"][player.uuid.toString()] = !data["PE_DiveLeggings"][player.uuid.toString()];
+            }
+            else
+            {
+                data["PE_DiveLeggings"][player.uuid.toString()] = false;
+            }
+
+            player.tell(Text.of("§eGem Leggings will now " + (data["PE_DiveLeggings"][player.uuid.toString()] ? "§adive normally §ewhile flying" : "§cignore dive §ewhile flying")));
+        }
+    });
+}

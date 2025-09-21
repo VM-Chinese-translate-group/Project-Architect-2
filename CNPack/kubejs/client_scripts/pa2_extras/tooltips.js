@@ -184,6 +184,16 @@ const tooltipToItem = [
         // Refined Radiance
         items: "create:refined_radiance",
         tips: ["tooltip.create.refined_radiance.1"]
+    },
+	{
+        // Accumulation Processor - Soul Laser Base
+        items: "megacells:accumulation_processor",
+        tips: ["§eRight-Click a Soul Laser Base to §dexport §efrom your Soul Network into the Base"]
+    },
+    {
+        // Quantum Processor - Soul Laser Base
+        items: "advanced_ae:quantum_processor",
+        tips: ["§eRight-Click a Soul Laser Base to §cimport §einto your Soul Network into the Base"]
     }
 ];
 
@@ -210,7 +220,7 @@ ItemEvents.tooltip(event => {
             if (index === -1)
                 return;
 
-            text.set(index, Text.of("More info at §b§nhttps://github.com/DonovanDMC/ProjectExpansion/wiki").yellow());//目前未实装，先不管
+            text.set(index, Text.of("更多信息可查询 §b§nhttps://github.com/DonovanDMC/ProjectExpansion/wiki").yellow());
         });
     };
 

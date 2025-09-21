@@ -102,6 +102,46 @@ const mineFixBlocks = [
 	"enlightened_end"
 ]
 
+// Fixes some broken NBT on drop
+// - The key is the id of the block, or a mod id to trigger for all blocks of that mod
+// - 'validate' is what validates if the block should be cleared
+// - 'dropWith' is the default NBT state to drop with (set to null to remove NBT completely)
+const fixNbtOnDrop = {
+    "easy_villagers:trader": {
+        validate: (block) => block.getEntityData().Villager === undefined && block.getEntityData().Workstation === undefined,
+        dropWith: null
+    },
+    "easy_villagers:auto_trader": {
+        validate: (block) => block.getEntityData().Villager === undefined && block.getEntityData().Workstation === undefined,
+        dropWith: null
+    },
+    "draconicevolution:basic_crafting_injector": {
+        validate: (block) => block.getEntityData().bc_caps.inventory.Items.length <= 0,
+        dropWith: null
+    },
+    "draconicevolution:wyvern_crafting_injector": {
+        validate: (block) => block.getEntityData().bc_caps.inventory.Items.length <= 0,
+        dropWith: null
+    },
+    "draconicevolution:awakened_crafting_injector": {
+        validate: (block) => block.getEntityData().bc_caps.inventory.Items.length <= 0,
+        dropWith: null
+    },
+    "draconicevolution:chaotic_crafting_injector": {
+        validate: (block) => block.getEntityData().bc_caps.inventory.Items.length <= 0,
+        dropWith: null
+    },
+    "ironfurnaces": {
+        validate: (block) => block.getId().endsWith("_furnace"),
+        dropWith: null,
+        onDrop: (block) => {
+            block.getEntityData().Items.forEach(item => {
+                block.popItem(Item.of(item.id, item.Count));
+            })
+        }
+    }
+}
+
 //---[CODE]---------------------------------------------------------------------------------------------------------------------------------------
 
 // Block Break Functions
@@ -141,7 +181,7 @@ BlockEvents.broken(event => {
 	// Get server for easy use & the block
 	const server = event.player.getServer();
 	const block = event.block;
-	
+
 	// Checks for Modular Routers
 	if (fixMRWrongDrop && event.block.getId() === "modularrouters:modular_router")
 	{		
@@ -153,6 +193,24 @@ BlockEvents.broken(event => {
 	// Ignore Creative Players
 	if (event.player.creative)
 		return;
+
+    // NBT Voider on Drop
+    const fixNbt = fixNbtOnDrop[block.getId()] !== undefined ? fixNbtOnDrop[block.getId()] : fixNbtOnDrop[block.getItem().getMod()];
+    if (fixNbt !== undefined && fixNbt.validate(block))
+    {
+        let item = block.getItem().withCount(1);
+        item.nbt = fixNbt.dropWith ?? undefined;
+
+        block.popItem(item);
+        if (fixNbt.onDrop !== undefined)
+            fixNbt.onDrop(block);
+
+        let pos = `${block.getX()} ${block.getY()} ${block.getZ()}`;
+        server.runCommandSilent(`setblock ${pos} air`);
+
+        event.cancel();
+        return;
+    }
 	
 	let heldItem = event.player.getMainHandItem();
 	let fixDrop = doubleDropFix.length !== 0 && ( doubleDropFix.includes(heldItem.getMod()) || doubleDropFix.includes(heldItem.getId()) );
@@ -175,25 +233,25 @@ BlockEvents.broken(event => {
 	if (fixACEnchant && heldItem.nbt && heldItem.nbt.AlchemicalCollectionEnabled && heldItem.nbt.AlchemicalCollectionEnabled == 1)
 		server.runCommandSilent(`projecte knowledge learn ${event.player.getUsername()} ${event.block.getItem().getId()}`); // Force learns the item being broken with AC active
 	
-	// Fix Tool Duping
+	// Fixes Tool Duping
     if (doubleDropBlocks.length !== 0)
-	{
-		if (fixDrop && ( doubleDropBlocks.includes(block.getItem().getMod()) || doubleDropBlocks.includes(block.getId()) ))
-			{	
-				// Breaks with commands to allow event cancelling
-				let pos = `${block.getX()} ${block.getY()} ${block.getZ()}`;
-				
-				if (block.getId().startsWith("chisel_chipped_integration:"))
-					server.runCommandSilent(`setblock ${pos} air`);
-				else
-					server.runCommandSilent(`setblock ${pos} air destroy`);
-				
-				// Cancels the event
-				event.cancel();
-			}
-	}
-		
-	// Fix Block Drops
+    {
+        if (fixDrop && ( doubleDropBlocks.includes(block.getItem().getMod()) || doubleDropBlocks.includes(block.getId()) ))
+        {	
+            // Breaks with commands to allow event cancelling
+            let pos = `${block.getX()} ${block.getY()} ${block.getZ()}`;
+            
+            if (block.getId().startsWith("chisel_chipped_integration:"))
+                server.runCommandSilent(`setblock ${pos} air`);
+            else
+                server.runCommandSilent(`setblock ${pos} air destroy`);
+            
+            // Cancels the event
+            event.cancel();
+        }
+    }
+	
+	// Fixes Block Drops
 	if (Object.keys(tagToTool).length > 0 && ( mineFixBlocks.includes(block.getItem().getMod()) || mineFixBlocks.includes(block.getId()) ))
 	{
 		Object.keys(tagToTool).forEach(tag => {
